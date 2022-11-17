@@ -1,58 +1,55 @@
 .primary-button-1 {
   /* green button */
-  width: 106px;
-  height: 39px;
-  left: 273px;
-  top: 225px;
-
+  padding: 8px 30px;
+  text-align: center;
+  text-decoration: none !important;
   background: #007A14;
   border-radius: 10px;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  color: white !important;
+  font-weight: 700;
+  border: 1px solid black
 }
 
 .primary-button-2 {
   /* green turquoise */
 
-  width: 130px;
-  height: 41px;
-  left: 167px;
-  top: 282px;
+  padding: 8px 15px;
   background: #137E58;
   border-radius: 5px;
+  text-decoration: none !important;
+  color: white !important;
+  font-weight: 700;
 }
 
 .primary-button-3 {
   /* green gradient */
-  width: 190px;
-  height: 53px;
-  left: 167px;
-  top: 469px;
 
+  padding: 13px 60px;
+  text-decoration: none !important;
+  color: white !important;
+  font-weight: 700;
   background: linear-gradient(180deg, #137E58 0%, #0A4113 100%);
   border-radius: 10px;
+  font-size: 20px;
 }
 
 .secondary-button-1 {
   /* large pale green */
-  width: 120px;
-  height: 41px;
-  left: 287px;
-  top: 550px;
-
-
+  padding: 10px 35px;
+  text-decoration: none !important;
+  color: darkgray !important;
+  font-weight: 700;
   background: #D5EAE2;
   border-radius: 10px;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .secondary-button-2 {
   /* medium pale green */
-
-  width: 91px;
-  height: 23px;
-  left: 167px;
-  top: 618px;
-
+  padding: 6px 15px;
+  text-decoration: none !important;
+  color: darkgray !important;
+  font-weight: 700;
+  font-size: small;
   background: #D5EAE2;
   border-radius: 3px;
 }
@@ -60,11 +57,11 @@
 .secondary-button-3 {
   /* small pale green */
 
-  width: 93px;
-  height: 16px;
-  left: 167px;
-  top: 655px;
-
+  padding: 2px 12px;
+  text-decoration: none !important;
+  color: darkgray !important;
+  font-weight: 700;
   background: #D5EAE2;
   border-radius: 3px;
+  font-size: x-small;
 }
