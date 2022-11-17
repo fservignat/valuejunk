@@ -1,5 +1,5 @@
-.button-green {
-  position: absolute;
+.primary-button-1 {
+  /* green button */
   width: 106px;
   height: 39px;
   left: 273px;
@@ -10,21 +10,19 @@
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-.button-turquoise {
-  position: absolute;
+.primary-button-2 {
+  /* green turquoise */
+
   width: 130px;
   height: 41px;
   left: 167px;
   top: 282px;
-
-  /* green turquoise */
-
   background: #137E58;
   border-radius: 5px;
 }
 
-.button-gradient {
-  position: absolute;
+.primary-button-3 {
+  /* green gradient */
   width: 190px;
   height: 53px;
   left: 167px;
@@ -34,22 +32,22 @@
   border-radius: 10px;
 }
 
-.button-large-pale-green {
-  position: absolute;
+.secondary-button-1 {
+  /* large pale green */
   width: 120px;
   height: 41px;
   left: 287px;
   top: 550px;
 
-  /* pale green */
 
   background: #D5EAE2;
   border-radius: 10px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-.button-medium-pale-green {
-  position: absolute;
+.secondary-button-2 {
+  /* medium pale green */
+
   width: 91px;
   height: 23px;
   left: 167px;
@@ -59,8 +57,9 @@
   border-radius: 3px;
 }
 
-.button-small-pale-green {
-  position: absolute;
+.secondary-button-3 {
+  /* small pale green */
+
   width: 93px;
   height: 16px;
   left: 167px;
