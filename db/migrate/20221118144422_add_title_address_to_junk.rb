@@ -6,7 +6,6 @@ class AddTitleAddressToJunk < ActiveRecord::Migration[7.0]
     add_column :services, :address, :string
     remove_column :users, :craft
     remove_column :users, :specialty
-    rename_column :users, :description, :bio
-    rename_column :users, :pseudonym, :username
+    rename_column :users, :name, :username
   end
 end
