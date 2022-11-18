@@ -4,10 +4,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :junks
-  has_many :services
-  has_many :projects
+  has_many :junks, dependent: :destroy
+  has_many :services, dependent: :destroy
+  has_many :projects, dependent: :destroy
+
   has_many :specialties, through: :services
+
   has_many :messages, through: :junks
   has_many :messages, through: :services
   has_many :messages, through: :projects
@@ -20,6 +22,6 @@ class User < ApplicationRecord
 
   validates :address, presence: true
 
-  validates :bio, length: { in: 50..400 }
+  validates :bio, length: { in: 10..400 }
 
 end
