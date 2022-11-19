@@ -8,15 +8,15 @@ class User < ApplicationRecord
   has_many :services, dependent: :destroy
   has_many :projects, dependent: :destroy
 
-  has_many :specialties, through: :services
+  # has_many :specialties, through: :services
 
   has_many :messages, through: :junks
   has_many :messages, through: :services
   has_many :messages, through: :projects
 
-  validates :name, presence: true
-  validates :name, uniqueness: true
-  validates :name, length: { in: 6..14 }
+  validates :username, presence: true
+  validates :username, uniqueness: true
+  validates :username, length: { in: 6..14 }
 
   validates :email, uniqueness: true, on: :create
 
