@@ -1,6 +1,6 @@
 class JunksController < ApplicationController
   def index
-    @junks = junk.all
+    @junks = Junk.all
   end
 
   def show
