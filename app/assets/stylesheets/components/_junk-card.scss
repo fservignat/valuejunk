@@ -1,0 +1,43 @@
+.junk-card {
+  width: 280px;
+  height: 358px;
+  border-radius: 10px;
+  background-color: $lighter-grey;
+
+  .junk-card-img {
+    height: 62%;
+    width: 100%;
+  }
+
+  .junk-card-ad {
+    color: $green;
+    font-family: stardos stencil;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.junk-card-content {
+  .junk-card-title {
+    color: black;
+
+  }
+
+  .price {
+
+  }
+
+  .delivery {
+
+  }
+}
+
+.junk-card-bottom {
+  .address-date {
+
+  }
+
+  .heart {
+
+  }
+}
