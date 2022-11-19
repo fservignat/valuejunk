@@ -31,6 +31,12 @@ class JunksController < ApplicationController
     redirect_to junk_path(@junk)
   end
 
+  def destroy
+    @junk = Junk.find(params[:id])
+    @junk.destroy
+    redirect_to junks_path, status: :see_other
+  end
+
   private
 
   def junk_params
