@@ -1,12 +1,13 @@
 <div class="container">
 
 <h1>Junks index</h1>
-
-  <% @junks.each do |junk| %>
-    <p>Title: <%= junk.title %></p>
-    <p>Description: <%= junk.description %></p>
-    <p>category: <%= junk.category %></p>
-    <p>Price: <%= junk.price %></p>
-    <p>Address: <%= junk.address %></p>
-  <% end %>
+  <ul>
+    <% @junks.each do |junk| %>
+      <p>Title: <%= junk.title %></p>
+      <p>Description: <%= junk.description %></p>
+      <p>Category: <%= junk.category %></p>
+      <p>Price: <%= junk.price %></p>
+      <p>Address: <%= junk.address %></p>
+    <% end %>
+  </ul>
 </div>
