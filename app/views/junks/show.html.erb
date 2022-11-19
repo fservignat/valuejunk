@@ -1,0 +1,6 @@
+<h2><%= @junk.title %></h2>
+<p><%= @junk.address %></p>
+<%= link_to "Delete",
+  junk_path(@junk),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
