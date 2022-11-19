@@ -1,5 +1,7 @@
 class ServicesController < ApplicationController
-  before_action :set_service, only: [:show, :create]
+  before_action :set_service, only: [:show]
+  before_action :service_params, only: [:create]
+
 
   def index
     @services = Service.all
@@ -15,6 +17,8 @@ class ServicesController < ApplicationController
 
   def create
     @service = Service.new(service_params)
+    @service.user = current_user
+
     if @service.save
       redirect_to service_path(@service)
     else
