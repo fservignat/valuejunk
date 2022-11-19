@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :junks, dependent: :destroy
   has_many :services, dependent: :destroy
-  has_many :projects, dependent: :destroy
+  # has_many :projects, dependent: :destroy
 
   # has_many :specialties, through: :services
 
@@ -16,7 +16,7 @@ class User < ApplicationRecord
 
   validates :username, presence: true
   validates :username, uniqueness: true
-  validates :username, length: { in: 6..14 }
+  validates :username, length: { in: 5..14 }
 
   validates :email, uniqueness: true, on: :create
 
