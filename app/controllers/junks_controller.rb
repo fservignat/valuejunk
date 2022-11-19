@@ -1,6 +1,9 @@
 class JunksController < ApplicationController
+  def index
+    @junks = Junk.all
+  end
 
-  def new
-    @junk = Junk.new
+  def show
+    @junk = Junk.find(params[:id])
   end
 end
