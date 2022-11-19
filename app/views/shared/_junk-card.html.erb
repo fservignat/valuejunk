@@ -28,11 +28,13 @@
 
   <div class="junk-card-content">
     <div class="junk-card-title">
-      <%# title linked to user %>
-      <%# <%= junk.title %>
+      <% @junks.each do |junk| %>
+        <%= junk.title %>
+      <% end %>
     </div>
-    <p></p>
-    <p></p>
+    <div class="price">
+    </div>
+
     <div class="junk-card-bottom">
       <div class="details">
       </div>
