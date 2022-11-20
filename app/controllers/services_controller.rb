@@ -15,5 +15,7 @@ class ServicesController < ApplicationController
       @service = Service.find(params[:id])
     end
 
-
+    def junk_params
+      params.require(:junk).permit(:title, :address, :description, :price, :craft, :specialty, photos: [])
+    end
 end
