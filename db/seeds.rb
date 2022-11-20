@@ -20,6 +20,16 @@ k_user = User.create!(
   username: "Kelly",
   email: "Kelly@outlook.com",
   address: "UPS Access Point, 11 Rue Jean Jaurès, 77100 Meaux, France",
+  bio: "I am a fashion designer and experience in making fancy dress and costume",
+  password: "123456"
+)
+puts "User created."
+
+puts "Creating User Owner"
+t_user = User.create!(
+  username: "Taylor",
+  email: "Taylor@outlook.com",
+  address: "UPS Access Point, 11 Rue Jean Jaurès, 77100 Meaux, France",
   bio: "Blacksmith by trade and enjoy repairing furniture",
   password: "123456"
 )
@@ -81,7 +91,7 @@ junk.save!
 puts "junk: #{junk.title} created."
 
 junk = Junk.new(
-  title: "A old classic look coffee table",
+  title: "A old classic coffee table",
   address: "35 Av. du Château, 92190 Meudon, France",
   description: "An old class coffee table made from pine wood.",
   category: "Furniture",
@@ -94,6 +104,19 @@ junk.save!
 puts "junk: #{junk.title} created."
 
 
+junk = Junk.new(
+  title: "A single bed for sale",
+  address: "16 Rue du Poirier Oudet, 94520 Mandres-les-Roses, France",
+  description: "A single bed frame made from pine wood. It has a spring base and dimension 190x90cm.",
+  category: "Furniture",
+  price: 50,
+  user: r_user)
+  # file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668158134/development/Experimental_Cocktail_Club_gzeegk.png')
+  # junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
+
+junk.save!
+puts "junk: #{junk.title} created."
+
 #create services content-------------------------
 
 service = Service.new(
@@ -101,7 +124,7 @@ service = Service.new(
   title: "Skilled smith in knifes and small jewleries",
   address: "23-1 Rue de la Marne, 94400 Vitry-sur-Seine, France",
   craft: "Metal",
-  description: "I have 10 years experience in blacksmith and expert in making knifes of all sorts.",
+  description: "I have 10 years experience in blacksmith and expert in making knifes and all sorts tools. I produced props for movie sets like Brave heart.",
   price:20,
   volunteer: false,
   user: r_user)
@@ -116,8 +139,41 @@ service = Service.new(
   title: "Making window panel and frame",
   address: k_user.address,
   craft: "Ceramics and glass",
-  description: "I have 5 years experience in window making involved renovating buildings and church windows.",
+  description: "I have 5 years experience in window making involved renovating buildings and church windows. I am familar
+  with traditional and modern techniques and will help you customise the window to fit your buidling design.",
   price:25,
+  volunteer: false,
+  user: r_user)
+  # file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668158134/development/Experimental_Cocktail_Club_gzeegk.png')
+  # junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
+
+service.save!
+puts "service: #{service.title} created."
+
+service = Service.new(
+
+  title: "Party outfit and costume designer",
+  address: k_user.address,
+  craft: "Fashion",
+  description: "I have experience in making party outfits and all sort of custome for parties.
+   I am concious about the enviroment and aim to upcycle old clothing in my design. Please check out my portfolio.
+   I also provide free consultations services to community projects and school arts.",
+  price:15,
+  volunteer: false,
+  user: k_user)
+  # file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668158134/development/Experimental_Cocktail_Club_gzeegk.png')
+  # junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
+
+service.save!
+puts "service: #{service.title} created."
+
+service = Service.new(
+
+  title: "Party outfit and costume designer",
+  address: t_user.address,
+  craft: "Wood and furniture",
+  description: "I have 10 years experience in repairing furniture and upcycle old ones. I also design custom make furniture so that it fits your bespoke needs.",
+  price:15,
   volunteer: false,
   user: k_user)
   # file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668158134/development/Experimental_Cocktail_Club_gzeegk.png')
