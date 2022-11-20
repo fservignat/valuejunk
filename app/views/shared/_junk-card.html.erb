@@ -60,32 +60,3 @@
     <% end %>
   </div>
 <%end%>
-
-
-<div class="flex-row-bar-card">
-  <% @bars.each do |bar| %>
-    <div class="full-bar-card">
-      <%= link_to bar_path(bar) do %>
-
-        <div class="bar-card-image">
-          <% if bar.photos.attached? %>
-            <%= cl_image_tag bar.photos.first.key, crop: :fill, class: 'w-100 h-100 d-block', alt: "image cover for bar" %>
-          <% else %>
-            <%= image_tag "https://images.unsplash.com/photo-1525268323446-0505b6fe7778?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80", class: "d-block w-100 h-100", alt: "image cover for bar" %>
-          <% end %>
-        </div>
-
-        <div class="bar-card-info">
-          <div class="bar-card-title">
-            <h2><%= bar.name %></h2>
-          </div>
-          <div class="bar-card-detail">
-            <p><%= bar.address %></p>
-            <p>£<%= bar.price %> / day</p>
-          </div>
-        </div>
-
-      <% end %>
-    </div>
-  <%end%>
-</div>
