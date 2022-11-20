@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   resources :junks, only: [:index, :show, :new, :create, :edit, :update, :destroy ]
 
-  resources :services, only: [:index, :show]
+  resources :services
 
 end
