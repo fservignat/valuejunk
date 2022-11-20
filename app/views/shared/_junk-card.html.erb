@@ -1,46 +1,91 @@
-<div class="junk-card">
+<% @junks.each do |junk| %>
+  <div class="junk-card">
+    <%= link_to junk_path(junk) do %>
+      <div class="junk-card-img">
+        <% if junk.photos.attached? %>
+          <%= cl_image_tag junk.photos.first.key, crop: :fill, class: 'w-100 h-100 d-block', alt: 'image of junk item' %>
+        <% else %>
+          <%= cl_image_tag("no-img-placeholder_acr54j", crop: :fill), class: 'd-block w-100 h-100', alt: 'image cover for bar' %>
+        <% end %>
 
-  <div class="junk-card-img">
-    <div class="junk-card-ad">
-    </div>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="..." class="d-block w-100" alt="...">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <% @junk.photos.first(3).each_with_index do |photo, index| %>
+              <% if index == 0 %>
+                <div class="carousel-item active">
+                  <%= cl_image_tag photo.key, class: "d-block w-100 h-100" alt: 'image junk' %>
+                </div>
+              <% else %>
+                <div class="carousel-item">
+                  <%= cl_image_tag photo.key, class: "d-block w-100 h-100" alt: 'image junk' %>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+          <% if @junk.photos.many? %>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          <% end %>
         </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
+        <% if junk.donation %>
+          <div class="junk-card-ad">
+          </div>
+        <% end %>
+      </div>
+
+      <div class="junk-card-content">
+        <div class="junk-card-title">
+          <h2><%= junk.title %></h2>
         </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
+        <div class="price">
+          <p><%= junk.price %></p>
+        </div>
+
+        <div class="junk-card-bottom">
+          <div class="details">
+            <p><%= junk.address %></p>
+            <p><%= junk.created_at %></p>
+          </div>
+          <div class="heart">
+            <i class="fa-regular fa-heart"></i>
+          </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+    <% end %>
   </div>
+<%end%>
 
-  <div class="junk-card-content">
-    <div class="junk-card-title">
-      <% @junks.each do |junk| %>
-        <%= junk.title %>
+
+<div class="flex-row-bar-card">
+  <% @bars.each do |bar| %>
+    <div class="full-bar-card">
+      <%= link_to bar_path(bar) do %>
+
+        <div class="bar-card-image">
+          <% if bar.photos.attached? %>
+            <%= cl_image_tag bar.photos.first.key, crop: :fill, class: 'w-100 h-100 d-block', alt: "image cover for bar" %>
+          <% else %>
+            <%= image_tag "https://images.unsplash.com/photo-1525268323446-0505b6fe7778?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80", class: "d-block w-100 h-100", alt: "image cover for bar" %>
+          <% end %>
+        </div>
+
+        <div class="bar-card-info">
+          <div class="bar-card-title">
+            <h2><%= bar.name %></h2>
+          </div>
+          <div class="bar-card-detail">
+            <p><%= bar.address %></p>
+            <p>£<%= bar.price %> / day</p>
+          </div>
+        </div>
+
       <% end %>
     </div>
-    <div class="price">
-    </div>
-
-    <div class="junk-card-bottom">
-      <div class="details">
-      </div>
-      <div class="heart">
-        <i class="fa-regular fa-heart"></i>
-      </div>
-    </div>
-  </div>
+  <%end%>
 </div>
