@@ -1,6 +1,12 @@
 <h2><%= @junk.title %></h2>
 <p><%= @junk.address %></p>
+
+<% @junk.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+
 <%= link_to "Delete",
   junk_path(@junk),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>
+

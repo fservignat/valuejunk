@@ -8,4 +8,9 @@
     <p>Price: <%= @service.price %></p>
     <p>Address: <%= @service.address %></p>
 
+
+  <% @service.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+
 </div>
