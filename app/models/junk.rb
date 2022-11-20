@@ -1,6 +1,8 @@
 class Junk < ApplicationRecord
   belongs_to :user
 
+  has_many_attached :photos
+
   validates :title, presence: true
   validates :address, presence: true
   validates :description, length: { in: 10..400 }
