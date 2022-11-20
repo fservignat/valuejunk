@@ -21,6 +21,22 @@ class JunksController < ApplicationController
     end
   end
 
+  def edit
+    @junk = Junk.find(params[:id])
+  end
+
+  def update
+    @junk = Junk.find(params[:id])
+    @junk.update(junk_params)
+    redirect_to junk_path(@junk)
+  end
+
+  def destroy
+    @junk = Junk.find(params[:id])
+    @junk.destroy
+    redirect_to junks_path, status: :see_other
+  end
+
   private
 
   def junk_params
