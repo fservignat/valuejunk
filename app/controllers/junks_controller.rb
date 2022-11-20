@@ -24,6 +24,6 @@ class JunksController < ApplicationController
   private
 
   def junk_params
-    params.require(:junk).permit(:title, :address, :description, :price, :category)
+    params.require(:junk).permit(:title, :address, :description, :price, :category, photos: [])
   end
 end
