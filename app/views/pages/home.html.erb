@@ -2,8 +2,11 @@
 <p>Find me in app/views/pages/home.html.erb</p>
 
 <div class="container-home">
-
-  <%= render "shared/flashes" %>
+   <div class="junk-home-box">
+    <div class="junk-home-cards">
+      <%# <%= render "shared/junk-card" %>
+    </div>
+   </div>
 
   <%= link_to "Search", junks_path %>
   <%= link_to "Collaborate", services_path %>
