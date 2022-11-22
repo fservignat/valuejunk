@@ -1,2 +1,14 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="container-home">
+   <div class="junk-home-box">
+    <div class="junk-home-cards">
+      <%# <%= render "shared/junk-card" %>
+    </div>
+   </div>
+
+  <%= link_to "Search", junks_path %>
+  <%= link_to "Collaborate", services_path %>
+
+</div>

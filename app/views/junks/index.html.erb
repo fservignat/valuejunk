@@ -1,13 +1,9 @@
 <div class="container">
 
 <h1>Junks index</h1>
-  <ul>
-    <% @junks.each do |junk| %>
-      <p>Title: <%= junk.title %></p>
-      <p>Description: <%= junk.description %></p>
-      <p>Category: <%= junk.category %></p>
-      <p>Price: <%= junk.price %></p>
-      <p>Address: <%= junk.address %></p>
-    <% end %>
-  </ul>
+
+  <div class="flex-row-junk-card">
+    <%= render partial: "shared/junk-card", junks: @junks %>
+  </div>
+
 </div>

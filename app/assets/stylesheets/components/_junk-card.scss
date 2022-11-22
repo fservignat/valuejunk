@@ -1,0 +1,58 @@
+.junk-card {
+  width: 280px;
+  height: 358px;
+  border-radius: 10px;
+  background-color: $lighter-grey;
+
+  .junk-card-img {
+    height: 62%;
+    width: 100%;
+    border-radius: 10 10 0 0;
+  }
+
+  .junk-card-ad {
+    color: $green;
+    font-family: stardos stencil;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.junk-card-content {
+  .junk-card-title {
+    color: black;
+    font-family: inter;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .price {
+    color: black;
+    font-family: inter;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .delivery {
+    padding: 2px 12px;
+    text-decoration: none !important;
+    color: darkgray !important;
+    font-weight: 700;
+    background: #D5EAE2;
+    border-radius: 3px;
+    font-size: x-small;
+  }
+}
+
+.junk-card-bottom {
+  .address-date {
+    color: $grey;
+    font-family: inter;
+    font-weight: bold;
+    font-size: 9px;
+  }
+
+  .heart {
+
+  }
+}
