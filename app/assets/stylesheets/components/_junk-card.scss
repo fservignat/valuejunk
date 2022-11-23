@@ -1,13 +1,19 @@
 .junk-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 280px;
   height: 358px;
   border-radius: 10px;
   background-color: $lighter-grey;
+  margin: 0;
+  padding: 0;
 
-  .junk-card-img {
+  img {
     height: 62%;
     width: 100%;
     border-radius: 10 10 0 0;
+    object-fit: cover;
   }
 
   .junk-card-ad {
@@ -19,35 +25,37 @@
 }
 
 .junk-card-content {
-  .junk-card-title {
+  font-family: $body-font;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  h2 {
     color: black;
-    font-family: inter;
     font-size: 18px;
     font-weight: bold;
+    text-decoration: none;
   }
-
-  .price {
+  p {
     color: black;
-    font-family: inter;
     font-size: 12px;
     font-weight: bold;
+    text-decoration: none;
   }
+}
 
-  .delivery {
-    padding: 2px 12px;
-    text-decoration: none !important;
-    color: darkgray !important;
-    font-weight: 700;
-    background: #D5EAE2;
-    border-radius: 3px;
-    font-size: x-small;
-  }
+.delivery {
+  padding: 2px 12px;
+  text-decoration: none !important;
+  color: darkgray !important;
+  font-weight: 700;
+  background: #D5EAE2;
+  border-radius: 3px;
+  font-size: x-small;
 }
 
 .junk-card-bottom {
   .address-date {
     color: $grey;
-    font-family: inter;
     font-weight: bold;
     font-size: 9px;
   }
