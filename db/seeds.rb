@@ -175,10 +175,10 @@ puts "service: #{service.title} created."
 
 service = Service.new(
 
-  title: "Party outfit and costume designer",
+  title: "Custom furniture builder",
   address: t_user.address,
   craft: "Wood and furniture",
-  description: "I have 10 years experience in repairing furniture and upcycle old ones. I also design custom make furniture so that it fits your bespoke needs.",
+  description: "I have 10 years experience in repairing furniture and upcycle old ones. I also custom make furniture so that it fits your bespoke needs.",
   price:15,
   volunteer: false,
   user: k_user)
