@@ -1,11 +1,13 @@
   <h1>Post an AD</h1>
 
-  <%= simple_form_for @service do |f|%>
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :craft %>
-    <%= f.input :volunteer, label: "Volunteer", as: :boolean %>
-    <%= f.input :price %>
-    <%= f.input :address %>
-    <%= f.submit class: "btn btn-primary" %>
-  <%end%>
+
+
+
+<form accept-charset="UTF-8" action="/@service" method="get">
+
+  <label for="title">Title:</label>
+  <input id="title" name="title" type="text" />
+  <label for="description">Description:</label>
+  <input id="title" name="title" type="text" />
+  <input name="commit" type="submit" value="Post" />
+</form>
