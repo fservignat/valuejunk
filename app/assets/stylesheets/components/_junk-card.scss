@@ -24,26 +24,25 @@
 }
 
 .junk-card-content {
-  font-family: $body-font;
+
   padding-left: 10px;
   padding-right: 10px;
 
   h2 {
+    font-family: $body-font;
     color: black;
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
+    padding-top: 5px;
   }
   p {
+    font-family: $body-font;
     color: black;
     font-size: 12px;
     font-weight: bold;
     text-decoration: none;
   }
-}
-
-a {
-  text-decoration: none;
 }
 
 .delivery {
@@ -57,13 +56,20 @@ a {
 }
 
 .junk-card-bottom {
-  .address-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.address-date {
+  p {
+    margin: 0px;
     color: $grey;
     font-weight: bold;
-    font-size: 9px;
+    font-size: 10px;
   }
+}
 
-  .heart {
+.heart {
 
-  }
 }

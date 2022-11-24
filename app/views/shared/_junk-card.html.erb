@@ -43,12 +43,14 @@
       <div class="junk-card-content">
         <h2><%= junk.title %></h2>
         <p><%= junk.price %>€</p>
-        <%# <% if junk.delivery %>
+        <%# if junk.delivery %>
+          <%# <p class="secondary-button-3">Delivery possible</p> %>
+        <%# end %>
 
         <div class="junk-card-bottom">
-          <div class="details">
+          <div class="address-date">
             <p><%= junk.address.split(", ")[1] %></p>
-            <p><%= junk.created_at %></p>
+            <p><%= junk.created_at.strftime("%A, %k:%M") %></p>
           </div>
           <div class="heart">
             <i class="fa-regular fa-heart"></i>
