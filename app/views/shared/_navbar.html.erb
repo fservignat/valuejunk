@@ -1,14 +1,18 @@
 <div class="navbar-custom">
+
   <div>
-    <%= cl_image_tag("https://res.cloudinary.com/dfkgih0bp/image/upload/v1669237805/development/ValueJunk/internal%20img%20%28website%20itself%29/images/logo_ntytza.svg", class: "navbar-logo") %>
+    <%= link_to image_tag("https://res.cloudinary.com/dfkgih0bp/image/upload/v1669318151/development/ValueJunk/internal%20img%20%28website%20itself%29/images/logo_lfxkjk.png", class: "navbar-logo"), root_path  %>
   </div>
+
   <div class="navbar-text">
     <%= link_to "Junk Market", junks_path %>
-    <%= link_to "Craftpeople", services_path %>
+    <%= link_to "Craftpeople", services_path, id: "nav-middle" %>
     <%= link_to "Projects" %>
   </div>
+
   <div class="navbar-icon">
     <%= link_to "+ place an ad", new_junk_path, class: "primary-button-2" %>
-    <i class="fa-solid fa-user fa-2xl"></i>
+    <i class="fa-solid fa-user fa-xl"></i>
   </div>
+
 </div>
