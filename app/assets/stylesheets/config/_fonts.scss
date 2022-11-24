@@ -1,9 +1,16 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat+Alternates:wght@700&family=Stardos+Stencil:wght@700&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$body-font: "inter", "sans-serif";
+$headers-font: "Montserrat Alternates", "sans-serif";
+
+
+// how to define the fond in css:
+// font-family: 'Inter', sans-serif;
+// font-family: 'Montserrat Alternates', sans-serif;
+// font-family: 'Stardos Stencil', cursive;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

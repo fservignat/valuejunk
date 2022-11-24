@@ -1,13 +1,12 @@
-<div class="container">
+<div class="main-container">
+  <div class="junk-title">
+    <h1 style="text-center">JUNK MARKET</h1>
+    <div class="title-panel">
+    </div>
+  </div>
 
-<h1>Junks index</h1>
-  <ul>
-    <% @junks.each do |junk| %>
-      <p>Title: <%= junk.title %></p>
-      <p>Description: <%= junk.description %></p>
-      <p>Category: <%= junk.category %></p>
-      <p>Price: <%= junk.price %></p>
-      <p>Address: <%= junk.address %></p>
-    <% end %>
-  </ul>
+  <div class="index-cards-list">
+    <%= render "shared/junk-card", junks: @junks %>
+  </div>
+
 </div>
