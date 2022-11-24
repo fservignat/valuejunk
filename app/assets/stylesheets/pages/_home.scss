@@ -1,5 +1,29 @@
 // Specific CSS for your home-page
 
+
+.banner {
+  background-image: url("https://res.cloudinary.com/dfkgih0bp/image/upload/v1669321513/development/ValueJunk/internal%20img%20%28website%20itself%29/images/full-banner_eherbw.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.banner-content {
+
+  h1 {
+    color: white;
+    font-size: 130px;
+    font-weight: bold;
+  }
+  p {
+    color: white;
+    font-family: $body-font;
+    font-size: 24px;
+  }
+}
+
 .container-home {
   margin-left: 100px;
   margin-right: 100px;
