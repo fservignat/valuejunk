@@ -1,7 +1,7 @@
 <% junks.each do |junk| %>
   <div class="junk-card">
     <%= link_to junk_path(junk) do %>
-      <div class="junk-card-img">
+      <%# <div class="junk-card-img"> %>
         <% if junk.photos.any? %>
           <%# cl_image_tag junk.photos.first.key, crop: :fill, class: 'w-100 h-100 d-block', alt: 'image of junk item' %>
           <div id="carouselExampleControls-<%= junk.id %>" class="carousel slide" data-bs-ride="carousel">
@@ -30,7 +30,7 @@
             <% end %>
           </div>
         <% else %>
-          <%= cl_image_tag "no-img-placeholder_acr54j", crop: :fill, class: 'd-block w-100 h-100', alt: 'image cover for bar' %>
+          <%= cl_image_tag("no-img-placeholder_acr54j", crop: :fill, class: 'd-block w-100 h-100', alt: 'image cover for junk') %>
         <% end %>
 
         <% if junk.donation %>
@@ -38,15 +38,11 @@
             <p>DONATION</p>
           </div>
         <% end %>
-      </div>
+      <%# </div> %>
 
       <div class="junk-card-content">
-        <div class="junk-card-title">
-          <h2><%= junk.title %></h2>
-        </div>
-        <div class="price">
-          <p><%= junk.price %></p>
-        </div>
+        <h2><%= junk.title %></h2>
+        <p><%= junk.price %></p>
 
         <div class="junk-card-bottom">
           <div class="details">
