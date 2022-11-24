@@ -1,9 +1,12 @@
-<div class="container">
+<div class="main-container">
+  <div class="junk-title">
+    <h1 style="text-center">JUNK MARKET</h1>
+    <div class="title-panel">
+    </div>
+  </div>
 
-<h1>Junks index</h1>
-
-  <div class="flex-row-junk-card">
-    <%= render partial: "shared/junk-card", junks: @junks %>
+  <div class="index-cards-list">
+    <%= render "shared/junk-card", junks: @junks %>
   </div>
 
 </div>
