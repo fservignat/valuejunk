@@ -1,6 +1,15 @@
 class JunksController < ApplicationController
   def index
     @junks = Junk.all
+    # The `geocoded` scope filters only junks with coordinates
+    @markers = @junks.geocoded.map do |junk|
+      {
+        lat: junk.latitude,
+        lng: junk.longitude,
+        info_window: render_to_string(partial: "popup_map", locals: { junk: junk }),
+        image_url: helpers.asset_url("hammer-solid.svg")
+      }
+    end
   end
 
   def show
