@@ -22,14 +22,29 @@
   flex-direction: row;
   justify-content: space-between;
 
-  a {
-  }
-
-  #nav-middle {
+  #nav-craft {
     padding-left: 80px;
     padding-right: 80px;
   }
 }
+
+#nav-market {
+  &:hover {
+    color: $light-green;
+  }
+}
+
+  #nav-craft {
+    &:hover {
+      color: $light-green;
+    }
+  }
+
+  #nav-projects {
+    &:hover {
+      color: $pink;
+    }
+  }
 
 .navbar-icon {
   display: flex;
@@ -42,5 +57,11 @@
     line-height: 2rem;
     margin-right: 35px;
     margin-left: 40px;
+  }
+}
+
+.fa-solid {
+  &:hover {
+    color: white;
   }
 }
