@@ -21,24 +21,22 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  #nav-craft {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
 }
 
 #nav-market {
+  margin-left: 70px;
   &:hover {
     color: $light-green;
   }
 }
 
-  #nav-craft {
-    &:hover {
-      color: $light-green;
-    }
+#nav-craft {
+  margin-left: 120px;
+  margin-right: 120px;
+  &:hover {
+    color: $light-green;
   }
+}
 
   #nav-projects {
     &:hover {
