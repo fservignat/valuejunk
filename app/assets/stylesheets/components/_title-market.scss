@@ -1,0 +1,21 @@
+.junk-title {
+
+
+  h1 {
+    font-family: $headers-font;
+    font-size: 68px;
+    font-weight: bold;
+    color: $green;
+  }
+
+  #pale-green {
+    color: $pale-green;
+  }
+
+  .title-panel {
+    color: $pale-green;
+    width: 333px;
+    height: 70px;
+    z-index: -1;
+  }
+}
