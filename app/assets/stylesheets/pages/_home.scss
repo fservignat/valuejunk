@@ -2,6 +2,7 @@
 
 
 .banner {
+  margin-bottom: 57px;
   img {
     background-size: cover;
     background-position: center;
@@ -33,4 +34,61 @@
 .container-home {
   margin-left: 100px;
   margin-right: 100px;
+}
+.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 57px;
+}
+
+.intro-description {
+  width: 600px;
+  height: 340px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-family: $body-font;
+    font-weight: 400;
+    font-size: 24px;
+    color: black;
+    padding: 0 20px;
+  }
+  #title {
+    font-family: $headers-font;
+    font-size: 30px;
+    font-weight: 600;
+    color: $green;
+  }
+  #upcycling {
+    font-weight: 600;
+    color: $green;
+  }
+  #fun {
+    font-family: $headers-font;
+    font-weight: 600;
+    color: $green;
+  }
+  #trendy {
+    font-family: $headers-font;
+    font-size: 30px;
+    font-weight: 600;
+    color: $green;
+  }
+  #collaborative {
+    font-family: $headers-font;
+    font-size: 36px;
+    font-weight: 600;
+    color: $green;
+  }
+}
+
+
+.intro-form {
+  width: 600px;
+  height: 340px;
+  margin-left: 10px;
 }
