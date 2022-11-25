@@ -63,6 +63,22 @@ junk = Junk.new(
 junk.save!
 puts "junk: #{junk.title} created."
 
+puts "Listing a junk"
+junk = Junk.new(
+  title: "A old cobber lamp, still usable",
+  address: "24 Rue Marcel Sembat, 93270 Sevran, France",
+  description: "This oil lamp is in good state and is perfect for decorating your dining room. I can deliver it if you are located in Sevran",
+  category:"Materials",
+  price: 0,
+  delivery: true,
+  user: k_user)
+  file = URI.open('https://images.unsplash.com/photo-1519668106955-a24e5f67f8c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8anVua3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
+  junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
+  file2 = URI.open('https://images.unsplash.com/photo-1519668106955-a24e5f67f8c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8anVua3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
+  junk.photos.attach(io: file2, filename: 'experimental.jpg', content_type: 'image/jpg')
+junk.save!
+puts "junk: #{junk.title} created."
+
 
 junk = Junk.new(
   title: "4 old chairs good for upcycle projects",
