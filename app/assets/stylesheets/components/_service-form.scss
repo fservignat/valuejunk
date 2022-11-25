@@ -1,9 +1,33 @@
 .service-info-flex {
   display: flex;
   justify-content: space-between;
-
+  gap: 40px;
+  align-items: center;
 }
 
-.service-description-widen {
-  width: 60%;
+.service-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-label-stack {
+  display: block;
+}
+
+// This is to display the textbox allowing input box align to the right
+//This works better than flex in this case because the photo input has a restricted width
+.service-grid {
+  display: grid;
+  grid-template-columns: 60% auto;
+  align-items: center;
+}
+
+.service-grid-col2 {
+  min-width: 100%;
+}
+
+.service-textbox {
+  padding: 1px;
+  width: 90%;
 }
