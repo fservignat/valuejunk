@@ -100,7 +100,7 @@
   background:linear-gradient(to bottom left, rgba(165, 165, 165, 0.1) 0%, rgba(14, 124, 12, 0.1) 100%);
   margin-bottom: 57px;
 
-  .full-title {
+  .full-title-junk {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
@@ -110,5 +110,22 @@
     font-size: 24px;
     font-weight:500;
     color: $dark-grey;
+  }
+}
+
+.craft-home-box {
+  width: 1250;
+  height: 600px;
+  border-radius: 20px;
+  background-image: url("https://res.cloudinary.com/dfkgih0bp/image/upload/v1668940531/development/ValueJunk/internal%20img%20%28website%20itself%29/images/img-craftpeople-homepage_zyki9o.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 57px;
+
+  p {
+    font-family: $body-font;
+    font-size: 24px;
+    font-weight:500;
+    color: white;
   }
 }
