@@ -1,5 +1,5 @@
+//This is to align the tabs with the form card below
 .junk-service-container {
-
   width: 800px;
   margin: auto;
   padding: 10px;
@@ -15,9 +15,41 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 20px;
+  text-align: 20px;
 }
 
-.junk-service-tabs {
-  margin: 10px;
+.junk-service-tabs-wrap {
+
+  height: 40px;
+}
+
+.junk-service-tab {
+  display: inline-block;
+  justify-items: center;
+  height: 30px;
+  width: 120px;
+  padding: 5px;
   text-decoration: none;
+  border-radius: 5px 5px 0 0;
+  color: $green;
+  background: $light-grey;
+  text-align: center;
+}
+
+.junk-service-tab:hover {
+  color: $green;
+  background: $pale-green;
+}
+
+.junk-service-tab-active {
+  padding-top: 15px;
+  height: 40px;
+  color: $green;
+  background: $pale-green;
+  justify-self: center;
+
+}
+
+.tab-margin {
+  margin-top: 10px;
 }
