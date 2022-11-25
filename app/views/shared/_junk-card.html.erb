@@ -8,12 +8,12 @@
             <div class="carousel-inner">
               <% junk.photos.first(3).each_with_index do |photo, index| %>
                 <% if index == 0 %>
-                  <div class="carousel-item active h-100">
-                    <%= cl_image_tag(photo.key, class: 'd-block w-100 h-100', alt: 'image junk') %>
+                  <div class="carousel-item active">
+                    <%= cl_image_tag(photo.key, class: 'd-block', alt: 'image junk') %>
                   </div>
                 <% else %>
-                  <div class="carousel-item h-100">
-                    <%= cl_image_tag(photo.key, class: 'd-block w-100 h-100', alt: 'image junk') %>
+                  <div class="carousel-item">
+                    <%= cl_image_tag(photo.key, class: 'd-block', alt: 'image junk') %>
                   </div>
                 <% end %>
               <% end %>
@@ -30,7 +30,7 @@
             <% end %>
           </div>
         <% else %>
-          <%= cl_image_tag("no-img-placeholder_acr54j", crop: :fill, class: 'd-block w-100 h-100', alt: 'image cover for junk') %>
+          <%= image_tag("https://res.cloudinary.com/dfkgih0bp/image/upload/v1668949083/development/ValueJunk/internal%20img%20%28website%20itself%29/images/no-img-placeholder_acr54j.jpg", crop: :fill, class: 'd-block', alt: 'image cover for junk') %>
         <% end %>
 
         <% if junk.donation %>
@@ -42,12 +42,15 @@
 
       <div class="junk-card-content">
         <h2><%= junk.title %></h2>
-        <p><%= junk.price %></p>
+        <p><%= junk.price %>€</p>
+        <%# if junk.delivery %>
+          <%# <p class="secondary-button-3">Delivery possible</p> %>
+        <%# end %>
 
         <div class="junk-card-bottom">
-          <div class="details">
-            <p><%= junk.address %></p>
-            <p><%= junk.created_at %></p>
+          <div class="address-date">
+            <p><%= junk.address.split(", ")[1] %></p>
+            <p><%= junk.created_at.strftime("%A, %k:%M") %></p>
           </div>
           <div class="heart">
             <i class="fa-regular fa-heart"></i>

@@ -1,18 +1,35 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <%= image_tag("https://res.cloudinary.com/dfkgih0bp/image/upload/v1669382762/development/ValueJunk/internal%20img%20%28website%20itself%29/images/banner-full_faklzn.png") %>
+  <div class="banner-search">
+  </div>
+</div>
+
+
+
 
 <div class="container-home">
+
+  <div class="intro">
+    <div class="intro-description box">
+      <div class="description text-center">
+        <p><span id="title">ValueJunk</span> is not just another marketplace.</p>
+        <p>We want to make <span id="upcycling">upcycling</span></p>
+        <p><span id="fun">fun</span><br><span id="trendy">trendy</span><br><span id="collaborative">collaborative</span></p>
+      </div>
+    </div>
+    <div class="intro-form box">
+    </div>
+    </div>
+    <div class="intro-rings">
+  </div>
 
 
     <div class="junk-home-box">
       <div class="junk-home-cards">
-
       </div>
+      <%= link_to "Search", junks_path, class: "primary-button-1" %>
     </div>
 
 
-  <%= link_to "Search", junks_path %>
   <%= link_to "Collaborate", services_path %>
-
-
 </div>
