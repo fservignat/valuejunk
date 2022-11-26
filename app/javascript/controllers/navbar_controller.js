@@ -6,7 +6,7 @@ export default class extends Controller {
     console.log("hello");
   }
   updateNavbar() {
-    if (window.scrollBy(0,10)) {
+    if (window.scrollY >= window.innerHeight) {
       this.element.classList.add("navbar-custom-color")
     } else {
       this.element.classList.remove("navbar-custom-color")
