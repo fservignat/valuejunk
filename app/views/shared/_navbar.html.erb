@@ -1,4 +1,6 @@
-<div class="navbar-custom">
+<div class="navbar-custom navbar-custom-color fixed-top"
+  data-controller= "<%= "navbar" if current_page? root_path %>"
+   data-action="scroll@window->navbar#updateNavbar">
 
   <div>
     <%= link_to image_tag("https://res.cloudinary.com/dfkgih0bp/image/upload/v1669318151/development/ValueJunk/internal%20img%20%28website%20itself%29/images/logo_lfxkjk.png", class: "navbar-logo"), root_path  %>
