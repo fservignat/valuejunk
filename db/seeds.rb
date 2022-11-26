@@ -54,6 +54,7 @@ junk = Junk.new(
   description: "Got some old pine wood pieces with dimension: 2 X 5 X 10m",
   category:"Materials",
   price: 0,
+  donation: true,
   user: k_user)
   file = URI.open('https://images.unsplash.com/photo-1519668106955-a24e5f67f8c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8anVua3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
   junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
@@ -69,7 +70,7 @@ junk = Junk.new(
   address: "24 Rue Marcel Sembat, 93270 Sevran, France",
   description: "This oil lamp is in good state and is perfect for decorating your dining room. I can deliver it if you are located in Sevran",
   category:"Materials",
-  price: 0,
+  price: 10,
   delivery: true,
   user: k_user)
   file = URI.open('https://images.unsplash.com/photo-1519668106955-a24e5f67f8c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8anVua3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
@@ -101,6 +102,7 @@ junk = Junk.new(
   description: "Got some red curtains to give away. Dimension is 10 X 50m.",
   category:"Décor",
   price: 0,
+  donation: true,
   user: k_user)
   file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668940532/development/ValueJunk/internal%20img%20%28website%20itself%29/images/yarn-balls_caseiq.jpg')
   file2 = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668940532/development/ValueJunk/internal%20img%20%28website%20itself%29/images/yarn-balls_caseiq.jpg')
