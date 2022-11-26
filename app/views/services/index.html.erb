@@ -4,13 +4,9 @@
 <br>
 <br>
     <% @services.each do |service| %>
-
-        <div >
-          <%= image_tag("Kelly.jpg", class: "avatar") %>
-        </div>
       <div class="service-card service-card-col5">
 
-        <div >
+        <div>
 
         </div>
 
@@ -32,8 +28,8 @@
           <p>Specialities: <%= %></p>
         </div>
 
+        <%= image_tag("Kelly.jpg", class: "avatar-large service-card-img") %>
       </div>
-
 
       <%= link_to "Show", service_path(service) %>|
       <%= link_to "Delete", service_path(service), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
