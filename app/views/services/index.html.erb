@@ -1,38 +1,37 @@
 <div class="container">
 
   <h1>Craftspeople</h1>
-<br>
-<br>
+  <br>
+  <br>
     <% @services.each do |service| %>
-      <div class="service-card service-card-col5">
+      <%= link_to service_path(service) do %>
+        <div class="service-card service-card-col5 service-card-font">
 
-        <div>
+          <div> </div>
 
+          <div>
+            <p class="service-card-title"><%= service.title %></p>
+            <p class="service-card-craft"><%= service.craft %></p>
+          </div>
+
+          <div>
+            <p class=""><%= service.address %></p>
+            <p class="">€<%= service.price %> / hr</p>
+          </div>
+
+          <div>
+            <i>"<%= service.description %>"</i>
+          </div>
+
+          <div>
+            <i>Specialities:<%= %></i>
+          </div>
+
+          <%= image_tag("Kelly.jpg", class: "avatar-large service-card-img") %>
         </div>
+      <%end%>
 
-        <div>
-          <p><%= service.title %></p>
-          <p><%= service.craft %></p>
-        </div>
-
-        <div>
-          <p><%= service.address %></p>
-          <p>€<%= service.price %> / hr</p>
-        </div>
-
-        <div>
-          <i>"<%= service.description %>"</i>
-        </div>
-
-        <div>
-          <p>Specialities: <%= %></p>
-        </div>
-
-        <%= image_tag("Kelly.jpg", class: "avatar-large service-card-img") %>
-      </div>
-
-      <%= link_to "Show", service_path(service) %>|
-      <%= link_to "Delete", service_path(service), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      <%# <%= link_to "Delete", service_path(service), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
     <%end%>
 
 </div>
