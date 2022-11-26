@@ -1,7 +1,7 @@
 <% junks.each do |junk| %>
   <div class="junk-card">
     <%= link_to junk_path(junk) do %>
-      <%# <div class="junk-card-img"> %>
+      <div class="junk-card-img">
         <% if junk.photos.any? %>
           <%# cl_image_tag junk.photos.first.key, crop: :fill, class: 'w-100 h-100 d-block', alt: 'image of junk item' %>
           <div id="carouselExampleControls-<%= junk.id %>" class="carousel slide" data-bs-ride="carousel">
@@ -34,26 +34,24 @@
         <% end %>
 
         <% if junk.donation %>
-          <div class="junk-card-ad">
-            <p>DONATION</p>
-          </div>
+          <p class="donation">DONATION</p>
         <% end %>
-      <%# </div> %>
+      </div>
 
       <div class="junk-card-content">
         <h2><%= junk.title %></h2>
         <p><%= junk.price %>€</p>
-        <%# if junk.delivery %>
-          <%# <p class="secondary-button-3">Delivery possible</p> %>
-        <%# end %>
+        <% if junk.delivery %>
+          <p class="secondary-button-3">Delivery possible</p>
+        <% end %>
 
         <div class="junk-card-bottom">
           <div class="address-date">
-            <p><%= junk.address.split(", ")[1] %></p>
+            <p><%= junk.address.split(", ")[1] %> - </p>
             <p><%= junk.created_at.strftime("%A, %k:%M") %></p>
           </div>
           <div class="heart">
-            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-heart fa-lg"></i>
           </div>
         </div>
       </div>
