@@ -13,6 +13,7 @@ class ServicesController < ApplicationController
       image_url: helpers.asset_url("person-solid.svg")
     }
     end
+
   end
 
   def show
