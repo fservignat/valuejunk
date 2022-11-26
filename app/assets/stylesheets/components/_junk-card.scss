@@ -17,6 +17,7 @@
 }
 
 .junk-card-img {
+  position: relative;
   p {
     color: $green;
     font-family: stardos stencil;
@@ -30,6 +31,13 @@
   }
 }
 
+.donation {
+  position: absolute;
+  top: 22px;
+  margin: 0;
+  right: 10px;
+  transform: rotate(-20deg);
+}
 
 .junk-card-content {
   padding-left: 10px;
