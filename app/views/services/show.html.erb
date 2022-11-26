@@ -2,24 +2,33 @@
 
   <h1>Craftspeople</h1>
 
-    <div class="service-card">
+  <div class="container">
+<br>
+<br>
+    <div class="service-card service-card-col4">
 
       <div>
-        <p>Title: <%= @service.title %></p>
+        <p><%= @service.title %></p>
         <p>Craft: <%= @service.craft %></p>
       </div>
 
       <div>
         <p>Address: <%= @service.address %></p>
+        <p>Price: <%= @service.price %></p>
       </div>
 
       <div>
         <p>Description: <%= @service.description %></p>
-        <p>Price: <%= @service.price %></p>
       </div>
+
+      <div>
+        <p>Specialities: <%= %></p>
+      </div>
+
     </div>
 
 
   <% @service.photos.each do |photo| %>
     <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
   <% end %>
+</div>

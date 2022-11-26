@@ -1,6 +1,6 @@
 .service-card {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  gap: 5px;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -17,4 +17,12 @@
     object-fit: cover;
   }
 
+}
+
+.service-card-col5 {
+  grid-template-columns: 5% 20% 20% 45% 10%;
+}
+
+.service-card-font12 {
+  font-size: 1em;
 }
