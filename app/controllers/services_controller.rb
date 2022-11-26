@@ -5,10 +5,18 @@ class ServicesController < ApplicationController
 
   def index
     @services = Service.all
+    # The `geocoded` scope filters only flats with coordinates
+    @markers = @services.geocoded.map do |service|
+    {
+      lat: service.latitude,
+      lng: service.longitude,
+      image_url: helpers.asset_url("person-solid.svg")
+    }
+    end
   end
 
   def show
-
+    @markers = [{lat: @service.latitude, lng: @service.longitude, image_url: helpers.asset_url("person-solid.svg")}]
   end
 
   def new
