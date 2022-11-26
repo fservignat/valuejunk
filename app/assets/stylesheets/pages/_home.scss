@@ -1,6 +1,4 @@
 // Specific CSS for your home-page
-@import "../components/junk-card";
-
 .banner {
   margin-bottom: 57px;
   img {
@@ -101,19 +99,6 @@
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
-  }
-  p {
-    font-family: $body-font;
-    font-size: 24px;
-    font-weight:500;
-    color: $dark-grey;
-  }
-  .junk-home-cards {
-    // position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px 55px 0px 55px;
   }
 }
 
