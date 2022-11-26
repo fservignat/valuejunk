@@ -1,34 +1,13 @@
-<div class="container">
+<div class="main-container">
 
   <h1>Craftspeople</h1>
   <br>
   <br>
+
+
     <% @services.each do |service| %>
       <%= link_to service_path(service) do %>
-        <div class="service-card service-card-col5 service-card-font">
-
-          <div> </div>
-
-          <div>
-            <p class="service-card-title"><%= service.title %></p>
-            <p class="service-card-craft"><%= service.craft %></p>
-          </div>
-
-          <div>
-            <p class=""><%= service.address %></p>
-            <p class="">€<%= service.price %> / hr</p>
-          </div>
-
-          <div>
-            <i>"<%= service.description %>"</i>
-          </div>
-
-          <div>
-            <i>Specialities:<%= %></i>
-          </div>
-
-          <%= image_tag("Kelly.jpg", class: "avatar-large service-card-img") %>
-        </div>
+        <%= render "shared/service-card", service: service %>
       <%end%>
 
       <%# <%= link_to "Delete", service_path(service), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
