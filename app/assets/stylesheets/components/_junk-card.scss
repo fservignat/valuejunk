@@ -42,6 +42,9 @@
 .junk-card-content {
   padding-left: 10px;
   padding-right: 10px;
+  height: 36%;
+  display: flex;
+  flex-direction: column;
 
   h2 {
     font-family: $body-font;
@@ -57,6 +60,8 @@
     font-size: 12px;
     font-weight: bold;
     text-decoration: none;
+    margin-bottom: 5px;
+    flex: 1 1 0%;
   }
 }
 
@@ -64,13 +69,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  // position: absolute;
+  // bottom: 5px;
 }
 
 .address-date {
   p {
-    margin: 0px;
+    margin-bottom: 5px;
     color: $grey;
     font-weight: bold;
     font-size: 10px;
+    display: inline;
   }
 }

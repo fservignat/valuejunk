@@ -1,5 +1,5 @@
 <div class="navbar-custom navbar-custom-color fixed-top"
-   data-controller="navbar"
+  data-controller= "<%= "navbar" if current_page? root_path %>"
    data-action="scroll@window->navbar#updateNavbar">
 
   <div>
