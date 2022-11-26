@@ -1,14 +1,68 @@
-<%= simple_form_for(service) do |f| %>
+<section class="junk-service-container">
 
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :craft %>
-  <%= f.input :volunteer, label: "Volunteer", as: :boolean %>
-  <%= f.input :price %>
-  <%= f.input :address %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.submit class: "btn btn-primary" %>
+    <div class="junk-service-tabs-wrap">
+      <a class="junk-service-tab tab-margin" href="">Item</a>
+      <a class="junk-service-tab junk-service-tab-active" href="">Services</a>
+    </div>
+    <div class="junk-service-form">
 
-  <%# <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <!-- [...] -->
-<% end %>
+      <form class="service-form-center" id="new_service" novalidate="novalidate" enctype="multipart/form-data" action="/services" accept-charset="UTF-8" method="post">
+
+        <div class="mb-3">
+          <label class="service-label-stack string required" for="service_title">
+            Title<abbr title="required">*</abbr>
+          </label><input class="string required" type="text" name="service[title]" id="service_title" />
+        </div>
+
+        <div class="service-info-flex">
+          <div class="mb-3">
+            <label class="service-label-stack string required" for="service_address">
+              Address<abbr title="required">*</abbr>
+            </label>
+            <input class="string required" type="text" name="service[address]" id="service_address" />
+          </div>
+          <div class="mb-3">
+            <label class="service-label-stack integer optional" for="service_price">Price</label>
+            <input class="numeric integer optional" type="number" step="1" name="service[price]" id="service_price" />
+          </div>
+          <div class="volunteer-btn">
+          <div class="form-check">
+            <input class="boolean optional" type="checkbox" value="1" name="service[volunteer]" id="service_volunteer" />
+            <label class="boolean optional" for="service_volunteer">Do you volunteer?</label>
+          </div>
+          </div>
+        </div>
+
+          <div class="service-grid">
+            <div class="mb-3" >
+              <label class="service-label-stack" for="service_description">Description</label>
+              <textarea class="service-textbox text optional"
+              rows="5" cols="25" name="service[description]" id="service_description"></textarea>
+            </div>
+
+            <div class="service-grid-col2">
+              <div class="mb-3">
+                <label class="string required" for="service_craft">
+                  Craft <abbr title="required">* </abbr>
+                </label>
+                <input class="string required" type="text" name="service[craft]" id="service_craft" />
+              </div>
+              <div class="mb-3 ">
+                <label class=" file optional" for="service_photos">Photos </label>
+                <input name="service[photos][]" type="hidden" autocomplete="off"/>
+                <input class="service-shrink file optional" multiple="multiple" type="file" name="service[photos][]" id="service_photos" />
+              </div>
+            </div>
+
+          </div>
+
+        <div class="service-flex-center">
+          <input type="submit" name="commit" value="Create Service" class="btn btn-secondary" data-disable-with="Create Service" />
+        </div>
+
+      </form>
+
+    </div>
+
+  </section>
+  <%# <%= render "form", service: @service %>

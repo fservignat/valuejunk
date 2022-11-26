@@ -18,10 +18,14 @@
   text-decoration: none !important;
   color: white !important;
   font-weight: 700;
+
+  &:hover {
+    background: #007A14;
+  }
 }
 
 .primary-button-3 {
-  /* green gradient big homepage */
+  /* green gradient search */
 
   padding: 13px 60px;
   text-decoration: none !important;
@@ -63,4 +67,6 @@
   background: #D5EAE2;
   border-radius: 3px;
   font-size: x-small;
+  width: 130px;
+  margin: 0;
 }
