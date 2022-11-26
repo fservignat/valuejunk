@@ -18,6 +18,10 @@
   text-decoration: none !important;
   color: white !important;
   font-weight: 700;
+
+  &:hover {
+    background: #007A14;
+  }
 }
 
 .primary-button-3 {
@@ -63,5 +67,4 @@
   background: #D5EAE2;
   border-radius: 3px;
   font-size: x-small;
-  width: 130px;
 }
