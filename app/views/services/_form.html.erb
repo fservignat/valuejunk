@@ -31,11 +31,11 @@
           </div>
           <div class="mb-3">
             <label class="service-label-stack integer optional" for="service_price">Price</label>
-            <input class="form-control numeric integer optional" type="number" step="1" name="service[price]" id="service_price" />
+            <input class="form-control numeric integer optional" type="number" step="1" name="service[price]" id="service_price" value="<%=@service[:price]%>"/>
           </div>
           <div class="volunteer-btn">
           <div class="form-check">
-            <input class="form-check-input boolean optional" type="checkbox" value="1" name="service[volunteer]" id="service_volunteer" />
+            <input class="form-check-input boolean optional" type="checkbox" value="1" name="service[volunteer]" id="service_volunteer"/>
             <label class="boolean optional" for="service_volunteer">Do you volunteer?</label>
           </div>
           </div>
@@ -71,7 +71,7 @@
               <div class="mb-3 ">
                 <label class=" file optional" for="service_photos">Photos </label>
                 <input name="service[photos][]" type="hidden" autocomplete="off"/>
-                <input class="form-control service-shrink file optional" multiple="multiple" type="file" name="service[photos][]" id="service_photos" />
+                <input class="form-control service-shrink file optional" multiple="multiple" type="file" name="service[photos][]" id="service_photos"/>
               </div>
             </div>
 
