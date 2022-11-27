@@ -95,15 +95,23 @@
   border-radius: 20px;
   background:linear-gradient(to bottom left, rgba(165, 165, 165, 0.1) 0%, rgba(14, 124, 12, 0.1) 100%);
   margin-bottom: 57px;
-  padding: 20px;
+  padding: 5px;
 }
 
 .full-title {
   display: flex;
-  justify-content: flex-end;
   flex-direction: column;
+  position: relative;
+  margin-right: 20px;
+  text-align: end;
+  margin-right: 20px;
+  text-align: end;
   p {
     margin: 0;
+    font-family: $body-font;
+    font-weight: 400;
+    font-size: 24px;
+    color: $dark-grey;
   }
 }
 
