@@ -45,7 +45,7 @@
             <div class="mb-3" >
               <label class="service-label-stack" for="service_description">Description</label>
               <textarea class="form-control service-textbox text optional"
-              rows="5" cols="25" name="service[description]" id="service_description"><%=@service[:description]%></textarea>
+              rows="11" cols="25" name="service[description]" id="service_description"><%=@service[:description]%></textarea>
               <% if @service.errors.any? %>
                 <p class="form-error-format"><%= @service.errors[:description].first %></p>
               <% end %>
@@ -68,13 +68,20 @@
                   <p class="form-error-format"><%= @service.errors[:craft].first %></p>
                 <% end %>
               </div>
+              <div class="mb-3 select optional service_speciality_list">
+              <label class="form-label select optional" for="service_speciality_list">Speciality list</label><input name="service[speciality_list][]" type="hidden" value="" autocomplete="off"><select class="form-select select optional" multiple="multiple" name="service[speciality_list][]" id="service_speciality_list">
+
+                <% $specialities.each do |speciality| %>
+                  <option value="<%=speciality%>"><%=speciality%></option>
+                <%end%>
+
+              </div>
               <div class="mb-3 ">
                 <label class=" file optional" for="service_photos">Photos </label>
                 <input name="service[photos][]" type="hidden" autocomplete="off"/>
                 <input class="form-control service-shrink file optional" multiple="multiple" type="file" name="service[photos][]" id="service_photos"/>
               </div>
             </div>
-
           </div>
 
         <div class="service-flex-center">
