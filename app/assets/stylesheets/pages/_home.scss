@@ -29,6 +29,7 @@
   margin-left: 100px;
   margin-right: 100px;
 }
+
 .intro {
   display: flex;
   flex-direction: row;
@@ -94,12 +95,22 @@
   border-radius: 20px;
   background:linear-gradient(to bottom left, rgba(165, 165, 165, 0.1) 0%, rgba(14, 124, 12, 0.1) 100%);
   margin-bottom: 57px;
+  padding: 20px;
+}
 
-  .full-title-junk {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
+.full-title {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  p {
+    margin: 0;
   }
+}
+
+.junk-home-cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .junk-card-home {
@@ -107,8 +118,8 @@
   background:linear-gradient(to bottom right, rgb(0, 201, 32) 0%, rgb(7, 47, 14) 100%);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border: 3px solid white;
-  width: 280px;
-  height: 358px;
+  width: 335px;
+  height: 430px;
   border-radius: 10px;
   background-color: $lighter-grey;
   margin: 0;
@@ -116,6 +127,7 @@
   img {
     height: 150px;
     width: 150%;
+    z-index: 1;
   }
 }
 
@@ -129,20 +141,33 @@
   h2 {
     font-family: $body-font;
     color: white;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     text-decoration: none;
-    padding-top: 5px;
+    margin-top: 14px;
+    margin-bottom: 20px;
   }
   p {
     font-family: $body-font;
     color: white;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-    margin-bottom: 5px;
+    margin-bottom: 33px;
+    margin-left: 10px;
     flex: 1 1 0%;
   }
+  .fa-heart {
+    color: white;
+    margin-right: 10px;
+    --fa-display: block;
+    text-align: right;
+  }
+}
+
+.primary-button-3 {
+  float: right;
+  margin-right: 10px;
 }
 
 .craft-home-box {
