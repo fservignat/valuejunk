@@ -48,9 +48,9 @@
                 </label>
                 <%# <input class="string required" type="text" name="service[craft]" id="service_craft" /> %>
                 <select class="form-select select required" name="service[craft]" id="service_craft">
-                  <% $craft.each do |value| %>
-                    <option value=<%=value%>%><%=value%></option>
-                  <%end %>
+                  <% $crafts.each do |craft| %>
+                    <option value=<%=craft%>><%=craft%></option>
+                  <%end%>
 
                 </select>
               </div>
