@@ -98,12 +98,10 @@
   padding: 5px;
 }
 
-.full-title {
+.full-title-junk {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-right: 20px;
-  text-align: end;
   margin-right: 20px;
   text-align: end;
   p {
@@ -111,7 +109,7 @@
     font-family: $body-font;
     font-weight: 400;
     font-size: 24px;
-    color: $dark-grey;
+    color: $dark-green;
   }
 }
 
@@ -193,4 +191,22 @@
     font-weight:500;
     color: white;
   }
+}
+
+.full-title-craft {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 20px;
+  text-align:start;
+  p {
+    margin: 0;
+    font-family: $body-font;
+    font-weight: 400;
+    font-size: 24px;
+    color: white;
+  }
+}
+#community {
+  color: $green;
 }

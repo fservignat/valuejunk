@@ -22,7 +22,7 @@
 
 
   <div class="junk-home-box">
-    <div class="full-title">
+    <div class="full-title-junk">
       <%= render "shared/title-market" %>
       <p>Buy, sell, exchange, donate. Simple as that!</p>
     </div>
@@ -131,16 +131,13 @@
 
   <div class="craft-home-box">
     <div class="full-title-craft">
-      <div class="craft-title">
-        <h2>CRAFTPEOPLE</h2>
-        <div class="title-panel"></div>
-        <p>Collaborate with your <span>community</span> to give life back to junk</p>
-      </div>
+      <%= render "shared/title-craftpeople" %>
+      <p>Collaborate with your <span id="community">community</span> to give life back to junk</p>
     </div>
 
     <div class="craftpeople-carousel">
     </div>
 
-    <%= link_to "Collaborate", services_path, class: "primary-button-1" %>
+    <%= link_to "Collaborate", services_path, class: "primary-button-3" %>
   </div>
 </div>
