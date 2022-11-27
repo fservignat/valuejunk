@@ -1,7 +1,7 @@
 .service-card {
   display: grid;
   position: relative;
-  gap: 7px;
+  gap: 50px;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -12,7 +12,8 @@
   padding: 5px;
 
   p {
-    color: rgb(36, 36, 36);
+    color: black;
+
   }
 
   i {
@@ -29,7 +30,7 @@
 }
 
 .service-card-col5 {
-  grid-template-columns: 10% 20% 15% 40% 15%;
+  grid-template-columns: 20% 10% 40% 30%;
   margin: 35px 0;
 
   div {
@@ -41,6 +42,11 @@
   font-family: $headers-font;
   font-size: 1em;
   font-weight: bold;
+
+}
+
+.service-content-left {
+  padding-left: 120px;
 }
 
 .service-card-craft {
@@ -48,6 +54,6 @@
 }
 
 .service-card-font {
-  font-family: $body-font;
+  // font-family: $body-font;
   font-size: 0.75em;
 }
