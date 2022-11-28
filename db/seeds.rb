@@ -19,7 +19,7 @@ puts "Creating User Owner"
 k_user = User.create!(
   username: "Kelly",
   email: "Kelly@outlook.com",
-  address: "UPS Access Point, 11 Rue Jean Jaurès, 77100 Meaux, France",
+  address: "23-1 Rue de la Marne, 94400 Vitry-sur-Seine, France",
   bio: "I am a fashion designer and experience in making fancy dress and costume",
   password: "123456"
 )
@@ -29,7 +29,7 @@ puts "Creating User Owner"
 t_user = User.create!(
   username: "Taylor",
   email: "Taylor@outlook.com",
-  address: "UPS Access Point, 11 Rue Jean Jaurès, 77100 Meaux, France",
+  address: "6 Parvis Notre-Dame - Pl. Jean-Paul II, 75004 Paris, France",
   bio: "Blacksmith by trade and enjoy repairing furniture",
   password: "123456"
 )
@@ -39,7 +39,7 @@ puts "Creating User Owner"
 r_user = User.create!(
   username: "Ricky",
   email: "Ricky@outlook.com",
-  address: "23 Rue de Lutèce, 92160 Antony, France",
+  address: "6 Parvis Notre-Dame - Pl. Jean-Paul II, 75004 Paris, France",
   bio: "I am a carpenter and love to build furniture",
   password: "123456"
 )

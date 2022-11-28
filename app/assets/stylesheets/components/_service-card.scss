@@ -1,0 +1,59 @@
+.service-card {
+  display: grid;
+  position: relative;
+  gap: 30px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin-left: 20px;
+  height: 100px;
+  border-radius: 25px 10px 10px 25px;
+  background-color: $light-grey;
+  padding: 5px;
+
+  p {
+    color: black;
+
+  }
+
+  i {
+    color: rgb(36, 36, 36);
+  }
+
+}
+
+.service-card-img {
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  border: 2px solid white;
+}
+
+.service-card-col4 {
+  grid-template-columns: 25% 10% 40% 25%;
+  margin: 35px 0;
+
+  div {
+    overflow: hidden;
+  }
+}
+
+.service-card-title {
+  font-family: $headers-font;
+  font-size: 1em;
+  font-weight: bold;
+
+}
+
+.service-content-left {
+  padding-left: 120px;
+}
+
+.service-card-craft {
+  font-size: 1.3em;
+}
+
+.service-card-font {
+  // font-family: $body-font;
+  font-size: 0.75em;
+}
