@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2022_11_27_135447) do
+=======
+ActiveRecord::Schema[7.0].define(version: 2022_11_26_135652) do
+>>>>>>> 641de06f02bb80d6fca640ab676635ae6433e134
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,6 +56,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_27_135447) do
     t.datetime "updated_at", null: false
     t.string "title"
     t.string "address"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_junks_on_user_id"
   end
 
@@ -74,6 +80,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_27_135447) do
     t.datetime "updated_at", null: false
     t.string "title"
     t.string "address"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_services_on_user_id"
   end
 

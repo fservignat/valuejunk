@@ -54,7 +54,11 @@ gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem 'faker'
 gem "cloudinary"
+<<<<<<< HEAD
 gem 'acts-as-taggable-on', '~> 9.0'
+=======
+gem "geocoder"
+>>>>>>> 641de06f02bb80d6fca640ab676635ae6433e134
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

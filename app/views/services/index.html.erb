@@ -1,15 +1,20 @@
-<div class="container">
+<div class="main-container">
 
   <h1>Craftspeople</h1>
-
-  <% @services.each do |service| %>
-    <p>Craft: <%= service.craft %></p>
-    <p>Description: <%= service.description %></p>
-    <p>Price: <%= service.price %></p>
-    <p>Address: <%= service.address %></p>
-    <%= link_to "Show", service_path(service) %>|
-    <%= link_to "Delete", service_path(service), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-  <%end%>
+  <br>
+  <br>
 
 
+    <% @services.each do |service| %>
+      <%= link_to service_path(service) do %>
+        <%= render "shared/service-card", service: service %>
+      <%end%>
+
+      <%# <%= link_to "Delete", service_path(service), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    <%end%>
+
+</div>
+
+<div class="map">
+  <%= render "shared/map"%>
 </div>
