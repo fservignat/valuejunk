@@ -5,17 +5,13 @@
     font-family: $headers-font;
     font-size: 68px;
     font-weight: bold;
-    color: $green;
+    color: $pink;
     margin: 0;
     z-index: 1;
   }
 
-  #pale-green {
-    color: $pale-green;
-  }
-
   .title-panel {
-    background-color: $pale-green;
+    background-color: white;
     width: 287px;
     height: 55px;
     // z-index: -1;
