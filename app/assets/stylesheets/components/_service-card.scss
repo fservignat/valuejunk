@@ -1,7 +1,7 @@
 .service-card {
   display: grid;
   position: relative;
-  gap: 50px;
+  gap: 30px;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -30,7 +30,7 @@
 }
 
 .service-card-col4 {
-  grid-template-columns: 20% 10% 40% 30%;
+  grid-template-columns: 25% 10% 40% 25%;
   margin: 35px 0;
 
   div {
