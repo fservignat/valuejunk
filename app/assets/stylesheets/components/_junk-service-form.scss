@@ -6,7 +6,7 @@
 }
 
 .junk-service-form {
-  display: flex;
+  // display: flex;
   height: 700px;
   width: 800px;
   justify-content: center;
@@ -48,6 +48,10 @@
   background: $pale-green;
   justify-self: center;
 
+}
+
+.junk-service-tab-active span {
+  padding-bottom: 10px;
 }
 
 .tab-margin {
