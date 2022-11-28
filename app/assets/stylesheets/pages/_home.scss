@@ -231,8 +231,7 @@
   .primary-button-3 {
     position: absolute;
     bottom: 20px;
-    left:50%;
-    margin-left: -85px;
+    margin-left: 50px;
   }
 
   p {
@@ -240,6 +239,8 @@
     font-size: 24px;
     font-weight:500;
     color: white;
+    display: flex;
+    justify-content: center;
   }
 }
 
