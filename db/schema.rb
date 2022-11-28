@@ -52,6 +52,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_26_135652) do
     t.datetime "updated_at", null: false
     t.string "title"
     t.string "address"
+    t.boolean "delivery"
     t.float "latitude"
     t.float "longitude"
     t.index ["user_id"], name: "index_junks_on_user_id"
