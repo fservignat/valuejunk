@@ -1,15 +1,39 @@
-<h2><%= @junk.title %></h2>
-<p><%= @junk.address %></p>
+<div class="main-container">
 
-<% @junk.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
+<br>
+<div class="junk-show-form">
+  <div>
+  <h2><%= @junk.title %></h2>
+  </div>
 
-<%= link_to "Delete",
-  junk_path(@junk),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
+<div class="junk-show-form-content">
 
-<div class="map">
-  <%= render "shared/map"%>
+    <div>
+      <%= render "shared/junk-card", junks: @junk_array %>
+    </div>
+<div class="junk-show-form-info">
+
+    <div>
+    <p><%= @junk.price %>€</p>
+    </div>
+
+    <div>
+    <p><%= @junk.address %></p>
+    </div>
+
+    <div>
+    <p><%= @junk.description %></p>
+    </div>
+  </div>
+</div>
+
+  <%= link_to "Delete",
+    junk_path(@junk),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+
+  <div class="map">
+    <%= render "shared/map"%>
+  </div>
+</div>
 </div>

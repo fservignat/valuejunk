@@ -1,4 +1,11 @@
-<%= simple_form_for @junk do |f| %>
+<div class="main-container">
+
+<br>
+<br>
+<br>
+<br>
+
+  <%= simple_form_for @junk do |f| %>
 
   <%= f.input :title %>
   <%= f.input :description %>
@@ -8,4 +15,5 @@
   <%= f.input :address %>
   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit %>
-<% end %>
+  <% end %>
+</div>
