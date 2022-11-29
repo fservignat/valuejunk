@@ -116,6 +116,8 @@ junk = Junk.new(
   description: "A single bed frame made from pine wood. It has a spring base and dimension 190x90cm.",
   category: "Furniture",
   price: 50,
+  donation: false,
+  delivery: false,
   user: r_user)
   # file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668158134/development/Experimental_Cocktail_Club_gzeegk.png')
   # junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
