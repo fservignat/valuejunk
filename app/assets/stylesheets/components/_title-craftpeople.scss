@@ -1,0 +1,25 @@
+.craft-title {
+
+  h1 {
+    position: relative;
+    font-family: $headers-font;
+    font-size: 68px;
+    font-weight: bold;
+    color: $green;
+    margin: 0;
+    z-index: 1;
+  }
+
+  #pale-green {
+    color: $pale-green;
+  }
+
+  .title-panel {
+    background-color: $pale-green;
+    width: 287px;
+    height: 55px;
+    position: absolute;
+    top: 32px;
+    left: 240px;
+  }
+}
