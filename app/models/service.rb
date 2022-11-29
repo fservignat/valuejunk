@@ -12,6 +12,8 @@ class Service < ApplicationRecord
   validates :address, presence: true
   validates :description, length: { in: 10..400 }
   validates :craft, presence: true
-  validates :craft, inclusion: { in: ["Ceramics and glass", "Fibre and textile", "Flower", "Leatherwork", "Houseware", "Fashion", "Needlework", "Paper", "Wood and furniture", "Stone", "Metal"]}
+  validates :craft, inclusion: { in: ["Ceramics and glass", "Fibre and textile", "Flower", "Leatherwork", "Houseware", "Fashion", "Needlework", "Paper", "Wood and furniture", "Stone", "Metal"] }
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
