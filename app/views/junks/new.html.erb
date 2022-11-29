@@ -1,13 +1,19 @@
 <div class="main-container">
+
+<br>
+<br>
+<br>
+<br>
+
   <%= simple_form_for @junk do |f| %>
 
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%# The placeholder below is temporarly and should become a dropdown  %>
-    <%= f.input :category,  placeholder: '"Furniture", "Electronics / Appliance", "Toys", "Clothing", "Plastics", "Décor", "Arts", "Others"' %>
-    <%= f.input :price %>
-    <%= f.input :address %>
-    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-    <%= f.submit %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%# The placeholder below is temporarly and should become a dropdown  %>
+  <%= f.input :category,  placeholder: '"Furniture", "Electronics / Appliance", "Toys", "Clothing", "Plastics", "Décor", "Arts", "Others"' %>
+  <%= f.input :price %>
+  <%= f.input :address %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.submit %>
   <% end %>
 </div>
