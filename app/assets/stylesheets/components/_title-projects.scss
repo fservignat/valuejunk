@@ -1,12 +1,11 @@
 .projects-title {
-  position: relative;
 
   h1 {
+    position: relative;
     font-family: $headers-font;
     font-size: 68px;
     font-weight: bold;
     color: $pink;
-    margin: 0;
     z-index: 1;
   }
 
@@ -14,9 +13,8 @@
     background-color: white;
     width: 287px;
     height: 55px;
-    z-index: -1;
     position: absolute;
     top: 32px;
-    left: 240px;
+    left: 315px;
   }
 }

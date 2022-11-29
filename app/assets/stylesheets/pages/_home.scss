@@ -97,6 +97,7 @@
   margin-bottom: 57px;
   padding: 5px;
   position: relative;
+  z-index: -1;
   .primary-button-3 {
     position: absolute;
     bottom: 20px;
@@ -125,23 +126,32 @@
   align-items: center;
 }
 
-.junk-card-home {
-  overflow: hidden;
-  background:linear-gradient(to bottom right, rgb(0, 201, 32) 0%, rgb(7, 47, 14) 100%);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border: 3px solid white;
-  width: 335px;
-  height: 430px;
-  border-radius: 10px;
-  background-color: $lighter-grey;
-  margin: 0;
-  padding: 0;
+.middle-card {
+  position: relative;
+
   img {
-    height: 150px;
-    width: 150%;
+    height: 200px;
+    width: 130%;
     z-index: 1;
+    position: absolute;
+    right: -13%;
+    top: -11%;
+  }
+
+  .junk-card-home {
+    overflow: hidden;
+    background:linear-gradient(to bottom right, rgb(0, 201, 32) 0%, rgb(7, 47, 14) 100%);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border: 3px solid white;
+    width: 335px;
+    height: 430px;
+    border-radius: 10px;
+    background-color: $lighter-grey;
+    margin: 0;
+    padding: 0;
   }
 }
+
 
 .junk-card-home-content {
   padding-left: 10px;
@@ -149,6 +159,7 @@
   height: 36%;
   display: flex;
   flex-direction: column;
+  padding-top: 150px;
 
   h2 {
     font-family: $body-font;
@@ -228,6 +239,7 @@
   background:linear-gradient(to bottom right, rgb(97, 10, 129) 0%, rgb(7, 11, 69) 100%);
   margin-bottom: 57px;
   position: relative;
+
   .primary-button-3 {
     position: absolute;
     bottom: 20px;
@@ -241,6 +253,7 @@
     color: white;
     display: flex;
     justify-content: center;
+    padding-left: 50px;
   }
 }
 
@@ -248,16 +261,42 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-left: 20px;
-  text-align:start;
+}
+
+.projects-home-content {
+  padding-top: 30px;
   p {
     margin: 0;
     font-family: $body-font;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 22px;
     color: white;
+    display: flex;
+    justify-content: flex-start;
   }
 }
+
 #upcycling {
   color: $light-green;
+}
+
+.projects-home-images {
+  position: relative;
+}
+
+#hat {
+  width: 410px;
+  height: 460px;
+  position: absolute;
+  right: 40px;
+  bottom: 25px;
+}
+#words {
+  width: 600px;
+  height: 315px;
+  z-index: 1;
+  position: absolute;
+  bottom: 50px;
+  right: 325px;
+
 }

@@ -68,17 +68,17 @@
         </div>
       </div>
 
-      <div class="junk-card-home">
-        <div class="junk-card-home-img">
-          <%= image_tag("junks-card-homepage.png") %>
-        </div>
-        <div class="junk-card-home-content">
-          <h2 class="text-center">All you can find</h2>
-          <p>Few</p>
-          <p>Clicks</p>
-          <p>Away</p>
-          <div class="heart">
-            <i class="fa-regular fa-heart fa-2xl"></i>
+      <div class="middle-card">
+        <%= image_tag("junks-card-homepage.png") %>
+        <div class="junk-card-home">
+          <div class="junk-card-home-content">
+            <h2 class="text-center">All you can find</h2>
+            <p>Few</p>
+            <p>Clicks</p>
+            <p>Away</p>
+            <div class="heart">
+              <i class="fa-regular fa-heart fa-2xl"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -140,15 +140,15 @@
   </div>
 
     <div class="projects-home-box">
-    <div class="full-title-projects">
+    <div class="full-title-projects text-center">
       <%= render "shared/title-projects" %>
     </div>
     <div class="projects-home-content">
       <p>There are so many things you can do with junk.</p>
       <p>Many trends use <span id="upcycling">upcycling</span> to give objects a second life.</p>
       <div class="project-home-images">
-        <img src="img-projects-homepage.png" alt="">
-        <img src="words-projects-homepage.png" alt="">
+        <%= image_tag("img-projects-homepage.jpeg", id: "hat") %>
+        <%= image_tag("words-projects-homepage.png", id: "words") %>
       </div>
       <%= link_to "Create", root_path, class: "primary-button-3" %>
     </div>
