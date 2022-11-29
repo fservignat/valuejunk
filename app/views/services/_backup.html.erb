@@ -2,7 +2,7 @@
 
   <%= f.input :title %>
   <%= f.input :description %>
-  <%= f.input :craft %>
+  <%= f.input :craft, as: :check_boxes, collection: [ "Western", "chinese", "asian" ] %>
   <%= f.input :volunteer, label: "Volunteer", as: :boolean %>
   <%= f.input :price %>
   <%= f.input :address %>
