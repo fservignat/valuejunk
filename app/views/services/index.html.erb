@@ -1,10 +1,7 @@
 <div class="main-container">
 
   <h1>Craftspeople</h1>
-  <br>
-  <br>
-
-
+<div class="service-content-center">
     <% @services.each do |service| %>
       <%= link_to service_path(service) do %>
         <%= render "shared/service-card", service: service %>
@@ -12,7 +9,7 @@
 
       <%# <%= link_to "Delete", service_path(service), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
     <%end%>
-
+</div>
 </div>
 
 <div class="map">
