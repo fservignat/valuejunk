@@ -1,9 +1,12 @@
 class Service < ApplicationRecord
+
   belongs_to :user
 
   has_many_attached :photos
 
   has_many :specialties, through: :service_specialties
+
+  $crafts = ["","Ceramics and glass", "Fibre and textile", "Flower", "Leatherwork", "Houseware", "Fashion", "Needlework", "Paper", "Wood and furniture", "Stone", "Metal"]
 
   validates :title, presence: true
   validates :address, presence: true
