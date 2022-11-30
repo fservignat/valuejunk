@@ -1,23 +1,31 @@
-<div class="service-card service-card-col4 service-card-font">
-  <%# <div> </div> %>
 
-  <div class="service-content-left">
-    <p class="service-card-title"><%= service.title %></p>
-    <p class="service-card-craft"><%= service.craft %></p>
+<div class="main-container">
+
+  <div class="service-card service-card-col4 service-card-font">
+    <%# <div> </div> %>
+
+    <div class="service-content-left">
+      <p class="service-card-name"><%= current_user.username %></p>
+      <p class="service-card-craft"><%= service.craft %></p>
+    </div>
+
+    <div>
+      <p class=""><%= service.address.split(",")[1] %></p>
+      <%if service.volunteer%>
+        <p class="">Volunteer</p>
+      <%else%>
+        <p class=""><%= service.price %> €/hr</p>
+      <%end%>
+    </div>
+
+    <div>
+      <i>"<%= service.description %>"</i>
+    </div>
+
+    <div>
+      <i>Specialities:<%= %></i>
+    </div>
+
+    <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1669482597/Kelly_n4hdii.jpg", class: "avatar-large service-card-img") %>
   </div>
-
-  <div>
-    <p class=""><%= service.address %></p>
-    <p class="">€<%= service.price %> / hr</p>
-  </div>
-
-  <div>
-    <i>"<%= service.description %>"</i>
-  </div>
-
-  <div>
-    <i>Specialities:<%= %></i>
-  </div>
-
-  <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1669482597/Kelly_n4hdii.jpg", class: "avatar-large service-card-img") %>
 </div>
