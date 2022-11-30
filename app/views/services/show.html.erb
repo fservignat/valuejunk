@@ -1,40 +1,41 @@
 <div class="main-container">
   <h1>Craftspeople</h1>
 
+  <div class="service-show-center">
+    <%= render "shared/service-card", service: @service %>
+  </div>
 
-
-    <div>
-      <%= render "shared/service-card", service: @service %>
+    <div class="service-show-content">
+      <div>
+        <p>Address</p>
+        <p class="service-show-border"><%= @service.address %></p>
+      </div>
+      <div>
+        <p class="service-show-border"><%= @service.price %> €/hr</p>
+      </div>
+      <div>
+        <p>Craft</p>
+        <p class="service-show-border"><%= @service.craft %></p>
+      </div>
     </div>
 
+    <div class="service-show-content">
       <div>
-        <div>
-          <p>Address</p>
-          <p class="service-show-border"><%= @service.address %></p>
-        </div>
-        <div>
-          <p><%= @service.price %> €/hr</p>
-        </div>
-        <div>
-          <p>Craft</p>
-          <p><%= @service.craft %></p>
-        </div>
+        <p>Description</p>
+        <p class="service-show-description"><%= @service.description %></p>
       </div>
-
       <div>
-        <div>
-          <p>Description</p>
-          <p><%= @service.description %></p>
-        </div>
-        <div>
-          <p>Specialities: <%= %></p>
-        </div>
+        <p>Specialities</p>
+        <p class="service-show-specialities"> <%= %></p>
       </div>
+    </div>
 
-    <% @service.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
-  </div>
+
+
+  <% @service.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+</div>
 
   <div class="map">
     <%= render "shared/map"%>
