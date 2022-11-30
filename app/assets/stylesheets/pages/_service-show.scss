@@ -1,3 +1,27 @@
+.service-show-center {
+  display: flex;
+  justify-content: center;
+}
+
+
+.service-show-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 300px 0 300px;
+}
+
+.service-show-description {
+  border-style: groove;
+  width: 500px;
+  height: 200px;
+}
+
+.service-show-specialities {
+  border-style: groove;
+  width: 300px;
+  height: 100px;
+}
+
 .service-show-border {
   border-style: groove;
   padding: 5px;
