@@ -97,11 +97,11 @@
   margin-bottom: 57px;
   padding: 5px;
   position: relative;
-  z-index: -1;
   .primary-button-3 {
     position: absolute;
     bottom: 20px;
     right: 50px;
+    z-index: 1;
   }
 }
 
@@ -240,10 +240,12 @@
   margin-bottom: 57px;
   position: relative;
 
+
   .primary-button-3 {
     position: absolute;
     bottom: 20px;
     margin-left: 50px;
+    z-index: 1;
   }
 
   p {
