@@ -4,7 +4,6 @@
   </div>
 </div>
 
-
 <div class="container-home">
 
   <div class="intro">
@@ -22,12 +21,136 @@
   </div>
 
 
-    <div class="junk-home-box">
-      <div class="junk-home-cards">
+  <div class="junk-home-box">
+    <div class="full-title-junk">
+      <%= render "shared/title-market" %>
+      <p>Buy, sell, exchange, donate. Simple as that!</p>
+    </div>
+    <div class="junk-home-cards">
+
+      <div class="junk-card">
+        <div class="junk-card-img">
+          <div id="carouselExampleControls-1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <%= image_tag("wooden-rocking-chair.jpg") %>
+              </div>
+              <div class="carousel-item">
+                <%= image_tag("wooden-background.jpg") %>
+              </div>
+              <div class="carousel-item">
+                <%= image_tag("yarn-balls.jpg") %>
+              </div>
+            </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls-1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls-1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+        </div>
+
+        <div class="junk-card-content">
+          <h2>Wooden rocking chair with wicker back</h2>
+          <p>25 €</p>
+          <p class="secondary-button-3">Delivery possible</p>
+          <div class="junk-card-bottom">
+            <div class="address-date">
+              <p>Paris 75005 - today, 08:24</p>
+            </div>
+            <div class="heart">
+              <i class="fa-regular fa-heart fa-lg"></i>
+            </div>
+          </div>
+        </div>
       </div>
-      <%= link_to "Search", junks_path, class: "primary-button-1" %>
+
+      <div class="middle-card">
+        <%= image_tag("junks-card-homepage.png") %>
+        <div class="junk-card-home">
+          <div class="junk-card-home-content">
+            <h2 class="text-center">All you can find</h2>
+            <p>Few</p>
+            <p>Clicks</p>
+            <p>Away</p>
+            <div class="heart">
+              <i class="fa-regular fa-heart fa-2xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="junk-card">
+        <div class="junk-card-img">
+          <div id="carouselExampleControls-1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <%= image_tag("wooden-rocking-chair.jpg") %>
+              </div>
+              <div class="carousel-item">
+                <%= image_tag("wooden-background.jpg") %>
+              </div>
+              <div class="carousel-item">
+                <%= image_tag("yarn-balls.jpg") %>
+              </div>
+            </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls-1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls-1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+            <p class="donation">DONATION</p>
+        </div>
+
+        <div class="junk-card-content">
+          <h2>Wool balls, white and grey</h2>
+          <p>0 €</p>
+          <div class="junk-card-bottom">
+            <div class="address-date">
+              <p>London E1 7AY - yesterday, 21:06</p>
+            </div>
+            <div class="heart">
+              <i class="fa-regular fa-heart fa-lg"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <%= link_to "Search", junks_path, class: "primary-button-3" %>
+  </div>
+
+  <div class="craft-home-box">
+    <div class="full-title-craft">
+      <%= render "shared/title-craftpeople" %>
+      <p>Collaborate with your <span id="community">community</span> to give life back to junk</p>
     </div>
 
+    <div class="craftpeople-carousel">
+    </div>
 
-  <%= link_to "Collaborate", services_path %>
+    <%= link_to "Collaborate", services_path, class: "primary-button-3" %>
+  </div>
+
+    <div class="projects-home-box">
+    <div class="full-title-projects text-center">
+      <%= render "shared/title-projects" %>
+    </div>
+    <div class="projects-home-content">
+      <p>There are so many things you can do with junk.</p>
+      <p>Many trends use <span id="upcycling">upcycling</span> to give objects a second life.</p>
+      <div class="project-home-images">
+        <%= image_tag("img-projects-homepage.jpg", id: "hat") %>
+        <%= image_tag("words-projects-homepage.png", id: "words") %>
+      </div>
+      <%= link_to "Create", root_path, class: "primary-button-3" %>
+    </div>
+  </div>
 </div>

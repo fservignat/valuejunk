@@ -1,0 +1,21 @@
+.projects-title {
+
+  h1 {
+    position: relative;
+    font-family: $headers-font;
+    font-size: 68px;
+    font-weight: bold;
+    color: $pink;
+    z-index: 1;
+    padding-top: 20px;
+  }
+
+  .title-panel {
+    background-color: white;
+    width: 287px;
+    height: 55px;
+    position: absolute;
+    top: 15px;
+    left: 315px;
+  }
+}

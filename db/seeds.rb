@@ -22,7 +22,10 @@ k_user = User.create!(
   address: "23-1 Rue de la Marne, 94400 Vitry-sur-Seine, France",
   bio: "I am a fashion designer and experience in making fancy dress and costume",
   password: "123456"
-)
+  )
+  file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1669482597/Kelly_n4hdii.jpg')
+  k_user.photo.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
+k_user.save!
 puts "User created."
 
 puts "Creating User Owner"
@@ -116,6 +119,8 @@ junk = Junk.new(
   description: "A single bed frame made from pine wood. It has a spring base and dimension 190x90cm.",
   category: "Furniture",
   price: 50,
+  donation: false,
+  # delivery: false,
   user: r_user)
   # file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668158134/development/Experimental_Cocktail_Club_gzeegk.png')
   # junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')

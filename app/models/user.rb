@@ -14,6 +14,9 @@ class User < ApplicationRecord
   has_many :messages, through: :services
   has_many :messages, through: :projects
 
+  has_one_attached :photo
+
+
   validates :username, presence: true
   validates :username, uniqueness: true
   validates :username, length: { in: 5..14 }

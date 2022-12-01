@@ -1,6 +1,4 @@
 // Specific CSS for your home-page
-
-
 .banner {
   margin-bottom: 57px;
   img {
@@ -9,10 +7,6 @@
     width: 100%;
     height: 100vh;
   }
-}
-
-.banner-content {
-
 }
 
 // @media (min-width: 480px) {
@@ -35,6 +29,7 @@
   margin-left: 100px;
   margin-right: 100px;
 }
+
 .intro {
   display: flex;
   flex-direction: row;
@@ -81,14 +76,229 @@
   #collaborative {
     font-family: $headers-font;
     font-size: 36px;
-    font-weight: 600;
+    font-weight: 500;
     color: $green;
   }
 }
-
 
 .intro-form {
   width: 600px;
   height: 340px;
   margin-left: 10px;
+}
+
+
+.junk-home-box {
+  // position: relative;
+  width: 1250;
+  height: 600px;
+  border-radius: 20px;
+  background:linear-gradient(to bottom left, rgba(165, 165, 165, 0.1) 0%, rgba(14, 124, 12, 0.1) 100%);
+  margin-bottom: 57px;
+  padding: 5px;
+  position: relative;
+  .primary-button-3 {
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    z-index: 1;
+  }
+}
+
+.full-title-junk {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-right: 20px;
+  text-align: end;
+  p {
+    margin: 0;
+    font-family: $body-font;
+    font-weight: 400;
+    font-size: 24px;
+    color: $dark-green;
+  }
+}
+
+.junk-home-cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.middle-card {
+  position: relative;
+
+  img {
+    height: 200px;
+    width: 130%;
+    z-index: 1;
+    position: absolute;
+    right: -13%;
+    top: -11%;
+  }
+
+  .junk-card-home {
+    overflow: hidden;
+    background:linear-gradient(to bottom right, rgb(0, 201, 32) 0%, rgb(7, 47, 14) 100%);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border: 3px solid white;
+    width: 335px;
+    height: 430px;
+    border-radius: 10px;
+    background-color: $lighter-grey;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+.junk-card-home-content {
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 36%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+
+  h2 {
+    font-family: $body-font;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 14px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-family: $body-font;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 33px;
+    margin-left: 10px;
+    flex: 1 1 0%;
+  }
+  .fa-heart {
+    color: white;
+    margin-right: 10px;
+    --fa-display: block;
+    text-align: right;
+  }
+}
+
+
+
+.craft-home-box {
+  width: 1250;
+  height: 600px;
+  border-radius: 20px;
+  background-image: url("https://res.cloudinary.com/dfkgih0bp/image/upload/v1668940531/development/ValueJunk/internal%20img%20%28website%20itself%29/images/img-craftpeople-homepage_zyki9o.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 57px;
+  position: relative;
+  .primary-button-3 {
+    position: absolute;
+    bottom: 20px;
+    left:50%;
+    margin-left: -85px;
+  }
+
+  p {
+    font-family: $body-font;
+    font-size: 24px;
+    font-weight:500;
+    color: white;
+  }
+}
+
+.full-title-craft {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 20px;
+  text-align:start;
+  p {
+    margin: 0;
+    font-family: $body-font;
+    font-weight: 400;
+    font-size: 24px;
+    color: white;
+  }
+}
+#community {
+  color: $green;
+}
+
+.projects-home-box {
+  width: 1250;
+  height: 600px;
+  border-radius: 20px;
+  background:linear-gradient(to bottom right, rgb(97, 10, 129) 0%, rgb(7, 11, 69) 100%);
+  margin-bottom: 57px;
+  position: relative;
+
+
+  .primary-button-3 {
+    position: absolute;
+    bottom: 20px;
+    margin-left: 50px;
+    z-index: 1;
+  }
+
+  p {
+    font-family: $body-font;
+    font-size: 24px;
+    font-weight:500;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
+  }
+}
+
+.full-title-projects {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.projects-home-content {
+  padding-top: 30px;
+  p {
+    margin: 0;
+    font-family: $body-font;
+    font-weight: 400;
+    font-size: 22px;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+#upcycling {
+  color: $light-green;
+}
+
+.projects-home-images {
+  position: relative;
+}
+
+#hat {
+  width: 410px;
+  height: 460px;
+  position: absolute;
+  right: 40px;
+  bottom: 25px;
+}
+#words {
+  width: 600px;
+  height: 315px;
+  z-index: 1;
+  position: absolute;
+  bottom: 50px;
+  right: 325px;
+
 }
