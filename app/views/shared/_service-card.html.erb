@@ -22,7 +22,12 @@
     </div>
 
     <div>
-      <i>Specialities:<%= %></i>
+      <i>Specialities</i>
+      <p>
+        <% service.speciality_list.each do |speciality| %>
+          <%= link_to speciality, tagged_path(speciality: speciality) %>
+        <% end %>
+      </p>
     </div>
 
 

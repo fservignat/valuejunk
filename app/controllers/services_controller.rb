@@ -16,6 +16,15 @@ class ServicesController < ApplicationController
 
   end
 
+  def tagged
+
+    if params[:speciality].present?
+      @services = Service.tagged_with(params[:speciality])
+    else
+      @services = Service.all
+    end
+  end
+
   def show
     @markers = [{lat: @service.latitude, lng: @service.longitude, image_url: helpers.asset_url("person-solid.svg")}]
   end
