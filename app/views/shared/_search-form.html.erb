@@ -1,4 +1,10 @@
-<%= form_with url: junks_path, method: :get, class: "d-flex" do %>
+<%= form_with url: junks_path, method: :get do %>
+
+    <label for="category">Category</label>
+    <select name="category">
+      <option value= "Items">Items</option>
+      <option value= "Services">Services</option>
+    </select>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
