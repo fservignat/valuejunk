@@ -1,6 +1,7 @@
 // Specific CSS for your home-page
 .banner {
   margin-bottom: 57px;
+
   img {
     background-size: cover;
     background-position: center;
@@ -45,6 +46,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   p {
     font-family: $body-font;
     font-weight: 400;
@@ -52,27 +54,32 @@
     color: black;
     padding: 0 20px;
   }
+
   #title {
     font-family: $headers-font;
     font-size: 30px;
     font-weight: 600;
     color: $green;
   }
+
   #upcycling {
     font-weight: 600;
     color: $green;
   }
+
   #fun {
     font-family: $headers-font;
     font-weight: 600;
     color: $green;
   }
+
   #trendy {
     font-family: $headers-font;
     font-size: 30px;
     font-weight: 600;
     color: $green;
   }
+
   #collaborative {
     font-family: $headers-font;
     font-size: 36px;
@@ -93,10 +100,11 @@
   width: 1250;
   height: 600px;
   border-radius: 20px;
-  background:linear-gradient(to bottom left, rgba(165, 165, 165, 0.1) 0%, rgba(14, 124, 12, 0.1) 100%);
+  background: linear-gradient(to bottom left, rgba(165, 165, 165, 0.1) 0%, rgba(14, 124, 12, 0.1) 100%);
   margin-bottom: 57px;
   padding: 5px;
   position: relative;
+
   .primary-button-3 {
     position: absolute;
     bottom: 20px;
@@ -111,6 +119,7 @@
   position: relative;
   margin-right: 20px;
   text-align: end;
+
   p {
     margin: 0;
     font-family: $body-font;
@@ -140,8 +149,8 @@
 
   .junk-card-home {
     overflow: hidden;
-    background:linear-gradient(to bottom right, rgb(0, 201, 32) 0%, rgb(7, 47, 14) 100%);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    background: linear-gradient(to bottom right, rgb(0, 201, 32) 0%, rgb(7, 47, 14) 100%);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border: 3px solid white;
     width: 335px;
     height: 430px;
@@ -170,6 +179,7 @@
     margin-top: 14px;
     margin-bottom: 20px;
   }
+
   p {
     font-family: $body-font;
     color: white;
@@ -180,6 +190,7 @@
     margin-left: 10px;
     flex: 1 1 0%;
   }
+
   .fa-heart {
     color: white;
     margin-right: 10px;
@@ -199,17 +210,18 @@
   background-position: center;
   margin-bottom: 57px;
   position: relative;
+
   .primary-button-3 {
     position: absolute;
     bottom: 20px;
-    left:50%;
+    left: 50%;
     margin-left: -85px;
   }
 
   p {
     font-family: $body-font;
     font-size: 24px;
-    font-weight:500;
+    font-weight: 500;
     color: white;
   }
 }
@@ -219,7 +231,8 @@
   flex-direction: column;
   position: relative;
   margin-left: 20px;
-  text-align:start;
+  text-align: start;
+
   p {
     margin: 0;
     font-family: $body-font;
@@ -228,6 +241,7 @@
     color: white;
   }
 }
+
 #community {
   color: $green;
 }
@@ -236,7 +250,7 @@
   width: 1250;
   height: 600px;
   border-radius: 20px;
-  background:linear-gradient(to bottom right, rgb(97, 10, 129) 0%, rgb(7, 11, 69) 100%);
+  background: linear-gradient(to bottom right, rgb(97, 10, 129) 0%, rgb(7, 11, 69) 100%);
   margin-bottom: 57px;
   position: relative;
 
@@ -251,7 +265,7 @@
   p {
     font-family: $body-font;
     font-size: 24px;
-    font-weight:500;
+    font-weight: 500;
     color: white;
     display: flex;
     justify-content: center;
@@ -267,6 +281,7 @@
 
 .projects-home-content {
   padding-top: 30px;
+
   p {
     margin: 0;
     font-family: $body-font;
@@ -293,6 +308,7 @@
   right: 40px;
   bottom: 25px;
 }
+
 #words {
   width: 600px;
   height: 315px;

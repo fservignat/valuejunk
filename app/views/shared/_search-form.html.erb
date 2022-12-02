@@ -1,0 +1,20 @@
+<%= form_with url: junks_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "What are you looking for?"
+  %>
+  <%= "Min price" %>
+  <%= text_field_tag :query_min_price,
+    params[:query_min_price],
+    class: "form-control",
+    placeholder: ""
+  %>
+  <%= "Max price" %>
+  <%= text_field_tag :query_max_price,
+    params[:query_max_price],
+    class: "form-control",
+    placeholder: ""
+  %>
+  <%= submit_tag "Search", class: "primary-button-1" %>
+<% end %>
