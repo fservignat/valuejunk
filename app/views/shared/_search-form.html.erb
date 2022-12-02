@@ -1,9 +1,10 @@
-<%= form_with url: services_path, method: :get do %>
+<%= form_with url: junks_path, method: :get, data: {search_form_target: "form"} do %>
 
     <label for="category">Category</label>
-    <select name="category">
-      <option value= "Items">Items</option>
-      <option value= "Services">Services</option>
+    <select name="category" data-search-form-target = "category"
+    data-action="click->search-form#update">
+      <option value="Items">Items</option>
+      <option value="Services">Services</option>
     </select>
   <%= text_field_tag :query,
     params[:query],
