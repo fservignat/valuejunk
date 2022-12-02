@@ -1,14 +1,14 @@
 //This is to align the tabs with the form card below
 .junk-service-container {
-  width: 800px;
+  width: 1125px;
   margin: auto;
   padding: 10px;
 }
 
 .junk-service-form {
   // display: flex;
-  height: 700px;
-  width: 800px;
+  height: 850px;
+  width: 1125px;
   justify-content: center;
   align-content: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -19,6 +19,7 @@
 
 .junk-service-tabs-wrap {
   height: 40px;
+
 }
 
 .junk-service-tab {
@@ -32,6 +33,7 @@
   color: $green;
   background: $light-grey;
   text-align: center;
+
 }
 
 .junk-service-tab:hover {
