@@ -1,6 +1,12 @@
 class JunksController < ApplicationController
   def index
-    @junks = Junk.all
+
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR description ILIKE :query"
+      @junks = Junk.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @junks = Junk.all
+    end
       # The `geocoded` scope filters only junks with coordinates
     @markers = @junks.geocoded.map do |junk|
       {
