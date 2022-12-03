@@ -1,0 +1,27 @@
+<%= form_with url: junks_path, method: :get, data: {search_form_target: "form"} do %>
+
+    <label for="category">Category</label>
+    <select name="category" data-search-form-target = "category"
+    data-action="click->search-form#update">
+      <option value="Items">Items</option>
+      <option value="Services">Services</option>
+    </select>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "What are you looking for?"
+  %>
+  <%= "Min price" %>
+  <%= text_field_tag :query_min_price,
+    params[:query_min_price],
+    class: "form-control",
+    placeholder: ""
+  %>
+  <%= "Max price" %>
+  <%= text_field_tag :query_max_price,
+    params[:query_max_price],
+    class: "form-control",
+    placeholder: ""
+  %>
+  <%= submit_tag "Search", class: "primary-button-1" %>
+<% end %>
