@@ -1,12 +1,16 @@
+
+
 <%= simple_form_for(service) do |f| %>
 
   <%= f.input :title %>
   <%= f.input :description %>
-  <%= f.input :craft, as: :check_boxes, collection: [ "Western", "chinese", "asian" ] %>
+  <%= f.input :craft, collection: $crafts %>
   <%= f.input :volunteer, label: "Volunteer", as: :boolean %>
   <%= f.input :price %>
   <%= f.input :address %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.input :speciality_list, input_html: { multiple: true }, collection: ["Fence", "Chair", "Table", "electronics", "spring"] %>
+
+  <%= f.input :photos, as: :file, input_html: { multiple: true, class: 'multiselectuser' } %>
   <%= f.submit class: "btn btn-primary" %>
 
 <% end %>
