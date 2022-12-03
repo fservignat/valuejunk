@@ -1,42 +1,62 @@
-<div class="main-container">
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
-<br>
-<div class="junk-show-form">
-  <div class="junk-show-form-title">
-  <h2><%= @junk.title %></h2>
-  </div>
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
 
-<div class="junk-show-form-content">
+  <!-- Modal Content (The Image) -->
 
-    <div class= "junk-show-card">
-      <%= render "shared/junk-card", junks: @junk_array %>
-    </div>
-<div class="junk-show-form-info">
+ <img class="modal-content" id="img01">
 
-    <div>
-    <p><%= @junk.price %>€</p>
-    </div>
-
-    <div class="boxed">
-    <p><%= @junk.address %></p>
-    </div>
-
-<br>
-    <div class="junk-description-scrollable">
-    <p><%= @junk.description %></p>
-    </div>
-<br>
-    <%= link_to "Contact seller", junks_path, class: "primary-button-3" %>
-  </div>
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
 </div>
 
-<%#   <%= link_to "Delete",
-    junk_path(@junk),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
+<div class="main-container">
+
+  <br>
+  <div class="junk-show-form">
+    <div class="junk-show-form-title">
+      <h2><%= @junk.title %></h2>
+    </div>
+
+    <div class="junk-show-form-content">
+
+      <div class= "junk-show-card">
+        <%= render "shared/junk-card", junks: @junk_array %>
+      </div>
+      <div class="junk-show-form-info">
+        <div>
+          <p><%= @junk.price %>€</p>
+        </div>
+
+        <p>Address</p>
+        <div class="boxed">
+          <p><%= @junk.address %></p>
+        </div>
+
+        <br>
+        <p>Description</p>
+        <div class="junk-description-scrollable">
+          <p><%= @junk.description %></p>
+        </div>
+      </div>
+      <br>
+
+    </div>
+  </div>
+
+  <div class="junk-show-images-button">
+    <div class="small-image-container">
+      <% @junk.photos.first(6).each do |photo| %>
+      <%= cl_image_tag(photo.key, class: 'small-image', alt: 'image junk') %>
+      <% end %>
+    </div>
+
+    <%= link_to "Contact seller", junks_path, class: "primary-button-3" %>
+  </div>
 
   <div class="map">
     <%= render "shared/map"%>
   </div>
-</div>
 </div>
