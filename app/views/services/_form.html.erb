@@ -1,90 +1,89 @@
-<section class="junk-service-container">
+<section class="main-container">
+  <div class="junk-service-container">
+      <div class="junk-service-tabs-wrap">
+        <a class="junk-service-tab tab-margin" href="/junks/new">Item</a>
+        <a class="junk-service-tab junk-service-tab-active" href="/services/new">Services</a>
+      </div>
 
-    <div class="junk-service-tabs-wrap">
-      <a class="junk-service-tab tab-margin" href="/junks/new">Item</a>
-      <a class="junk-service-tab junk-service-tab-active" href="/services/new">Services</a>
-    </div>
+      <div class="junk-service-form">
 
-    <div class="junk-service-form">
+        <div class="junk-service-subform">
+          <form class="service-form-center" id="new_service" novalidate="novalidate" enctype="multipart/form-data" action="/services" accept-charset="UTF-8" method="post">
 
-      <div class="junk-service-subform">
-      <form class="service-form-center" id="new_service" novalidate="novalidate" enctype="multipart/form-data" action="/services" accept-charset="UTF-8" method="post">
-
-        <div class="mb-3">
-          <label class="service-label-stack string required" for="service_title">
-            Title<abbr title="required">*</abbr>
-          </label>
-          <input class="form-control string required" type="text" name="service[title]" id="service_title" value="<%=@service[:title]%>" />
-          <% if @service.errors.any? %>
-            <p class="form-error-format"><%= @service.errors[:title].first %></p>
-          <% end %>
-        </div>
-
-        <div class="service-info-flex">
-          <div class="mb-3">
-            <label class="service-label-stack string required" for="service_address">
-              Address<abbr title="required">*</abbr>
-            </label>
-            <input class="form-control string required" type="text" name="service[address]" id="service_address" value="<%=@service[:address]%>" />
-            <% if @service.errors.any? %>
-              <p class="form-error-format"><%= @service.errors[:address].first %></p>
-            <% end %>
-          </div>
-          <div class="mb-3">
-            <label class="service-label-stack integer optional" for="service_price">Price</label>
-            <input class="form-control numeric integer optional" type="number" step="1" name="service[price]" id="service_price" value="<%=@service[:price]%>"/>
-          </div>
-          <div class="volunteer-btn">
-          <div class="form-check">
-            <input class="form-check-input boolean optional" type="checkbox" value="1" name="service[volunteer]" id="service_volunteer"/>
-            <label class="boolean optional" for="service_volunteer">Do you volunteer?</label>
-          </div>
-          </div>
-        </div>
-
-          <div class="service-grid">
-            <div class="mb-3" >
-              <label class="service-label-stack" for="service_description">Description</label>
-              <textarea class="form-control service-textbox text optional"
-              rows="5" cols="25" name="service[description]" id="service_description"><%=@service[:description]%></textarea>
+            <div class="mb-3">
+              <label class="service-label-stack string required" for="service_title">
+                Title<abbr title="required">*</abbr>
+              </label>
+              <input class="form-control string required" type="text" name="service[title]" id="service_title" value="<%=@service[:title]%>" />
               <% if @service.errors.any? %>
-                <p class="form-error-format"><%= @service.errors[:description].first %></p>
+                <p class="form-error-format"><%= @service.errors[:title].first %></p>
               <% end %>
             </div>
 
-            <div class="service-grid-col2">
+            <div class="service-info-flex">
               <div class="mb-3">
-                <label class="string required" for="service_craft">
-                  Craft <abbr title="required">* </abbr>
+                <label class="service-label-stack string required" for="service_address">
+                  Address<abbr title="required">*</abbr>
                 </label>
-                <%# <input class="string required" type="text" name="service[craft]" id="service_craft" /> %>
-                <select class="form-select select required" name="service[craft]" id="service_craft">
-                  <option value="<%=@service[:craft]%>"><%=@service[:craft]%></option>
-                  <% $crafts.each do |craft| %>
-                    <option value="<%=craft%>"><%=craft%></option>
-                  <%end%>
-
-                </select>
+                <input class="form-control string required" type="text" name="service[address]" id="service_address" value="<%=@service[:address]%>" />
                 <% if @service.errors.any? %>
-                  <p class="form-error-format"><%= @service.errors[:craft].first %></p>
+                  <p class="form-error-format"><%= @service.errors[:address].first %></p>
                 <% end %>
               </div>
-              <div class="mb-3 ">
-                <label class=" file optional" for="service_photos">Photos </label>
-                <input name="service[photos][]" type="hidden" autocomplete="off"/>
-                <input class="form-control service-shrink file optional" multiple="multiple" type="file" name="service[photos][]" id="service_photos"/>
+              <div class="mb-3">
+                <label class="service-label-stack integer optional" for="service_price">Price</label>
+                <input class="form-control numeric integer optional" type="number" step="1" name="service[price]" id="service_price" value="<%=@service[:price]%>"/>
+              </div>
+              <div class="volunteer-btn">
+              <div class="form-check">
+                <input class="form-check-input boolean optional" type="checkbox" value="1" name="service[volunteer]" id="service_volunteer"/>
+                <label class="boolean optional" for="service_volunteer">Do you volunteer?</label>
+              </div>
               </div>
             </div>
 
+            <div class="service-grid">
+              <div class="mb-3" >
+                <label class="service-label-stack" for="service_description">Description</label>
+                <textarea class="form-control service-textbox text optional"
+                rows="5" cols="25" name="service[description]" id="service_description"><%=@service[:description]%></textarea>
+                <% if @service.errors.any? %>
+                  <p class="form-error-format"><%= @service.errors[:description].first %></p>
+                <% end %>
+              </div>
+
+              <div class="service-grid-col2">
+                <div class="mb-3">
+                  <label class="string required" for="service_craft">
+                    Craft <abbr title="required">* </abbr>
+                  </label>
+                  <%# <input class="string required" type="text" name="service[craft]" id="service_craft" /> %>
+                  <select class="form-select select required" name="service[craft]" id="service_craft">
+                    <option value="<%=@service[:craft]%>"><%=@service[:craft]%></option>
+                    <% $crafts.each do |craft| %>
+                      <option value="<%=craft%>"><%=craft%></option>
+                    <%end%>
+
+                  </select>
+                  <% if @service.errors.any? %>
+                    <p class="form-error-format"><%= @service.errors[:craft].first %></p>
+                  <% end %>
+                </div>
+                <div class="mb-3 ">
+                  <label class=" file optional" for="service_photos">Photos </label>
+                  <input name="service[photos][]" type="hidden" autocomplete="off"/>
+                  <input class="form-control service-shrink file optional" multiple="multiple" type="file" name="service[photos][]" id="service_photos"/>
+                </div>
+              </div>
+
+            </div>
+
+          <div class="service-flex-center">
+            <input type="submit" name="commit" value="Add Service" class="primary-button-1" data-disable-with="Addrai Service" />
           </div>
 
-        <div class="service-flex-center">
-          <input type="submit" name="commit" value="Add Service" class="btn btn-secondary" data-disable-with="Addrai Service" />
-        </div>
-
-      </form>
+        </form>
+      </div>
     </div>
-    </div>
-
-  </section>
-  <%# <%= render "form", service: @service %>
+  </div>
+</section>

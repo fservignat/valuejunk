@@ -4,7 +4,18 @@ class ServicesController < ApplicationController
 
 
   def index
-    @services = Service.all
+
+    if params[:query].present? or params[:query_min_price].present? or params[:query_max_price].present?
+      if params[:query_max_price] == ""
+        params[:query_max_price] = "99999"
+      end
+      sql_query = "(title ILIKE :query OR description ILIKE :query OR craft ILIKE :query)"
+      price_query = "price BETWEEN :query_min_price AND :query_max_price"
+      @services = Service.where("#{sql_query} AND #{price_query}", query: "%#{params[:query]}%",
+      query_min_price: params[:query_min_price].to_i, query_max_price: params[:query_max_price].to_i)
+    else
+      @services = Service.all
+    end
     # The `geocoded` scope filters only flats with coordinates
     @markers = @services.geocoded.map do |service|
     {

@@ -1,37 +1,43 @@
-
-
+<div class="main-container">
   <h1>Craftspeople</h1>
 
-  <div class="main-container">
-<br>
-<br>
-    <div class="service-card service-card-col4">
+  <div class="service-show-center">
+    <%= render "shared/service-card", service: @service %>
+  </div>
 
+    <div class="service-show-content">
       <div>
-        <p><%= @service.title %></p>
-        <p>Craft: <%= @service.craft %></p>
+        <p>Address</p>
+        <p class="service-show-border"><%= @service.address %></p>
       </div>
-
       <div>
-        <p>Address: <%= @service.address %></p>
-        <p>Price: <%= @service.price %></p>
+        <p class="service-show-border"><%= @service.price %> €/hr</p>
       </div>
-
       <div>
-        <p>Description: <%= @service.description %></p>
+        <p>Craft</p>
+        <p class="service-show-border"><%= @service.craft %></p>
       </div>
-
-      <div>
-        <p>Specialities: <%= %></p>
-      </div>
-
     </div>
+
+    <div class="service-show-content">
+      <div>
+        <p>Description</p>
+        <p class="service-show-description"><%= @service.description %></p>
+      </div>
+      <div>
+        <p>Specialities</p>
+        <p class="service-show-specialities"> <%= %></p>
+      </div>
+    </div>
+
 
 
   <% @service.photos.each do |photo| %>
     <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
   <% end %>
 </div>
-<div class="map">
-  <%= render "shared/map"%>
+
+  <div class="map">
+    <%= render "shared/map"%>
+  </div>
 </div>
