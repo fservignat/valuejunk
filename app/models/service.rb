@@ -7,6 +7,7 @@ class Service < ApplicationRecord
   has_many :specialties, through: :service_specialties
 
   $crafts = ["","Ceramics and glass", "Fibre and textile", "Flower", "Leatherwork", "Houseware", "Fashion", "Needlework", "Paper", "Wood and furniture", "Stone", "Metal"]
+  $specialities = ["Fence", "Chair", "Table", "Sofa", "Windows", "Structure", "Outfits", "Fashion", "Children"]
 
   validates :title, presence: true
   validates :address, presence: true
@@ -16,4 +17,5 @@ class Service < ApplicationRecord
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+  acts_as_taggable_on :specialities
 end
