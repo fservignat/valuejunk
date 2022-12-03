@@ -1,14 +1,17 @@
+  <div class="service-card service-card-font">
+    <%= link_to service_path(service), class: "service-card-clickable" do %>
+    <% if service.user.photo.attached? %>
+      <%= cl_image_tag service.user.photo.key, crop: :fill, class: "avatar-large service-card-img", alt: "image cover for bar" %>
+    <% else %>
+      <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "avatar-large service-card-img") %>
+    <% end %>
 
-
-  <div class="service-card service-card-col4 service-card-font">
-    <%# <div> </div> %>
-
-    <div class="service-content-left">
+    <div class="service-card-heading">
       <p class="service-card-name"><%= service.user[:username] %></p>
       <p class="service-card-craft"><%= service.craft %></p>
     </div>
 
-    <div>
+    <div class="service-card-address">
       <p class=""><%= service.address.split(",")[1] %></p>
       <%if service.volunteer%>
         <p class="">Volunteer</p>
@@ -17,23 +20,19 @@
       <%end%>
     </div>
 
-    <div>
+    <div class="service-card-description">
       <i>"<%= service.description %>"</i>
     </div>
-
-    <div>
+    <%end%>
+    <div class="service-card-specialities">
       <i>Specialities</i>
-      <p>
-        <% service.speciality_list.each do |speciality| %>
-          <%= link_to speciality, tagged_path(speciality: speciality) %>
-        <% end %>
-      </p>
+      <div>
+        <p>
+          <% service.speciality_list.each do |speciality| %>
+            <%= link_to speciality, tagged_path(speciality: speciality), class: "speciality-btn" %>
+          <% end %>
+        </p>
+      </div>
     </div>
 
-
-    <% if service.user.photo.attached? %>
-      <%= cl_image_tag service.user.photo.key, crop: :fill, class: "avatar-large service-card-img", alt: "image cover for bar" %>
-    <% else %>
-      <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "avatar-large service-card-img") %>
-    <% end %>
   </div>
