@@ -1,7 +1,7 @@
 .service-card {
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 25px;
   width: 1074px;
   height: 86px;
   margin-left: 20px;
@@ -49,31 +49,40 @@
 }
 
 .service-card-address {
-  width: 150px;
+  width: 120px;
 }
 
 .service-card-description {
-  // width: 400px;
-  flex: 1;
+  width: 400px;
+  margin-left: 10px;
 }
 
 .service-card-specialities {
   width: 150px;
-  overflow: hidden;
-  text-overflow: "...";
-
-  &:hover {
-    overflow: scroll;
-  }
 }
 
 .speciality-btn {
-  background-color: $light-green;
+  background-color: $pale-green;
   color: black;
   border-radius: 10px;
-  padding: 1px 4px 1px 4px;
-  margin-bottom: 1px;
+  padding: 2px 4px 2px 4px;
+
 }
+
+.service-card-icon {
+  display: flex;
+  width: 60px;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+
+  i {
+    margin: 5px;
+  }
+}
+
 
 .service-content-left {
   padding-left: 120px;

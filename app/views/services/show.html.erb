@@ -2,7 +2,8 @@
   <h1>Craftspeople</h1>
 
   <div class="service-show-center">
-    <%= render "shared/service-card", service: @service %>
+    <% profile=false %>
+    <%= render "shared/service-card", service: @service, profile: profile %>
   </div>
 
     <div class="service-show-content">

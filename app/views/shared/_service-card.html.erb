@@ -21,18 +21,30 @@
     </div>
 
     <div class="service-card-description">
-      <i>"<%= service.description %>"</i>
+       <i>"<%= service.description.length > 200 ? "#{service.description[0...200]}..." : service.description %>"</i>
     </div>
     <%end%>
     <div class="service-card-specialities">
       <i>Specialities</i>
       <div>
         <p>
-          <% service.speciality_list.each do |speciality| %>
+          <% service.speciality_list.sample(4).each do |speciality| %>
             <%= link_to speciality, tagged_path(speciality: speciality), class: "speciality-btn" %>
+
           <% end %>
+        <% if service.speciality_list.count > 4 %>
+          <span>...</span>
+        <% end %>
         </p>
       </div>
     </div>
+
+    <% if profile %>
+      <div class="service-card-icon">
+          <i class="fa-regular fa-pen-to-square"></i>
+          <i class="fa-solid fa-trash-can"></i>
+      </div>
+    <% end %>
+
 
   </div>
