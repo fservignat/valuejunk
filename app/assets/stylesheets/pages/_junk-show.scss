@@ -1,9 +1,40 @@
+.junk-show-form {
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 15px;
+}
+
+.junk-show-form-title {
+  text-align: center;
+}
+
 .junk-show-form-content {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: space-evenly;
+
 }
 
 .junk-show-form-info {
   display: block;
+  ;
+}
+
+.boxed {
+  border: 1px solid black;
+}
+
+.junk-description-scrollable {
+  padding: 5px;
+  width: 100%;
+  height: 100px;
+  overflow: auto;
+  overflow-y: scroll;
+  text-align: justify;
+  border: black solid 1px;
+
+}
+
+
+.map {
+  width: 100%;
 }

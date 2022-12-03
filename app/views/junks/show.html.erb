@@ -2,13 +2,13 @@
 
 <br>
 <div class="junk-show-form">
-  <div>
+  <div class="junk-show-form-title">
   <h2><%= @junk.title %></h2>
   </div>
 
 <div class="junk-show-form-content">
 
-    <div>
+    <div class= "junk-show-card">
       <%= render "shared/junk-card", junks: @junk_array %>
     </div>
 <div class="junk-show-form-info">
@@ -17,17 +17,20 @@
     <p><%= @junk.price %>€</p>
     </div>
 
-    <div>
+    <div class="boxed">
     <p><%= @junk.address %></p>
     </div>
 
-    <div>
+<br>
+    <div class="junk-description-scrollable">
     <p><%= @junk.description %></p>
     </div>
+<br>
+    <%= link_to "Contact seller", junks_path, class: "primary-button-3" %>
   </div>
 </div>
 
-  <%= link_to "Delete",
+<%#   <%= link_to "Delete",
     junk_path(@junk),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
   %>
