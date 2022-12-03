@@ -14,6 +14,11 @@ class ServicesController < ApplicationController
     }
     end
 
+    # respond_to do |format|
+    #   format.html
+    #   format.text {render services_path, locals: { services: @services}, formats: [:html]}
+    # end
+
   end
 
   def tagged
@@ -23,6 +28,7 @@ class ServicesController < ApplicationController
     else
       @services = Service.all
     end
+    render :index
   end
 
   def show
