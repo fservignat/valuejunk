@@ -8,7 +8,8 @@
       <div class="junk-service-form">
 
         <% profile = false %>
-        <%= render "shared/service-card", service: @service_template, profile: profile %>
+        <% service_template=Service.new(description: "", price: "" , craft: "", volunteer: "", title: "", address: "", user_id: current_user.id)%>
+        <%= render "shared/service-card", service: service_template, profile: profile %>
 
         <div class="junk-service-subform">
           <form class="service-form-center" id="new_service" novalidate="novalidate" enctype="multipart/form-data" action="/services" accept-charset="UTF-8" method="post">
