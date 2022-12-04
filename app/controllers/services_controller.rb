@@ -25,10 +25,7 @@ class ServicesController < ApplicationController
     }
     end
 
-    # respond_to do |format|
-    #   format.html
-    #   format.text {render services_path, locals: { services: @services}, formats: [:html]}
-    # end
+
 
   end
 
@@ -48,6 +45,7 @@ class ServicesController < ApplicationController
 
   def new
     @service = Service.new
+    @service_template=Service.new(description: "", price: "" , craft: "", volunteer: "", title: "", address: "", user_id: current_user.id)
   end
 
   def create

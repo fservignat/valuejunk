@@ -1,5 +1,8 @@
 <section class="main-container">
   <div class="junk-service-container">
+      <%profile = false %>
+
+      <%= render "shared/service-card", service: @service_template, profile: profile %>
       <div class="junk-service-tabs-wrap">
         <a class="junk-service-tab tab-margin" href="/junks/new">Item</a>
         <a class="junk-service-tab junk-service-tab-active" href="/services/new">Services</a>
@@ -64,22 +67,28 @@
                     <% $crafts.each do |craft| %>
                       <option value="<%=craft%>"><%=craft%></option>
                     <%end%>
-
                   </select>
                   <% if @service.errors.any? %>
                     <p class="form-error-format"><%= @service.errors[:craft].first %></p>
                   <% end %>
                 </div>
                 <div class="mb-3 select optional service_speciality_list">
-                  <label class="form-label select optional" for="service_speciality_list">Speciality list</label><input name="service[speciality_list][]" type="hidden" value="" autocomplete="off"><select class="form-select select optional" multiple="multiple" name="service[speciality_list][]" id="service_speciality_list">
-                  <optgroup label="Ceramics and glass">
-                    <% $ceramics.each do |ceramic| %>
-                      <option value="  <%=ceramic%>"><%=ceramic%></option>
-                    <%end%>
-                  <optgroup label="Fibre and textiles crafts">
-                    <% $fibres.each do |fibre| %>
-                      <option value="  <%=fibre%>"><%=fibre%></option>
-                    <%end%>
+                  <label class="form-label select optional" for="service_speciality_list">Speciality list</label>
+                  <input name="service[speciality_list][]" type="hidden" value="" autocomplete="off">
+                  <select class="form-select select optional" multiple="multiple" name="service[speciality_list][]" id="service_speciality_list">
+                    <optgroup label="Ceramics and glass">
+                      <% $ceramics.each do |ceramic| %>
+                        <option value="  <%=ceramic%>"><%=ceramic%></option>
+                      <%end%>
+                    <optgroup label="Fibre and textiles crafts">
+                      <% $fibres.each do |fibre| %>
+                        <option value="  <%=fibre%>"><%=fibre%></option>
+                      <%end%>
+                    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+                    <script>
+                        new MultiSelectTag('service_speciality_list')  // id
+                    </script>
+                  </select>
                 </div>
 
                 <div class="mb-3 ">
