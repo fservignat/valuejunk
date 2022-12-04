@@ -12,8 +12,8 @@
   <div id="caption"></div>
 </div>
 
-<div class="main-container">
-
+<section class="main-container">
+<div class="junk-show-container">
   <br>
   <div class="junk-show-form">
     <div class="junk-show-form-title">
@@ -21,42 +21,65 @@
     </div>
 
     <div class="junk-show-form-content">
-
       <div class= "junk-show-card">
         <%= render "shared/junk-card", junks: @junk_array %>
       </div>
+
       <div class="junk-show-form-info">
-        <div>
-          <p><%= @junk.price %>€</p>
+        <div class="price-favourites">
+          <div>
+            <p><%= @junk.price %>€</p>
+          </div>
+
+          <div>
+          <p>Add to Favourites</p>
+          </div>
         </div>
 
-        <p>Address</p>
-        <div class="boxed">
-          <p><%= @junk.address %></p>
+        <div class="address">
+          <div>
+            <div class="label-name"><p>City/Town</p></div>
+            <div class="boxed">
+              <p><%= @junk.address.split(", ")[1].split[1] %></p>
+            </div>
+          </div>
+
+          <div>
+            <div class="label-name"><p>Postal code</p></div>
+            <div class="boxed">
+              <p><%= @junk.address.split(", ")[1].split[0] %></p>
+            </div>
+          </div>
+
+          <div>
+          <p>Delivery possible</p>
+          </div>
         </div>
 
-        <br>
-        <p>Description</p>
-        <div class="junk-description-scrollable">
-          <p><%= @junk.description %></p>
+        <div class="description">
+          <div class="label-name"><p>Description</p></div>
+          <div class="junk-description-scrollable">
+            <p><%= @junk.description %></p>
+          </div>
         </div>
       </div>
-      <br>
+
 
     </div>
+
+
+    <div class="junk-show-images-button">
+      <div class="small-image-container">
+        <% @junk.photos.first(6).each do |photo| %>
+        <%= cl_image_tag(photo.key, class: 'small-image', alt: 'image junk') %>
+        <% end %>
+      </div>
+      <%= link_to "Contact seller", junks_path, class: "primary-button-1" %>
   </div>
+      <div class="map">
+        <%= render "shared/map"%>
+      </div>
 
-  <div class="junk-show-images-button">
-    <div class="small-image-container">
-      <% @junk.photos.first(6).each do |photo| %>
-      <%= cl_image_tag(photo.key, class: 'small-image', alt: 'image junk') %>
-      <% end %>
-    </div>
-
-    <%= link_to "Contact seller", junks_path, class: "primary-button-3" %>
-  </div>
-
-  <div class="map">
-    <%= render "shared/map"%>
   </div>
 </div>
+</section>
