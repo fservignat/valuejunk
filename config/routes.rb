@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   resources :services
 
+  get '/tagged', to: "services#tagged", as: :tagged
+
 end

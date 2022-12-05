@@ -1,20 +1,18 @@
 .service-card {
-  display: grid;
-  position: relative;
-  gap: 20px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
   width: 1074px;
-  margin-left: 20px;
   height: 86px;
+  margin-left: 20px;
+  margin-bottom: 25px;
   border-radius: 25px 10px 10px 25px;
   background-color: $light-grey;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   padding: 5px;
-  margin-bottom: 25px;
 
   p {
     color: black;
-
   }
 
   i {
@@ -23,35 +21,71 @@
 
 }
 
-.service-card-img {
-  position: absolute;
-  left: -10px;
-  top: -10px;
-  border: 2px solid white;
+.service-card-clickable {
+  display: flex;
 }
 
-.service-card-col4 {
-  grid-template-columns: 30% 10% 35% 10% 10%;
-  // margin: 30px 0;
+.service-card-img {
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 2px solid white;
+  width: 100px;
+}
 
-  div {
-    overflow: hidden;
-  }
+.service-card-heading {
+  width: 200px;
+  margin-left: 10px;
+
 }
 
 .service-card-name {
   font-family: $headers-font;
   font-size: 16px;
   font-weight: bold;
-
-}
-
-.service-content-left {
-  padding-left: 120px;
 }
 
 .service-card-craft {
   font-size: 17px;
+}
+
+.service-card-address {
+  width: 120px;
+}
+
+.service-card-description {
+  width: 400px;
+  margin-left: 10px;
+}
+
+.service-card-specialities {
+  width: 150px;
+}
+
+.speciality-btn {
+  background-color: $pale-green;
+  color: black;
+  border-radius: 10px;
+  padding: 2px 4px 2px 4px;
+
+}
+
+.service-card-icon {
+  display: flex;
+  width: 60px;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+
+  i {
+    margin: 5px;
+  }
+}
+
+
+.service-content-left {
+  padding-left: 120px;
 }
 
 .service-card-font {

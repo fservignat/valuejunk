@@ -25,6 +25,21 @@ class ServicesController < ApplicationController
     }
     end
 
+    # respond_to do |format|
+    #   format.html
+    #   format.text {render services_path, locals: { services: @services}, formats: [:html]}
+    # end
+
+  end
+
+  def tagged
+
+    if params[:speciality].present?
+      @services = Service.tagged_with(params[:speciality])
+    else
+      @services = Service.all
+    end
+    render :index
   end
 
   def show
@@ -69,7 +84,8 @@ class ServicesController < ApplicationController
     end
 
     def service_params
-      params.require(:service).permit(:description, :price, :craft, :volunteer, :title, :address, :user_id, photos: [])
+      params.require(:service)
+      .permit(:description, :price, :craft, :volunteer, :title, :address, :user_id, photos: [], speciality_list: [])
     end
 
 end
