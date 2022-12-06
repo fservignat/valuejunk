@@ -9,8 +9,9 @@
 
         <div class="service-card-position">
           <% profile = false %>
-          <%# <% service_template=Service.new(description: "", price: "" , craft: "", volunteer: "", title: "", address: "", user_id: current_user.id)%>
-          <%= render "shared/service-card", service: @service_template, profile: profile %>
+          <%# instance created so an empty card can be render on the new form page. Code added in controller seems to cause error when empty form is submitted. %>
+          <% service_template=Service.new(description: "", price: "" , craft: "", volunteer: "", title: "", address: "", user_id: current_user.id) %>
+          <%= render "shared/service-card", service: service_template, profile: profile %>
         </div>
 
         <div class="junk-service-subform" data-action="click->service-card#update_speciality">
