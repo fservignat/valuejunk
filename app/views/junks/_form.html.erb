@@ -1,5 +1,22 @@
-<%= simple_form_for(junk) do |f| %>
-  <!-- [...] -->
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <!-- [...] -->
-<% end %>
+<section class="main-container">
+  <div class="junk-service-container">
+      <div class="junk-service-tabs-wrap">
+        <a class="junk-service-tab junk-service-tab-active" href="/junks/new">Item</a>
+        <a class="junk-service-tab tab-margin" href="/services/new">Services</a>
+      </div>
+
+      <div class="junk-service-form">
+        <%= simple_form_for @junk do |f| %>
+          <%= f.input :title %>
+          <%= f.input :description %>
+          <%# The placeholder below is temporarly and should become a dropdown  %>
+          <%= f.input :category,  placeholder: '"Furniture", "Electronics / Appliance", "Toys", "Clothing", "Plastics", "Décor", "Arts", "Others"' %>
+          <%= f.input :price %>
+          <%= f.input :address %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          <%= f.submit %>
+        <% end %>
+      </div>
+  </div>
+
+</section>

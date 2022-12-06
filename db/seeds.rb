@@ -165,7 +165,7 @@ service = Service.new(
 
   title: "Party outfit and costume designer",
   address: k_user.address,
-  craft: "Fashion",
+  craft: "Fibre and textile",
   description: "I have experience in making party outfits and all sort of custome for parties.
    I am concious about the enviroment and aim to upcycle old clothing in my design. Please check out my portfolio.
    I also provide free consultations services to community projects and school arts.",
