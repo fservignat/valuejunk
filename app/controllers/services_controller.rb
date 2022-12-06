@@ -43,6 +43,9 @@ class ServicesController < ApplicationController
 
   def new
     @service = Service.new
+
+    @service_template=Service.new(description: "", price: "" , craft: "", volunteer: "", title: "", address: "", user_id: current_user.id)
+
   end
 
   def create

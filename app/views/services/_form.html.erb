@@ -9,8 +9,8 @@
 
         <div class="service-card-position">
           <% profile = false %>
-          <% service_template=Service.new(description: "", price: "" , craft: "", volunteer: "", title: "", address: "", user_id: current_user.id)%>
-          <%= render "shared/service-card", service: service_template, profile: profile %>
+          <%# <% service_template=Service.new(description: "", price: "" , craft: "", volunteer: "", title: "", address: "", user_id: current_user.id)%>
+          <%= render "shared/service-card", service: @service_template, profile: profile %>
         </div>
 
         <div class="junk-service-subform" data-action="click->service-card#update_speciality">
