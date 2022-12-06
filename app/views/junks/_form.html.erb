@@ -1,57 +1,75 @@
-<section class="main-container">
-  <div class="junk-service-container">
-      <div class="junk-service-tabs-wrap">
-        <a class="junk-service-tab junk-service-tab-active" href="/junks/new">Item</a>
-        <a class="junk-service-tab tab-margin" href="/services/new">Services</a>
+
+<div class="junk-service-form">
+
+  <div class="junk-form-content">
+    <form class="new_junk" id="new_junk" novalidate="novalidate" enctype="multipart/form-data" action="/junks" accept-charset="UTF-8" method="post">
+      <div class="string required junk_title junk-form-box-length-sm">
+        <label class="form-label string required" for="junk_title">Title <abbr title="required">*</abbr></label>
+        <input class="form-control string required" type="text" name="junk[title]" id="junk_title" value="<%=@junk[:title]%>">
+        <% if @junk.errors.any? %>
+            <p class="form-error-format"><%= @junk.errors[:title].first %></p>
+        <% end %>
       </div>
 
-      <div class="junk-service-form">
-        <form class="new_junk" id="new_junk" novalidate="novalidate" enctype="multipart/form-data" action="/junks" accept-charset="UTF-8" method="post">
-          <%# <input type="hidden" name="authenticity_token" value="Ov5HErcsoECXhtizE7aiBNOLceg1SkyMbIb3IGTVKrmfJtGk4Thl6W1dPdS-iV_0s6rnlpxapnHKMN4UmKizCA" autocomplete="off"> %>
-          <div class="string required junk_title">
-            <label class="form-label string required" for="junk_title">Title <abbr title="required">*</abbr></label>
-            <input class="form-control string required" type="text" name="junk[title]" id="junk_title" value="<%=@junk[:title]%>">
-            <% if @junk.errors.any? %>
-                <p class="form-error-format"><%= @junk.errors[:title].first %></p>
-            <% end %>
-          </div>
-          <div class="text optional junk_description">
-            <label class="form-label text optional" for="junk_description">Description</label>
-            <textarea class="form-control text optional" name="junk[description]" id="junk_description"></textarea>
-            <% if @junk.errors.any? %>
-              <p class="form-error-format"><%= @junk.errors[:title].first %></p>
-            <% end %>
-          </div>
-          <div class="string required junk_category">
-            <label class="string required" for="junk_category">Category <abbr title="required">*</abbr></label>
-            <select class="form-select select required" name="junk[category]" id="junk_category"><option value="" label=" ">
-              <option value="<%=@junk[:category]%>"><%=@junk[:category]%></option>
-              <% $categories.each do |category| %>
-                <option value="<%=category%>"><%=category%></option>
-              <%end%>
-            </select>
-          <div class="mb-3 integer optional junk_price">
-            <label class="form-label integer optional" for="junk_price">Price</label>
-            <input class="form-control numeric integer optional" type="number" step="1" name="junk[price]" id="junk_price"></div>
-          <div class="mb-3 string required junk_address">
-            <label class="form-label string required" for="junk_address">Address <abbr title="required">*</abbr></label>
-            <input class="form-control string required" type="text" name="junk[address]" id="junk_address"></div>
-          <div class="mb-3 file optional junk_photos"><label class="form-label file optional" for="junk_photos">Photos</label>
-            <input name="junk[photos][]" type="hidden" value="" autocomplete="off">
-            <input class="form-control file optional" multiple="multiple" type="file" name="junk[photos][]" id="junk_photos">
-          </div>
-            <input type="submit" name="commit" value="Create Junk" data-disable-with="Create Junk">
-        </form>
+      <div class="junk-form-price">
+        <div class="integer optional junk_price">
+          <label class="form-label integer optional" for="junk_price">Price</label>
+          <input class="form-control numeric integer optional" type="number"
+          step="1" name="junk[price]" id="junk_price" value="<%=@junk[:price]%>">
+          <% if @junk.errors.any? %>
+            <p class="form-error-format"><%= @junk.errors[:price].first %></p>
+          <% end %>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input boolean optional" type="checkbox" value="1" name="junk[donation]" id="junk_donation"/>
+          <label class="boolean optional" for="junk_donatoin">Donation</label>
+        </div>
       </div>
+
+      <div class="junk-form-address">
+        <div class="string required junk_address">
+          <label class="form-label string required" for="junk_address">Address <abbr title="required">*</abbr></label>
+          <input class="form-control string required" type="text"
+            name="junk[address]" id="junk_address" value="<%=@junk[:address]%>">
+          <% if @junk.errors.any? %>
+            <p class="form-error-format"><%= @junk.errors[:address].first %></p>
+          <% end %>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input boolean optional" type="checkbox" value="1" name="junk[donation]" id="junk_donation"/>
+          <label class="boolean optional" for="junk_donatoin">Do you deliver?</label>
+        </div>
+      </div>
+
+      <div class="text optional junk_description">
+        <label class="form-label text optional" for="junk_description">Description</label>
+        <textarea class="form-control text optional" name="junk[description]"
+          id="junk_description"><%=@junk[:description]%></textarea>
+        <% if @junk.errors.any? %>
+          <p class="form-error-format"><%= @junk.errors[:description].first %></p>
+        <% end %>
+      </div>
+
+      <div class="string required junk_category junk-form-box-length-sm">
+        <label class="string required" for="junk_category">Category <abbr title="required">*</abbr></label>
+        <select class="form-select select required" name="junk[category]" id="junk_category">
+          <option value="<%=@junk[:category]%>"><%=@junk[:category]%></option>
+          <% $categories.each do |category| %>
+            <option value="<%=category%>"><%=category%></option>
+          <%end%>
+        </select>
+        <% if @junk.errors.any? %>
+          <p class="form-error-format"><%= @junk.errors[:category].first %></p>
+        <% end %>
+      </div>
+
+      <div class="mb-3 file optional junk_photos junk-form-box-length-med"><label class="form-label file optional" for="junk_photos">Photos</label>
+        <input name="junk[photos][]" type="hidden" value="" autocomplete="off">
+        <input class="form-control file optional" multiple="multiple" type="file" name="junk[photos][]" id="junk_photos">
+      </div>
+
+        <input type="submit" name="commit" class="primary-button-1"
+          value="Post ad" data-disable-with="Post ad">
+    </form>
   </div>
-
-
-<%= simple_form_for(junk) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :category,  collection: $categories %>
-  <%= f.input :price %>
-  <%= f.input :address %>
-  <%= f.submit %>
-<% end %>
-</section>
+</div>

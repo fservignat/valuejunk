@@ -1,0 +1,60 @@
+<% junks.each do |junk| %>
+  <div class="junk-card">
+    <%= link_to junk_path(junk) do %>
+      <div class="junk-card-img">
+        <% if junk.photos.any? %>
+          <%# cl_image_tag junk.photos.first.key, crop: :fill, class: 'w-100 h-100 d-block', alt: 'image of junk item' %>
+          <div id="carouselExampleControls-<%= junk.id %>" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <% junk.photos.first(3).each_with_index do |photo, index| %>
+                <% if index == 0 %>
+                  <div class="carousel-item active">
+                    <%= cl_image_tag(photo.key, class: 'd-block', alt: 'image junk') %>
+                  </div>
+                <% else %>
+                  <div class="carousel-item">
+                    <%= cl_image_tag(photo.key, class: 'd-block', alt: 'image junk') %>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+            <% if junk.photos.any? %>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls-<%= junk.id %>" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls-<%= junk.id %>" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            <% end %>
+          </div>
+        <% else %>
+          <%= image_tag("https://res.cloudinary.com/dfkgih0bp/image/upload/v1668949083/development/ValueJunk/internal%20img%20%28website%20itself%29/images/no-img-placeholder_acr54j.jpg", crop: :fill, class: 'd-block', alt: 'image cover for junk') %>
+        <% end %>
+
+        <% if junk.donation %>
+          <p class="donation">DONATION</p>
+        <% end %>
+      </div>
+
+      <div class="junk-card-content">
+        <h2><%= junk.title %></h2>
+        <p><%= junk.price %>€</p>
+        <%# if junk.delivery %>
+          <%#  <p class="secondary-button-3">Delivery possible</p> %>
+        <%# end %>
+
+        <div class="junk-card-bottom">
+          <div class="address-date">
+            <p><%= junk.address.split(", ")[1] %> - </p>
+            <p><%= junk.created_at.strftime("%A, %k:%M") %></p>
+          </div>
+          <div class="heart">
+            <i class="fa-regular fa-heart fa-lg"></i>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<%end%>
