@@ -40,35 +40,30 @@
     </div>
   </div>
 
+  <nav class="service-box">
+    <label for="touch"><span class="text-center title">Your trade services</span></label>
+    <input type="checkbox" id="touch">
+    <ul class="slide service-list list-unstyled">
+      <%# if service listed by user  %>
+      <%#= render "shared/service-card" %>
+      <li><a href="#">Lorem Ipsum</a></li>
+      <li><a href="#">Lorem Ipsum</a></li>
+      <li><a href="#">Lorem Ipsum</a></li>
+      <li><a href="#">Lorem Ipsum</a></li>
+    </ul>
+  </nav>
 
-<nav class="service-box">
-  <label for="touch"><span class="text-center title">Your trade services</span></label>
-  <input type="checkbox" id="touch">
-  <ul class="slide service-list">
-    <%# if service listed by user  %>
-    <%#= render "shared/service-card" %>
-    <li><a href="#">Lorem Ipsum</a></li>
-    <li><a href="#">Lorem Ipsum</a></li>
-    <li><a href="#">Lorem Ipsum</a></li>
-    <li><a href="#">Lorem Ipsum</a></li>
-  </ul>
-</nav>
-
-
-<nav class="junk-box">
-  <label for="touch2"><span class="text-center title">Your listed items</span></label>
-  <input type="checkbox" id="touch2">
-  <ul class="slide2 junk-list">
-    <%# if junk listed by user  %>
-    <%#= render "shared/junk-card" %>
-    <li><a href="#">Lorem Ipsum</a></li>
-    <li><a href="#">Lorem Ipsum</a></li>
-    <li><a href="#">Lorem Ipsum</a></li>
-    <li><a href="#">Lorem Ipsum</a></li>
-  </ul>
-</nav>
-
-
-
+  <nav class="junk-box">
+    <label for="touch2"><span class="text-center title">Your listed items</span></label>
+    <input type="checkbox" id="touch2">
+    <ul class="slide2 junk-list list-unstyled">
+      <%# if junk listed by user  %>
+      <%#= render "shared/junk-card" %>
+      <li><a href="#">Lorem Ipsum</a></li>
+      <li><a href="#">Lorem Ipsum</a></li>
+      <li><a href="#">Lorem Ipsum</a></li>
+      <li><a href="#">Lorem Ipsum</a></li>
+    </ul>
+  </nav>
 
 </div>
