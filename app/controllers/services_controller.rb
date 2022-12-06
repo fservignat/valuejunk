@@ -25,11 +25,6 @@ class ServicesController < ApplicationController
     }
     end
 
-    # respond_to do |format|
-    #   format.html
-    #   format.text {render services_path, locals: { services: @services}, formats: [:html]}
-    # end
-
   end
 
   def tagged
@@ -48,6 +43,10 @@ class ServicesController < ApplicationController
 
   def new
     @service = Service.new
+
+    # This is to make sure the service card doesn't generate error in the new form
+    @service_template=Service.new(description: "", price: "" , craft: "", volunteer: "", title: "", address: "", user_id: current_user.id)
+
   end
 
   def create
