@@ -2,13 +2,13 @@
 
   <div class="profile-header">
     <div class="user-title">
-      <% if service.user.photo.attached? %>
-        <%= cl_image_tag service.user.photo.key, crop: :fill, class: "avatar-large service-card-img", alt: "avatar image of user" %>
-      <% else %>
+      <%# if user.photo.attached? %>
+        <%#= cl_image_tag service.user.photo.key, crop: :fill, class: "avatar-large service-card-img", alt: "avatar image of user" %>
+      <%# else %>
         <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "avatar-large service-card-img") %>
-      <% end %>
+      <%# end %>
       <div class="username">
-        <%= @user.username %>
+        <%= @user.username.upcase %>
       </div>
     </div>
     <div class="links">
@@ -17,20 +17,58 @@
     </div>
   </div>
 
-  <div class="service-box">
-    <div class="service-title">
+  <div class="user-info">
+    <div class="user-bio">
+      <div class="img-upload">
+        <div class="field">
+          <%# if @user.photo.attached? %>
+            <%#= image_tag @user.avatar %>
+          <%# end %>
+        </div>
+        <div class="field">
+          Upload a Profile Picture
+          <%#= f.label "Profile Picture"  %>
+          <%#= f.file_field :avatar %>
+        </div>
+      </div>
+      <div class="address"></div>
+      <div class="bio"></div>
     </div>
-    <%# if service listed by user  %>
-    <%#= render "shared/service-card" %>
+    <div class="user-craft">
+      <div class="craft"></div>
+      <div class="specialty"></div>
+    </div>
   </div>
 
-  <div class="junk-box">
-    <div class="junk-title">
-    </div>
-    <div class="junk-list">
-      <%# if junk listed by user  %>
-      <%#= render "shared/junk-card" %>
-    </div>
-  </div>
+
+<nav class="service-box">
+  <label for="touch"><span class="text-center title">Your trade services</span></label>
+  <input type="checkbox" id="touch">
+  <ul class="slide service-list">
+    <%# if service listed by user  %>
+    <%#= render "shared/service-card" %>
+    <li><a href="#">Lorem Ipsum</a></li>
+    <li><a href="#">Lorem Ipsum</a></li>
+    <li><a href="#">Lorem Ipsum</a></li>
+    <li><a href="#">Lorem Ipsum</a></li>
+  </ul>
+</nav>
+
+
+<nav class="junk-box">
+  <label for="touch2"><span class="text-center title">Your listed items</span></label>
+  <input type="checkbox" id="touch2">
+  <ul class="slide2 junk-list">
+    <%# if junk listed by user  %>
+    <%#= render "shared/junk-card" %>
+    <li><a href="#">Lorem Ipsum</a></li>
+    <li><a href="#">Lorem Ipsum</a></li>
+    <li><a href="#">Lorem Ipsum</a></li>
+    <li><a href="#">Lorem Ipsum</a></li>
+  </ul>
+</nav>
+
+
+
 
 </div>

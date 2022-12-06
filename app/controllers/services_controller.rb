@@ -79,13 +79,12 @@ class ServicesController < ApplicationController
 
   private
 
-    def set_service
-      @service = Service.find(params[:id])
-    end
+  def set_service
+    @service = Service.find(params[:id])
+  end
 
-    def service_params
-      params.require(:service)
-      .permit(:description, :price, :craft, :volunteer, :title, :address, :user_id, photos: [], speciality_list: [])
-    end
+  def service_params
+    params.require(:service).permit(:description, :price, :craft, :volunteer, :title, :address, :user_id, photos: [], speciality_list: [])
+  end
 
 end
