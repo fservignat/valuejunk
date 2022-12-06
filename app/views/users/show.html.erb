@@ -7,7 +7,9 @@
       <% else %>
         <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "avatar-large service-card-img") %>
       <% end %>
-      <%= @user.username, class: 'username' %>
+      <div class="username">
+        <%= @user.username %>
+      </div>
     </div>
     <div class="links">
       <%= link_to "Messages", "#" %>
