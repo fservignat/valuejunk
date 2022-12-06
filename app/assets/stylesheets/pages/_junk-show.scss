@@ -61,6 +61,13 @@
   justify-content: space-around;
 }
 
+.delivery {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  align-items: flex-start;
+}
+
 .price-favourites {
   display: flex;
   justify-content: space-between;
@@ -72,13 +79,19 @@
   align-items: center;
 }
 
+#favourites {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
 .label-name {
   margin-bottom: -1rem;
 }
 
 .boxed {
   border: 1px solid black;
-  width: 150px;
+  width: 130px;
 
   p {
     font-weight: 400;
@@ -124,7 +137,6 @@
 
 .map {
   width: 100%;
-  padding-top: 20px;
 }
 
 
@@ -171,6 +183,7 @@
   display: block;
   width: 100%;
   max-width: 900px;
+  z-index: 9999999;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
