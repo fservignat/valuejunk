@@ -14,3 +14,13 @@
   <%= f.submit class: "btn btn-primary" %>
 
 <% end %>
+
+<%= simple_form_for(junk) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%# The placeholder below is temporarly and should become a dropdown  %>
+  <%= f.input :category,  colleciton: $categories %>
+  <%= f.input :price %>
+  <%= f.input :address %>
+  <%= f.submit %>
+<% end %>

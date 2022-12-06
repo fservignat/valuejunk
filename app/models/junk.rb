@@ -3,6 +3,8 @@ class Junk < ApplicationRecord
 
   has_many_attached :photos
 
+  $categories = ["", "Materials", "Furniture", "Electronics / Appliance", "Toys", "Clothing", "Plastics", "Décor", "Arts", "Others"]
+
   validates :title, presence: true
   validates :address, presence: true
   validates :description, length: { in: 10..400 }
