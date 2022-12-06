@@ -15,3 +15,6 @@ application.register("navbar", NavbarController)
 
 import SearchFormController from "./search_form_controller"
 application.register("search-form", SearchFormController)
+
+import ServiceCardController from "./service_card_controller"
+application.register("service-card", ServiceCardController)
