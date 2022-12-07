@@ -8,8 +8,8 @@ export default class extends Controller {
     "photo", "card_photo"]
 
   connect() {
-    // console.log("junk connected");
-    // console.log(this.photoTarget);
+    console.log("junk connected");
+    console.log(this.photoTarget.value);
   }
 
   update_title() {
@@ -32,8 +32,10 @@ export default class extends Controller {
 
   update_photo() {
 
-    console.log("inside photo")
-    console.log(this.photoTarget)
+    // console.log("inside photo")
+    // console.dir(this.card_photoTarget.src)
+    console.log(this.photoTarget.value)
+    // this.card_photoTarget.src = this.photoTarget.value;
   }
 
 }
