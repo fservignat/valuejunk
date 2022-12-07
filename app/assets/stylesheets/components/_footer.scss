@@ -6,44 +6,50 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  bottom: 0px;
-    img {
+    .logo {
       width: 180px;
       margin-left: 50px;
     }
 }
 
 .content {
+  width: 400px;
+  height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  p {
-    font-family: $body-font;
-    font-size: 17px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
+  margin-right: 50px;
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
-.cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
 
+p {
+  font-family: $body-font;
+  font-size: 17px;
+  color: white;
+  text-align: center;
+  a {
+  text-decoration: none;
+  }
+}
 
 
 .footer-card {
   position: relative;
   .avatar {
     height: 87px;
+    width: 87px;
     border-radius: 50%;
     position: absolute;
     bottom: 0px;
     left: 0px;
+    margin: 0;
   }
 
   p {
@@ -70,7 +76,7 @@
 }
 
 .fa-linkedin:hover {
-  color: $blue;
+  color: rgb(30, 30, 153);
 }
 .fa-github:hover {
   color: $purple;
