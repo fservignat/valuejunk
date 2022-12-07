@@ -69,7 +69,10 @@
 
     <div class="mb-3 file optional junk_photos junk-form-box-length-med"><label class="form-label file optional" for="junk_photos">Photos</label>
       <input name="junk[photos][]" type="hidden" value="" autocomplete="off">
-      <input class="form-control file optional" multiple="multiple" type="file" name="junk[photos][]" id="junk_photos">
+      <input class="form-control file optional" multiple="multiple" type="file"
+      name="junk[photos][]" id="junk_photos"
+      data-junk-card-controller="photo"
+       data-action="click->junk-card#update_photo">
     </div>
 
       <input type="submit" name="commit" class="primary-button-1"

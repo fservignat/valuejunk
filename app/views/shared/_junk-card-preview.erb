@@ -5,7 +5,7 @@
       <% if junk.photos.any? %>
           <%# cl_image_tag junk.photos.first.key, crop: :fill, class: 'w-100 h-100 d-block', alt: 'image of junk item' %>
           <div id="carouselExampleControls-<%= junk.id %>" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner" data-junk-card-target="card_photos">
+            <div class="carousel-inner">
               <% junk.photos.first(3).each_with_index do |photo, index| %>
                 <% if index == 0 %>
                   <div class="carousel-item active">
@@ -31,7 +31,7 @@
           </div>
         <% else %>
           <%= image_tag("https://res.cloudinary.com/dfkgih0bp/image/upload/v1668949083/development/ValueJunk/internal%20img%20%28website%20itself%29/images/no-img-placeholder_acr54j.jpg",
-            crop: :fill, class: 'd-block', alt: 'image cover for junk') %>
+            crop: :fill, class: 'd-block', alt: 'image cover for junk')%>
         <% end %>
 
       <% if junk.donation %>
@@ -49,7 +49,6 @@
       <div class="junk-card-bottom">
         <div class="address-date">
           <p data-junk-card-target="card_address"><%= junk.address.split(", ")[1] %> - </p>
-
         </div>
         <div class="heart">
           <i class="fa-regular fa-heart fa-lg"></i>

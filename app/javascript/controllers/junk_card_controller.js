@@ -4,13 +4,12 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["title", "card_title",
     "price", "card_price",
-    "address", "card_address"
+    "address", "card_address",
     "photo", "card_photo"]
 
   connect() {
-    console.log("junk connected")
-    console.log(this.photoTarget)
-
+    // console.log("junk connected");
+    // console.log(this.photoTarget);
   }
 
   update_title() {
@@ -19,10 +18,10 @@ export default class extends Controller {
   }
 
   update_address() {
-    let address = this.addressTarget.value.split(", ")[1];
-    console.log(address)
-    this.card_addressTarget.innerHTML = address;
-
+    // short_address = this.addressTarget.value.split(", ")[1];
+    // console.log(short_address)
+    // console.log(this.addressTarget.innerHTML)
+    this.card_addressTarget.innerHTML = this.addressTarget.value;
   }
 
   update_price() {
@@ -33,7 +32,8 @@ export default class extends Controller {
 
   update_photo() {
 
-
+    console.log("inside photo")
+    console.log(this.photoTarget)
   }
 
 }
