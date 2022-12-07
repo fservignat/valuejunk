@@ -4,9 +4,11 @@
   position: relative;
   margin-right: 20px;
   text-align: center;
+  margin-top: 100px;
+  margin-bottom: 70px;
 }
 
-.ad-title {
+.post-title {
 
   h1 {
     position: relative;
@@ -24,11 +26,11 @@
 
   .title-panel {
     background-color: $pale-green;
-    width: 333px;
+    width: 208px;
     height: 55px;
     z-index: 0;
     position: absolute;
-    top: 32px;
-    right: -4px;
+    top: -6px;
+    left: 366px;
   }
 }
