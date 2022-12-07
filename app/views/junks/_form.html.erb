@@ -2,7 +2,10 @@
   <form class="new_junk" id="new_junk" novalidate="novalidate" enctype="multipart/form-data" action="/junks" accept-charset="UTF-8" method="post">
     <div class="string required junk_title junk-form-box-length-sm">
       <label class="form-label string required" for="junk_title">Title <abbr title="required">*</abbr></label>
-      <input class="form-control string required" type="text" name="junk[title]" id="junk_title" value="<%=@junk[:title]%>">
+      <input class="form-control string required" type="text" name="junk[title]"
+        id="junk_title" value="<%=@junk[:title]%>"
+        data-junk-card-target="title"
+        data-action="keyup->junk-card#update_title">
       <% if @junk.errors.any? %>
           <p class="form-error-format"><%= @junk.errors[:title].first %></p>
       <% end %>
@@ -12,7 +15,9 @@
       <div class="integer optional junk_price">
         <label class="form-label integer optional" for="junk_price">Price</label>
         <input class="form-control numeric integer optional" type="number"
-        step="1" name="junk[price]" id="junk_price" value="<%=@junk[:price]%>">
+          step="1" name="junk[price]" id="junk_price" value="<%=@junk[:price]%>"
+          data-junk-card-target="price"
+          data-action="keyup->junk-card#update_price">
         <% if @junk.errors.any? %>
           <p class="form-error-format"><%= @junk.errors[:price].first %></p>
         <% end %>
@@ -27,7 +32,9 @@
       <div class="string required junk_address">
         <label class="form-label string required" for="junk_address">Address <abbr title="required">*</abbr></label>
         <input class="form-control string required" type="text"
-          name="junk[address]" id="junk_address" value="<%=@junk[:address]%>">
+          name="junk[address]" id="junk_address" value="<%=@junk[:address]%>"
+          data-junk-card-target="address"
+          data-action="keyup->junk-card#update_address">
         <% if @junk.errors.any? %>
           <p class="form-error-format"><%= @junk.errors[:address].first %></p>
         <% end %>
