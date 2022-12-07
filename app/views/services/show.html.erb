@@ -1,11 +1,12 @@
 <div class="main-container">
-  <h1>Craftspeople</h1>
 
-  <div class="service-show-center">
-    <% profile=false %>
-    <%= render "shared/service-card", service: @service, profile: profile %>
+  <div id="junk-market-title">
+    <div class="full-title-junk">
+      <%= render "shared/title-craftpeople" %>
+    </div>
   </div>
 
+<div class="service-show-container">
     <div class="service-show-content">
       <div>
         <p>Address</p>
@@ -20,9 +21,12 @@
       </div>
     </div>
 
+
+
     <div class="service-show-content">
       <div>
         <p>Description</p>
+
         <p class="service-show-description"><%= @service.description %></p>
       </div>
       <div>
@@ -47,3 +51,5 @@
 <%  @service.speciality_list.each do |speciality| %>
   <p>specities: <%= speciality %></p>
 <% end %>
+
+</div>
