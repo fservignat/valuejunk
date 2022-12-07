@@ -20,6 +20,15 @@
   justify-content: space-between;
   margin-right: 50px;
 
+  p {
+    font-family: $body-font;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    a {
+    text-decoration: none;
+    }
+  }
   .cards {
     display: flex;
     flex-direction: row;
@@ -29,15 +38,6 @@
 }
 
 
-p {
-  font-family: $body-font;
-  font-size: 17px;
-  color: white;
-  text-align: center;
-  a {
-  text-decoration: none;
-  }
-}
 
 
 .footer-card {

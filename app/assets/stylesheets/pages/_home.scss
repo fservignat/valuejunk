@@ -149,7 +149,7 @@
   .primary-button-3 {
     position: absolute;
     bottom: 20px;
-    right: 50px;
+    right: 100px;
     z-index: 1;
   }
 }
@@ -173,9 +173,16 @@
 
 .junk-home-cards {
   display: flex;
-  justify-content: center;
-  gap: 7em;
+  justify-content: space-between;
+  // gap: 7em;
   align-items: center;
+}
+
+.rotate1 {
+  transform: rotate(-10deg);
+}
+.rotate2 {
+  transform: rotate(10deg);
 }
 
 .middle-card {
