@@ -7,29 +7,52 @@
   </div>
 
 <div class="service-show-container">
+
+  <div class="photo-craft">
+    <div id="photo">
+    <h1>photo</h1>
+    </div>
+
+    <div id="title-craft">
+    <h2><%= @service.title %></h2>
+    <p><%= @service.craft %></p>
+    </div>
+  </div>
+
     <div class="service-show-content">
-      <div>
-        <p>Address</p>
-        <p class="service-show-border"><%= @service.address %></p>
-      </div>
-      <div>
+
+      <div class="address-price">
+        <div id="address">
+          <div>
+          <p>City</p>
+            <p class="service-show-border"><%= @service.address.split(", ")[1].split[1] %></p>
+          </div>
+
+          <div>
+          <p>Postal code</p>
+            <p class="service-show-border"><%= @service.address.split(", ")[1].split[0] %></p>
+          </div>
+        </div>
+
+        <div>
+        <p>Price</p>
         <p class="service-show-border"><%= @service.price %> €/hr</p>
+        </div>
       </div>
+
       <div>
-        <p>Craft</p>
-        <p class="service-show-border"><%= @service.craft %></p>
+      <p>Description</p>
+        <div id="description-scrollable">
+        <p><%= @service.description %></p>
+        </div>
       </div>
+
     </div>
 
 
 
     <div class="service-show-content">
-      <div>
-        <p>Description</p>
 
-        <p class="service-show-description"><%= @service.description %></p>
-      </div>
-      <div>
         <p>Specialities</p>
         <p class="service-show-specialities"> <%= %></p>
       </div>
@@ -40,6 +63,9 @@
   <% @service.photos.each do |photo| %>
     <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
   <% end %>
+  <div class="map">
+    <%= render "shared/map"%>
+  </div>
 </div>
 
   <div class="map">

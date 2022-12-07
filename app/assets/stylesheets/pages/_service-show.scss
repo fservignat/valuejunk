@@ -26,10 +26,32 @@
   left: 240px;
 }
 
+.photo-craft {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+  justify-content: flex-start;
+  margin-left: 220px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 .service-show-content {
   display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  width: 520px;
   justify-content: space-around;
-  padding: 0 300px 0 300px;
+}
+
+.address-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+#address {
+  display: flex;
+  gap: 3px;
 }
 
 .service-show-description {
@@ -45,8 +67,10 @@
 }
 
 .service-show-border {
-  border-style: groove;
+  border: 1px solid #ADADAD;
+  border-radius: 3px;
   padding: 5px;
+  width: 115px;
 
 }
 
@@ -57,5 +81,5 @@
   overflow: auto;
   overflow-y: scroll;
   text-align: justify;
-  border: black solid 1px;
+  border: 1px solid #ADADAD;
 }
