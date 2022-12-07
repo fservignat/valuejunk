@@ -8,11 +8,15 @@
         <a class="junk-service-tab tab-margin" href="/services/new">Services</a>
       </div>
 
-
-
-        <% junk_template=Junk.new(title: "", address: "", description: "", price: "" , category: "", user_id: current_user.id) %>
-        <%= render "shared/junk-card", junks: [junk_template] %>
-
-        <%= render "form", junk: @junk %>
+    <div class="junk-service-form">
+      <div class=junk-form-content>
+        <div class="junk-form-content-left">
+          <% junk_template=Junk.new(title: "", address: "", description: "", price: "" , category: "",
+            donation: false, user_id: current_user.id, photos: []) %>
+          <%= render "shared/junk-card-preview", junk: junk_template %>
+        </div>
+          <%= render "form", junk: @junk %>
+      </div>
+    </div>
   </div>
 </section>
