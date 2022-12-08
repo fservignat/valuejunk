@@ -38,6 +38,7 @@ class JunksController < ApplicationController
     @junk.user = current_user
     if @junk.save
       redirect_to junk_path(@junk)
+      flash[:notice] = "Thank you, your ad was successfully created!"
     else
       render :new, status: :unprocessable_entity
     end

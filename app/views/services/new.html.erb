@@ -1,6 +1,8 @@
 <section class="junk-service-main-container">
 
-  <h1>Post an AD</h1>
+  <div class="full-title-junk">
+    <%= render "shared/title_ad" %>
+  </div>
 
     <div class="junk-service-sub-container">
       <div class="junk-service-tabs-wrap">
@@ -20,6 +22,8 @@
         <div class="junk-service-subform" data-action="click->service-card#update_speciality">
           <%= render "form", service: @service %>
         </div>
+
+        <p class="ad-confirm"><%= notice %></p>
 
       </div>
     </div>

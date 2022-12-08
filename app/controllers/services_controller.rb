@@ -53,6 +53,7 @@ class ServicesController < ApplicationController
 
     if @service.save
       redirect_to service_path(@service)
+      flash[:notice] = "Thank you, your ad was successfully created!"
     else
       render :new, status: :unprocessable_entity
     end
