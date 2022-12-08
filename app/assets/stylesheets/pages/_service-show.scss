@@ -106,8 +106,10 @@
   flex-direction: column;
 }
 
-.small-image-container {
-  display: flex;
+.service-small-image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 10px;
 }
 
 .small-image {

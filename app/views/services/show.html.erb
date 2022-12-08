@@ -13,7 +13,11 @@
 
   <div class="photo-craft">
     <div id="photo">
-    <h1>photo</h1>
+    <% if @service.user.photo.attached? %>
+        <%= cl_image_tag @service.user.photo.key, crop: :fill, class: "avatar-large service-card-img", alt: "avatar for user" %>
+      <% else %>
+        <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "avatar-large service-card-img") %>
+      <% end %>
     </div>
 
     <div id="title-craft">
@@ -63,7 +67,7 @@
 
     <div class="right-container">
       <div class="grit">
-        <div class="small-image-container">
+        <div class="service-small-image-container">
 
     <% @service.photos.first(6).each do |photo| %>
       <%= cl_image_tag(photo.key, class: 'small-image') %>
