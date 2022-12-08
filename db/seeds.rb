@@ -126,6 +126,7 @@ junk = Junk.new(
   category: "Furniture",
   price: 50,
   donation: false,
+  delivery: true,
   user: r_user)
   # file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668158134/development/Experimental_Cocktail_Club_gzeegk.png')
   # junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
