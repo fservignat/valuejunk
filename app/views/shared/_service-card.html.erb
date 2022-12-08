@@ -1,19 +1,10 @@
   <div class="service-card service-card-font">
-<<<<<<< HEAD
-    <%= link_to service_path(service), class: "service-card-clickable" do %>
-    <% if service.user.photo.attached? %>
-      <%= cl_image_tag service.user.photo.key, crop: :fill, class: "avatar-large service-card-img", alt: "avatar image of user" %>
-    <% else %>
-      <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "avatar-large service-card-img") %>
-    <% end %>
-=======
     <%= link_to (service === nil || service.id === nil) ? services_path : service_path(service), class: "service-card-clickable" do %>
       <% if service.user.photo.attached? %>
         <%= cl_image_tag service.user.photo.key, crop: :fill, class: "avatar-large service-card-img", alt: "avatar for user" %>
       <% else %>
         <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "avatar-large service-card-img") %>
       <% end %>
->>>>>>> master
 
       <div class="service-card-heading">
         <p class="service-card-name"><%= service.user[:username] %></p>
