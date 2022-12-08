@@ -74,13 +74,29 @@
           <select class="form-select select optional" multiple="multiple" name="service[speciality_list][]"
             id="service_speciality_list"
             data-service-card-target="speciality">
-            <optgroup label="Ceramics and glass">
               <% $ceramics.each do |ceramic| %>
                 <option value="  <%=ceramic%>"><%=ceramic%></option>
               <%end%>
-            <optgroup label="Fibre and textiles crafts">
               <% $fibres.each do |fibre| %>
                 <option value="  <%=fibre%>"><%=fibre%></option>
+              <%end%>
+              <% $flowers.each do |flower| %>
+                <option value="  <%=flower%>"><%=flower%></option>
+              <%end%>
+              <% $leatherworks.each do |leatherwork| %>
+                <option value="  <%=leatherwork%>"><%=leatherwork%></option>
+              <%end%>
+              <% $papers.each do |paper| %>
+                <option value="  <%=paper%>"><%=paper%></option>
+              <%end%>
+              <% $woods.each do |wood| %>
+                <option value="  <%=wood%>"><%=wood%></option>
+              <%end%>
+              <% $stones.each do |stone| %>
+                <option value="  <%=stone%>"><%=stone%></option>
+              <%end%>
+              <% $metals.each do |metal| %>
+                <option value="  <%=metal%>"><%=metal%></option>
               <%end%>
             <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
             <script>

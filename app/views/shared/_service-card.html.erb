@@ -30,12 +30,12 @@
     <i>Specialities</i>
     <div>
       <p data-service-card-target="card_speciality">
-        <% service.speciality_list.sample(4).each do |speciality| %>
+        <% service.speciality_list.sample(3).each do |speciality| %>
           <%= link_to speciality, tagged_path(speciality: speciality),
           class: "speciality-btn" %>
 
         <% end %>
-        <% if service.speciality_list.count > 4 %>
+        <% if service.speciality_list.count > 3 %>
           <span>...</span>
         <% end %>
       </p>
