@@ -165,13 +165,13 @@ junk = Junk.new(
   donation: false,
   delivery: true,
   user: r_user)
-  file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670539001/single-bed3_hdxshk.jpg')
+  file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670540774/single-bed2_lacybs.jpg')
   junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
-  file2 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670539001/single-bed2_qzjvxq.jpg')
+  file2 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670540774/single-bed3_fxzr1n.jpg')
   junk.photos.attach(io: file2, filename: 'experimental.jpg', content_type: 'image/jpg')
-  file3 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670539001/single-bed4_xcgzwn.jpg')
+  file3 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670540774/single-bed4_j1uykl.jpg')
   junk.photos.attach(io: file3, filename: 'experimental.jpg', content_type: 'image/jpg')
-  file4 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670539001/single-bed1_ayrftz.jpg')
+  file4 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670540774/single-bed4_j1uykl.jpg')
   junk.photos.attach(io: file4, filename: 'experimental.jpg', content_type: 'image/jpg')
 junk.save!
 puts "junk: #{junk.title} created."
