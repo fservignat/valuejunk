@@ -1,4 +1,26 @@
-<div class="main-container">
-  <%= render "shared/title_ad" %>
-  <%= render "form", service: @service %>
-</div>
+<section class="junk-service-main-container">
+
+  <h1>Post an AD</h1>
+
+    <div class="junk-service-sub-container">
+      <div class="junk-service-tabs-wrap">
+        <a class="junk-service-tab tab-margin" href="/junks/new">Item</a>
+        <a class="junk-service-tab junk-service-tab-active" href="/services/new">Services</a>
+      </div>
+
+      <div class="junk-service-form" data-controller="service-card">
+
+        <div class="service-card-position">
+          <% profile = false %>
+          <%# a template instance created so an empty card can be rendered in the new form page. NOTE: service_template added in controller seems to cause error. %>
+          <% service_template=Service.new(description: "", price: "" , craft: "", volunteer: "", title: "", address: "", user_id: current_user.id) %>
+          <%= render "shared/service-card", service: service_template, profile: profile %>
+        </div>
+
+        <div class="junk-service-subform" data-action="click->service-card#update_speciality">
+          <%= render "form", service: @service %>
+        </div>
+
+      </div>
+    </div>
+</section>
