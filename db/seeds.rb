@@ -32,10 +32,12 @@ puts "Creating User Owner"
 t_user = User.create!(
   username: "Taylor",
   email: "Taylor@outlook.com",
-  address: "6 Parvis Notre-Dame - Pl. Jean-Paul II, 75004 Paris, France",
+  address: "11 Rue Anatole France, 78530 Buc, France",
   bio: "Blacksmith by trade and enjoy repairing furniture",
   password: "123456"
 )
+file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670455368/ValueJunk/blacksmith_y7beuq.jpg')
+t_user.photo.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
 puts "User created."
 
 puts "Creating User Owner"
@@ -46,21 +48,23 @@ r_user = User.create!(
   bio: "I am a carpenter and love to build furniture",
   password: "123456"
 )
+file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670455915/ValueJunk/carpenter2_mhnlc1.jpg')
+r_user.photo.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
 puts "User created."
 
 #creating junk content -----------------------------------------
 puts "Listing a junk"
 
 junk = Junk.new(
-  title: "Some good wood panel to give away",
+  title: "Some 4x4 wood panels to give away",
   address: "4 Rue Marcel Sembat, 93270 Sevran, France",
   description: "Got some old pine wood pieces with dimension: 2 X 5 X 10m",
   category:"Materials",
   price: 0,
   user: k_user)
-  file = URI.open('https://images.unsplash.com/photo-1519668106955-a24e5f67f8c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8anVua3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
+  file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670456139/ValueJunk/Wood-planks001_c1swib.jpg')
   junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
-  file2 = URI.open('https://images.unsplash.com/photo-1519668106955-a24e5f67f8c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8anVua3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')
+  file2 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670454973/ValueJunk/few-wood-planks002_z9zqzx.jpg')
   junk.photos.attach(io: file2, filename: 'experimental.jpg', content_type: 'image/jpg')
 
 junk.save!
@@ -68,14 +72,16 @@ puts "junk: #{junk.title} created."
 
 
 junk = Junk.new(
-  title: "4 old chairs good for upcycle projects",
+  title: "some old chairs good for upcycle projects",
   address: "9 Prom. des Mares, 93230 Romainville, France",
   description: "Got 4 old chairs to sell made from oak. Very traditional and from 1950s.",
   category: "Furniture",
   price:10,
   user: k_user)
-  file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668940532/development/ValueJunk/internal%20img%20%28website%20itself%29/images/wooden-rocking-chair_hmbsz3.jpg')
+  file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670456218/ValueJunk/wood_chairs_w02gjp.webp')
   junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
+  file2 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670456219/ValueJunk/wood_chairs_traditional_hr6pa7.jpg')
+  junk.photos.attach(io: file2, filename: 'experimental.jpg', content_type: 'image/jpg')
 
 junk.save!
 puts "junk: #{junk.title} created."
@@ -89,9 +95,9 @@ junk = Junk.new(
   category:"Décor",
   price: 0,
   user: k_user)
-  file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668940532/development/ValueJunk/internal%20img%20%28website%20itself%29/images/yarn-balls_caseiq.jpg')
-  file2 = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668940532/development/ValueJunk/internal%20img%20%28website%20itself%29/images/yarn-balls_caseiq.jpg')
-  file3 = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668940532/development/ValueJunk/internal%20img%20%28website%20itself%29/images/yarn-balls_caseiq.jpg')
+  file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670457984/ValueJunk/88b3f449b678382fdbc6afc96e05e7e6_bcrqdw.jpg')
+  file2 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670457984/ValueJunk/a0b521589593203025c96c544c03d550_d5kfb0.jpg')
+  file3 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670458327/ValueJunk/curtains_lf43hn.jpg')
   junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
   junk.photos.attach(io: file2, filename: 'experimental.jpg', content_type: 'image/jpg')
   junk.photos.attach(io: file3, filename: 'experimental.jpg', content_type: 'image/jpg')
@@ -120,7 +126,7 @@ junk = Junk.new(
   category: "Furniture",
   price: 50,
   donation: false,
-  # delivery: false,
+  delivery: true,
   user: r_user)
   # file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668158134/development/Experimental_Cocktail_Club_gzeegk.png')
   # junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
@@ -141,14 +147,14 @@ service = Service.new(
   user: r_user)
   # file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668158134/development/Experimental_Cocktail_Club_gzeegk.png')
   # junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
-
+  service.speciality_list.add("Blacksmithing", "Casting","Jewellery", "Knife making" )
 service.save!
 puts "service: #{service.title} created."
 
 service = Service.new(
 
   title: "Making window panel and frame",
-  address: k_user.address,
+  address: r_user.address,
   craft: "Ceramics and glass",
   description: "I have 5 years experience in window making involved renovating buildings and church windows. I am familar
   with traditional and modern techniques and will help you customise the window to fit your buidling design.",
@@ -157,6 +163,7 @@ service = Service.new(
   user: r_user)
   # file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668158134/development/Experimental_Cocktail_Club_gzeegk.png')
   # junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
+  service.speciality_list.add("Glass and glass art", "Woodworking","Wood carving" )
 
 service.save!
 puts "service: #{service.title} created."
@@ -172,9 +179,13 @@ service = Service.new(
   price:15,
   volunteer: false,
   user: k_user)
-  # file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668158134/development/Experimental_Cocktail_Club_gzeegk.png')
-  # junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
-
+  file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670454982/ValueJunk/VikKing_hkszmf.jpg')
+  service.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
+  file2 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670454973/ValueJunk/Dark-Vador_i9gldp.jpg')
+  service.photos.attach(io: file2, filename: 'experimental.jpg', content_type: 'image/jpg')
+  file3 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670456924/ValueJunk/il_340x270.4352777136_pvcz_clx1mt.webp')
+  service.photos.attach(io: file3, filename: 'experimental.jpg', content_type: 'image/jpg')
+  service.speciality_list.add("Stitch", "Fashion","Needlework","Sewing", "dyeing" )
 service.save!
 puts "service: #{service.title} created."
 
@@ -186,9 +197,13 @@ service = Service.new(
   description: "I have 10 years experience in repairing furniture and upcycle old ones. I also custom make furniture so that it fits your bespoke needs.",
   price:15,
   volunteer: false,
-  user: k_user)
-  # file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668158134/development/Experimental_Cocktail_Club_gzeegk.png')
-  # junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
-
+  user: t_user)
+  file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670456803/ValueJunk/sideboar3_t91vi0.jpg')
+  service.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
+  file2 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670456803/ValueJunk/cabinet-color1_ieuvuy.jpg')
+  service.photos.attach(io: file2, filename: 'experimental.jpg', content_type: 'image/jpg')
+  file3 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670456802/ValueJunk/Cabinet2_jx58ro.jpg')
+  service.photos.attach(io: file3, filename: 'experimental.jpg', content_type: 'image/jpg')
+  service.speciality_list.add("Cabinet making", "Carpentry","Wood burning","Woodworking")
 service.save!
 puts "service: #{service.title} created."
