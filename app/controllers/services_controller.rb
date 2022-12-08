@@ -43,11 +43,13 @@ class ServicesController < ApplicationController
 
   def new
     @service = Service.new
+    @service_template=Service.new(description: "", address: "", user: current_user)
   end
 
   def create
     @service = Service.new(service_params)
     @service.user = current_user
+    @service_template=Service.new(description: "", address: "", user: current_user)
 
     if @service.save
       redirect_to service_path(@service)
