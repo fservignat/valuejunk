@@ -1,15 +1,18 @@
 <div class="main-container">
 
-  <div class="full-title-craft">
-    <%= render "shared/title-craftpeople" %>
+  <div class="title">
+    <div class="full-title-craft">
+      <%= render "shared/title-craftpeople" %>
+    </div>
   </div>
 
   <div class="service-content-center">
     <% @services.each do |service| %>
-        <% profile=false %>
-        <%= render "shared/service-card", service: service, profile: profile %>
+      <% profile=false %>
+      <%= render "shared/service-card", service: service, profile: profile %>
     <%end%>
   </div>
+
 </div>
 
 <div class="map">
