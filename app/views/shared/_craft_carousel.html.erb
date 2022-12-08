@@ -1,50 +1,60 @@
-<div class="slide-container">
-  <span class="slider-span" id="slider-span1"></span>
-  <span class="slider-span" id="slider-span2"></span>
-  <span class="slider-span" id="slider-span3"></span>
-  <span class="slider-span" id="slider-span4"></span>
-  <span class="slider-span" id="slider-span5"></span>
-  <span class="slider-span" id="slider-span6"></span>
-  <span class="slider-span" id="slider-span7"></span>
-  <span class="slider-span" id="slider-span8"></span>
-  <span class="slider-span" id="slider-span9"></span>
-
-  <div class="image-slider">
-    <div class="slide-div" id="slide-1">
-      <%= image_tag "icons/ceramic.png", class: 'img', id: 'img' %>
-      <a href="#slider-span1" class="button" id="button-1"></a>
-    </div>
-    <div class="slide-div" id="slide-2">
-      <%= image_tag "icons/flower.png", class: 'img', id: 'img' %>
-      <a href="#slider-span2" class="button" id="button-2"></a>
-    </div>
-    <div class="slide-div" id="slide-3">
-      <%= image_tag "icons/house.png", class: 'img', id: 'img' %>
-      <a href="#slider-span3" class="button" id="button-3"></a>
-    </div>
-    <div class="slide-div" id="slide-4">
-      <%= image_tag "icons/leather.png", class: 'img', id: 'img' %>
-      <a href="#slider-span4" class="button" id="button-4"></a>
-    </div>
-    <div class="slide-div" id="slide-5">
-      <%= image_tag "icons/metal.png", class: 'img', id: 'img' %>
-      <a href="#slider-span5" class="button" id="button-5"></a>
-    </div>
-    <div class="slide-div" id="slide-6">
-      <%= image_tag "icons/paper.png", class: 'img', id: 'img' %>
-      <a href="#slider-span6" class="button" id="button-6"></a>
-    </div>
-    <div class="slide-div" id="slide-7">
-      <%= image_tag "icons/rock.png", class: 'img', id: 'img' %>
-      <a href="#slider-span7" class="button" id="button-7"></a>
-    </div>
-    <div class="slide-div" id="slide-8">
-      <%= image_tag "icons/textile.png", class: 'img', id: 'img' %>
-      <a href="#slider-span8" class="button" id="button-8"></a>
-    </div>
-    <div class="slide-div" id="slide-9">
-      <%= image_tag "icons/wood.png", class: 'img', id: 'img' %>
-      <a href="#slider-span9" class="button" id="button-9"></a>
-    </div>
-  </div>
+<div class="slider">
+	<input type="radio" name="testimonial" id="t-1">
+	<input type="radio" name="testimonial" id="t-2">
+	<input type="radio" name="testimonial" id="t-3" checked>
+	<input type="radio" name="testimonial" id="t-4">
+	<input type="radio" name="testimonial" id="t-5">
+	<input type="radio" name="testimonial" id="t-6">
+	<input type="radio" name="testimonial" id="t-7">
+	<input type="radio" name="testimonial" id="t-8">
+	<input type="radio" name="testimonial" id="t-9">
+	<div class="testimonials">
+		<label class="item" for="t-1">
+			<% image_tag("icons/house.png", alt: "icon craft houseware") %>
+			<h2>Houseware</h2>
+		</label>
+		<label class="item" for="t-2">
+      <% image_tag("icons/ceramic.png", alt: "icon craft Ceramics and glass") %>
+			<h2>Ceramics and glass</h2>
+		</label>
+		<label class="item" for="t-3">
+      <% image_tag("icons/textile.png", alt: "icon craft Fibre and textil") %>
+			<h2>Fibre and textile</h2>
+		</label>
+		<label class="item" for="t-4">
+      <% image_tag("icons/flower.png", alt: "icon craft Flower & garden") %>
+			<h2>Flower & garden</h2>
+		</label>
+		<label class="item" for="t-5">
+      <% image_tag("icons/leather.png", alt: "icon craft Leatherwork") %>
+			<h2>Leatherwork</h2>
+		</label>
+    <label class="item" for="t-6">
+      <% image_tag("icons/metal.png", alt: "icon craft Metal") %>
+			<h2>Metal</h2>
+		</label>
+    <label class="item" for="t-7">
+      <% image_tag("icons/rock.png", alt: "icon craft Stone") %>
+			<h2>Stone</h2>
+		</label>
+    <label class="item" for="t-8">
+      <% image_tag("icons/wood.png", alt: "icon craft Wood and furniture") %>
+			<h2>Wood and furniture</h2>
+		</label>
+    <label class="item" for="t-9">
+      <% image_tag("icons/paper.png", alt: "icon craft paper") %>
+			<h2>Paper</h2>
+		</label>
+	</div>
+	<div class="dots">
+		<label for="t-1"></label>
+		<label for="t-2"></label>
+		<label for="t-3"></label>
+		<label for="t-4"></label>
+		<label for="t-5"></label>
+		<label for="t-6"></label>
+		<label for="t-7"></label>
+		<label for="t-8"></label>
+		<label for="t-9"></label>
+	</div>
 </div>
