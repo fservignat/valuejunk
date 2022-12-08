@@ -49,7 +49,7 @@ class JunksController < ApplicationController
     if @junk.save
       redirect_to junk_path(@junk)
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -72,6 +72,6 @@ class JunksController < ApplicationController
     private
 
   def junk_params
-    params.require(:junk).permit(:title, :address, :description, :price, :category, photos: [])
+    params.require(:junk).permit(:title, :address, :description, :price, :category, :donation, :delivery, photos: [])
   end
 end

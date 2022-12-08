@@ -2,15 +2,15 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 280px;
-  height: 358px;
+  height: 21em;
+  width: 16em;
   border-radius: 10px;
   background-color: $lighter-grey;
   margin: 0;
   padding: 0;
 
   img {
-    height: 223px;
+    height: 14em;
     width: 100%;
     object-fit: cover;
   }
@@ -45,19 +45,22 @@
   height: 36%;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   h2 {
     font-family: $body-font;
     color: black;
-    font-size: 18px;
+    font-size: 1em;
     font-weight: bold;
     text-decoration: none;
     padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0;
   }
   p {
     font-family: $body-font;
     color: black;
-    font-size: 12px;
+    font-size: 0.8em;
     font-weight: bold;
     text-decoration: none;
     margin-bottom: 5px;
@@ -65,15 +68,31 @@
   }
 }
 
+.price-delivery {
+  display: flex;
+  flex-direction: row;
+}
+
 .junk-card-bottom {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   // position: absolute;
-  // bottom: 5px;
+  // bottom: 17px;
+
+  p {
+    font-size: 10px;
+    display: inline;
+  }
+
+  i {
+    color: black;
+  }
 }
 
 .address-date {
+  line-height: 12px;
   p {
     margin-bottom: 5px;
     color: $grey;

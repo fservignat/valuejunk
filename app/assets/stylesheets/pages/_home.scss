@@ -159,7 +159,7 @@
   .primary-button-3 {
     position: absolute;
     bottom: 20px;
-    right: 50px;
+    right: 100px;
     z-index: 1;
   }
 }
@@ -177,13 +177,22 @@
     font-weight: 400;
     font-size: 24px;
     color: $dark-green;
+    margin-bottom: 1em;
   }
 }
 
 .junk-home-cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  // gap: 7em;
   align-items: center;
+}
+
+.rotate1 {
+  transform: rotate(-10deg);
+}
+.rotate2 {
+  transform: rotate(10deg);
 }
 
 .middle-card {
@@ -203,15 +212,14 @@
     background: linear-gradient(to bottom right, rgb(0, 201, 32) 0%, rgb(7, 47, 14) 100%);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border: 3px solid white;
-    width: 335px;
-    height: 430px;
+    width: 20em;
+    height: 24em;
     border-radius: 10px;
     background-color: $lighter-grey;
     margin: 0;
     padding: 0;
   }
 }
-
 
 .junk-card-home-content {
   padding-left: 10px;
@@ -237,7 +245,7 @@
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-    margin-bottom: 33px;
+    margin-bottom: 1em;
     margin-left: 10px;
     flex: 1 1 0%;
   }
