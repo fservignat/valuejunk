@@ -17,9 +17,22 @@ $font-size-base: 1rem;
 // $danger:     $red;
 // $warning:    $orange;
 
+//switch button
+$component-active-color: $green;
+$component-active-bg: $pale-green;
+
 // Buttons & inputs' radius
 $border-radius: 2px;
 $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
+$dropdown-bg: #06250c; //#212529
+$dropdown-link-color: white;
+$dropdown-link-hover-color: $light-green;
+$dropdown-link-hover-bg: none;
+$dropdown-border-radius: 10px;
+$dropdown-spacer: 10px;
+$dropdown-min-width: 8rem;
+$dropdown-box-shadow: 0 0 15px rgba(0,0,0,.2);
+$dropdown-divider-margin-y: 10px;
