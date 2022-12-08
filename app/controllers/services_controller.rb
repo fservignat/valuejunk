@@ -34,6 +34,13 @@ class ServicesController < ApplicationController
     else
       @services = Service.all
     end
+    @markers = @services.geocoded.map do |service|
+      {
+        lat: service.latitude,
+        lng: service.longitude,
+        image_url: helpers.asset_url("person-solid.svg")
+      }
+      end
     render :index
   end
 
