@@ -1,5 +1,8 @@
 <div class="main-container">
 
+
+
+
   <div id="junk-market-title">
     <div class="full-title-junk">
       <%= render "shared/title-craftpeople" %>
@@ -19,63 +22,81 @@
     </div>
   </div>
 
-    <div class="service-show-content">
+<div class="middle-part">
+      <div class="service-show-content">
 
-      <div class="address-price">
-        <div id="address">
-          <div>
-          <p>City</p>
-            <p class="service-show-border"><%= @service.address.split(", ")[1].split[1] %></p>
+        <div class="address-price">
+          <div id="address">
+            <div>
+            <p>City</p>
+              <p class="service-show-border"><%= @service.address.split(", ")[1].split[1] %></p>
+            </div>
+
+            <div>
+            <p>Postal code</p>
+              <p class="service-show-border"><%= @service.address.split(", ")[1].split[0] %></p>
+            </div>
           </div>
 
           <div>
-          <p>Postal code</p>
-            <p class="service-show-border"><%= @service.address.split(", ")[1].split[0] %></p>
+          <p>Price</p>
+          <p class="service-show-border"><%= @service.price %> €/hr</p>
           </div>
         </div>
 
         <div>
-        <p>Price</p>
-        <p class="service-show-border"><%= @service.price %> €/hr</p>
+        <p>Description</p>
+          <div id="description-scrollable">
+          <p><%= @service.description %></p>
+          </div>
         </div>
-      </div>
 
-      <div>
-      <p>Description</p>
-        <div id="description-scrollable">
-        <p><%= @service.description %></p>
-        </div>
-      </div>
-
-    </div>
-
-
-
-    <div class="service-show-content">
-
+        <div>
         <p>Specialities</p>
-        <p class="service-show-specialities"> <%= %></p>
+          <div id="specialities">
+            <p> <%  @service.speciality_list.each do |speciality| %>
+            <p><%= speciality %></p>
+            <% end %></p>
+          </div>
+        </div>
+      </div>
+
+    <div class="right-container">
+      <div class="grit">
+        <div class="small-image-container">
+
+    <% @service.photos.first(6).each do |photo| %>
+      <%= cl_image_tag(photo.key, class: 'small-image') %>
+    <% end %>
+
+  </div>
+      </div>
+
+      <div class="contact">
+        <%= link_to "Contact craftperson", service_path, class: "primary-button-1" %>
       </div>
     </div>
-
-
-
-  <% @service.photos.each do |photo| %>
-    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-  <% end %>
-  <div class="map">
-    <%= render "shared/map"%>
-  </div>
 </div>
 
   <div class="map">
     <%= render "shared/map"%>
   </div>
+
+
+
+
 </div>
 
+</div>
 
-<%  @service.speciality_list.each do |speciality| %>
-  <p>specities: <%= speciality %></p>
-<% end %>
+<div id="myModal" class="modal">
 
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
 </div>

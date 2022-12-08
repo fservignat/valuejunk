@@ -13,8 +13,10 @@
 
 .banner-content {
   position: absolute;
-  top: 123px;
-  right: 40px;
+  top: 34vh;
+  right: 3vw;
+  // top: 6rem;
+  // right: -1rem;
 }
 
 .banner-full-title {
@@ -27,8 +29,10 @@
     font-weight: bold;
     margin: 0;
     position: absolute;
-    top: 123px;
+    top: 0px;
     right: 170px;
+    // top: 9rem;
+    // right: 14rem;
     z-index: 1;
   }
 
@@ -48,8 +52,10 @@
     margin: 0;
     text-align: start;
     position: absolute;
+    top: 112px;
     right: 100px;
-    top: 235px;
+    // right: 10rem;
+    // top: 16rem;
   }
 }
 
