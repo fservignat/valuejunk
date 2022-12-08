@@ -8,11 +8,11 @@
   align-items: center;
     .logo {
       width: 180px;
-      margin-left: 50px;
+      margin-left: 80px;
     }
 }
 
-.content {
+.content-footer {
   width: 400px;
   height: 160px;
   display: flex;
@@ -25,20 +25,18 @@
     font-size: 17px;
     color: white;
     text-align: center;
-    a {
-    text-decoration: none;
-    }
   }
-  .cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+
+  a {
+  text-decoration: none;
   }
 }
 
-
-
+.cards {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
 
 .footer-card {
   position: relative;
