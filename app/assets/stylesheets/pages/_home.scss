@@ -183,7 +183,7 @@
 
 .junk-home-cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   // gap: 7em;
   align-items: center;
 }
@@ -221,6 +221,12 @@
   }
 }
 
+.price-delivery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .junk-card-home-content {
   padding-left: 10px;
   padding-right: 10px;
@@ -228,6 +234,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 150px;
+  justify-content: space-between;
 
   h2 {
     font-family: $body-font;

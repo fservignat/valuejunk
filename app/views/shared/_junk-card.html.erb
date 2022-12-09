@@ -39,12 +39,14 @@
       </div>
 
       <div class="junk-card-content">
-        <h2><%= junk.title %></h2>
-        <div class="price-delivery">
-          <p><%= junk.price %>€</p>
-          <%# if junk.delivery %>
-            <%# <p class="secondary-button-3 text-nowrap">Delivery possible</p> %>
-          <%# end %>
+        <div class="junk-card-upper">
+          <h2><%= junk.title %></h2>
+          <div class="price-delivery">
+            <p><%= junk.price %>€</p>
+            <% if junk.delivery %>
+              <p class="secondary-button-3 text-nowrap">Delivery possible</p>
+            <% end %>
+          </div>
         </div>
 
         <div class="junk-card-bottom">
