@@ -21,6 +21,13 @@
       placeholder: "Message ##{@chatroom.name}",
       wrapper_html: {class: "flex-grow-1"}
     %>
-    <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+    <%= f.submit "Send", class: "btn primary-button-1 mb-4" %>
   <% end %>
+
+  <%= link_to message_path(@chatroom.messages),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+      <i class="fa-solid fa-trash-can"></i>
+  <% end %>
+
+
 </div>

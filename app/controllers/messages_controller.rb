@@ -17,6 +17,12 @@ class MessagesController < ApplicationController
     end
   end
 
+  def destroy
+    @messages = Message.all
+    @messages.destroy_all()
+    redirect_to chatroom_path, status: :see_other
+  end
+
   private
 
   def message_params
