@@ -1,3 +1,9 @@
+.chatroom-container {
+  align-self: center;
+  width: 800px;
+  height: 70%;
+}
+
 .chatroom {
   background: white;
   margin-top: 9px;
@@ -35,7 +41,8 @@
   display: flex;
   justify-content: flex-end;
   margin-top: -35px;
-  width: 98%;
+  width: 97%;
+  color: grey;
 }
 
 .chatroom-entry-box {
