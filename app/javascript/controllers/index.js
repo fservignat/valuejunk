@@ -21,6 +21,3 @@ application.register("service-card", ServiceCardController)
 
 import TypedJsController from "./typed_js_controller"
 application.register("typed-js", TypedJsController)
-
-// import TypedJsController from "./carousel_controller"
-// application.register("carousel", TypedJsController)

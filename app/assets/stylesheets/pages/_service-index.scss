@@ -8,3 +8,14 @@
   align-items: center;
   flex-direction: column;
 }
+
+.search-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.search-form-services {
+  width: 600px;
+  height: 230px;
+}

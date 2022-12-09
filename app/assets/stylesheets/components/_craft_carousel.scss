@@ -1,13 +1,9 @@
 .carousel {
-  border: 1px solid red;
-  margin-bottom: 30px;
+  margin-bottom: 65px;
+  width: 40%;
 }
 
 .carousel-inner {
-  height: 330px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
 }
 
@@ -20,7 +16,7 @@
     font-size: 24px;
     font-weight: bold;
     margin: 0;
-    margin-top: 20px;
+    margin-top: 10px;
     width: 250px;
     text-align: center;
   }
@@ -29,6 +25,7 @@
 .carousel-item {
   text-align: center;
   position: initial !important;
+  margin-bottom: 20px;
   img {
     height: 170px;
   }
