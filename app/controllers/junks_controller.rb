@@ -1,12 +1,14 @@
 class JunksController < ApplicationController
   def index
-    if params[:query].present? or params[:query_min_price].present? or params[:query_max_price].present? or params[:location].present? or params[:service].present? or params[:junk].present?
+    if params[:query].present? or params[:query_min_price].present? or
+      params[:query_max_price].present? or params[:location].present? or
+      params[:service].present? or params[:junk].present?
       #set the max price so it will return all items if there is no input.
       if params[:query_max_price] == ""
         params[:query_max_price] = "99999"
       end
 
-      if params[:service].present? or params[:junk].present?
+      if params[:junk].present?
         params[:query_max_price] = "0"
       end
 
