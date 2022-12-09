@@ -6,6 +6,10 @@ Rails.application.routes.draw do
 
   resources :services
 
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
+
   get '/tagged', to: "services#tagged", as: :tagged
 
 end
