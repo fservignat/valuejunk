@@ -51,5 +51,5 @@
 <%  @service.speciality_list.each do |speciality| %>
   <p>specities: <%= speciality %></p>
 <% end %>
-
-<%= link_to "chat", chatroom_path(1)%>
+<% user_chat = Chatroom.where(name: @service.user.username)[0].id%>
+<%= link_to "Message", chatroom_path(user_chat)%>
