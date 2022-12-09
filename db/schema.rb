@@ -52,6 +52,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_172940) do
     t.datetime "updated_at", null: false
     t.string "title"
     t.string "address"
+    t.boolean "delivery"
     t.float "latitude"
     t.float "longitude"
     t.boolean "delivery"

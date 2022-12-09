@@ -14,18 +14,19 @@
 <div class="container-home">
 
   <div class="intro">
-    <div class="intro-description box">
-      <div class="description text-center">
-        <p><span id="title">ValueJunk</span> is not just another marketplace.</p>
-        <p>We want to make <span id="upcycling">upcycling</span></p>
-        <p><span id="fun">fun</span><br><span id="trendy">trendy</span><br><span id="collaborative">collaborative</span></p>
+    <div class="boxes">
+      <div class="intro-description box">
+        <div class="description text-center">
+          <p><span id="title">ValueJunk</span> is not just another marketplace.</p>
+          <p>We want to make <span id="upcycling">upcycling</span></p>
+          <p><span id="fun">fun</span><br><span id="trendy">trendy</span><br><span id="collaborative">collaborative</span></p>
+        </div>
+      </div>
+      <div class="intro-form box" data-controller="search-form">
+        <%= render "shared/search-form" %>
       </div>
     </div>
-    <div class="intro-form box" data-controller="search-form">
-      <%= render "shared/search-form" %>
-    </div>
-    </div>
-    <div class="intro-rings">
+    <%= image_tag("box-info-rings", class: 'rings') %>
   </div>
 
 

@@ -1,18 +1,28 @@
 class JunksController < ApplicationController
   def index
+    @junks = Junk.all
 
-    if params[:query].present? or params[:query_min_price].present? or params[:query_max_price].present?
-      if params[:query_max_price] == ""
-        params[:query_max_price] = "99999"
-      end
-      sql_query = "(title ILIKE :query OR description ILIKE :query)"
-      price_query = "price BETWEEN :query_min_price AND :query_max_price"
-      @junks = Junk.where("#{sql_query} AND #{price_query}", query: "%#{params[:query]}%",
-      query_min_price: params[:query_min_price].to_i, query_max_price: params[:query_max_price].to_i)
-    else
-      @junks = Junk.all
+    if params[:query].present?
+      @junks = @junks.where("title ILIKE ?", "%#{params[:query]}%")
     end
-      # The `geocoded` scope filters only junks with coordinates
+
+    if params[:query_min_price].present?
+      unless params[:query_max_price] == ""
+        @junks = @junks.where("price > ?", "%#{params[:query_min_price]}%")
+      end
+    end
+
+    if params[:query_max_price].present?
+      unless params[:query_max_price] == "99999"
+        @junks = @junks.where("price < ?", "%#{params[:query_max_price]}%")
+      end
+    end
+
+    if params[:location].present?
+      @junks = @junks.near(params[:location], 10)
+    end
+
+    # The `geocoded` scope filters only junks with coordinates
     @markers = @junks.geocoded.map do |junk|
       {
         lat: junk.latitude,

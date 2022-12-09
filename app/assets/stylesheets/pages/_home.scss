@@ -80,17 +80,29 @@
 }
 
 .intro {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 57px;
+  position: relative;
+  .boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 57px;
+    gap: 30px;
+  }
+  .rings {
+    position: absolute;
+    bottom: -45px;
+    left: 40%;
+  }
+}
+
+.box {
+  width: 600px;
+  height: 340px;
+  padding: 24px;
 }
 
 .intro-description {
-  width: 600px;
-  height: 340px;
-  margin-right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,7 +112,6 @@
     font-weight: 400;
     font-size: 24px;
     color: black;
-    padding: 0 20px;
   }
 
   #title {
@@ -135,13 +146,6 @@
     color: $green;
   }
 }
-
-.intro-form {
-  width: 600px;
-  height: 340px;
-  margin-left: 10px;
-}
-
 
 .junk-home-box {
   width: 1250;
