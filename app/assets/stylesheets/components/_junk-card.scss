@@ -42,9 +42,10 @@
 .junk-card-content {
   padding-left: 10px;
   padding-right: 10px;
-  height: 36%;
+  height: 30%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   position: relative;
 
   h2 {
@@ -71,15 +72,13 @@
 .price-delivery {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .junk-card-bottom {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  // position: absolute;
-  // bottom: 17px;
 
   p {
     font-size: 10px;
