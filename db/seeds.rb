@@ -212,6 +212,7 @@ puts "service: #{service.title} created."
 
 
 #create chatroom-------------------------
+Chatroom.destroy_all
 chatroom1=Chatroom.create!(name: "Kelly")
 puts "chatroom #{chatroom1.name} created."
 

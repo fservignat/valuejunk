@@ -1,6 +1,6 @@
 <div class="main-container chatroom" data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id%>">
-  <h1>#<%= @chatroom.name %></h1>
+  <h1>Message to: <%= @chatroom.name %></h1>
 
   <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
@@ -8,26 +8,31 @@
     <% end %>
   </div>
 
-  <%= simple_form_for [@chatroom, @message],
-    html: {
-      class: "d-flex",
-      data:{
-        action:  "turbo:submit-end->chatroom-subscription#resetForm"
-      }
-    } do |f|
-  %>
-    <%= f.input :content,
-      label: false,
-      placeholder: "Message ##{@chatroom.name}",
-      wrapper_html: {class: "flex-grow-1"}
-    %>
-    <%= f.submit "Send", class: "btn primary-button-1 mb-4" %>
-  <% end %>
 
-  <%= link_to message_path(@chatroom.messages),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-      <i class="fa-solid fa-trash-can"></i>
-  <% end %>
+      <%= link_to message_path(@chatroom.messages),
+        class: "chatroom-trash-position",
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+          <i class="fa-solid fa-trash-can"></i>
+      <% end %>
+
+  <%# <div class="chatroom-entry-box"> %>
+    <%= simple_form_for [@chatroom, @message],
+      html: {
+        class: "d-flex chatroom-entry-box",
+        data:{
+          action: "turbo:submit-end->chatroom-subscription#resetForm"
+        }
+      } do |f|
+    %>
+      <%= f.input :content,
+        label: false,
+        placeholder: "Type your message here...",
+        wrapper_html: {class: "flex-grow-1"}
+      %>
+      <%= f.submit "Send", class: "btn primary-button-1 mb-4" %>
+    <% end %>
+  </div>
+
 
 
 </div>

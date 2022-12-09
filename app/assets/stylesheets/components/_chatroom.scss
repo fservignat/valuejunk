@@ -30,3 +30,17 @@
     }
   }
 }
+
+.chatroom-trash-position {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -35px;
+  width: 98%;
+}
+
+.chatroom-entry-box {
+  // display: grid;
+  // grid-template: 80% auto;
+  gap: 20px;
+  margin-top: 30px;
+}
