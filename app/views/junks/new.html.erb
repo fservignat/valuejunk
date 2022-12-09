@@ -1,4 +1,21 @@
-<div class="main-container">
+<section class="junk-service-main-container">
   <h1>Post an AD</h1>
-  <%= render "form", junk: @junk %>
-</div>
+
+  <div class="junk-service-sub-container">
+      <div class="junk-service-tabs-wrap">
+        <a class="junk-service-tab junk-service-tab-active" href="/junks/new">Item</a>
+        <a class="junk-service-tab tab-margin" href="/services/new">Services</a>
+      </div>
+
+    <div class="junk-service-form" data-controller="junk-card">
+      <div class=junk-form-content>
+        <div class="junk-form-content-left">
+          <% junk_template=Junk.new(title: "", address: "", description: "", price: "" , category: "",
+            donation: false, user_id: current_user.id, photos: []) %>
+          <%= render "shared/junk-card-preview", junk: junk_template %>
+        </div>
+          <%= render "form", junk: @junk %>
+      </div>
+    </div>
+  </div>
+</section>

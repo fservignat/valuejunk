@@ -1,52 +1,57 @@
-  <div class="service-card service-card-font">
-    <%= link_to (service === nil || service.id === nil) ? services_path : service_path(service), class: "service-card-clickable" do %>
-      <% if service.user.photo.attached? %>
-        <%= cl_image_tag service.user.photo.key, crop: :fill, class: "avatar-large service-card-img", alt: "avatar for user" %>
-      <% else %>
-        <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "avatar-large service-card-img") %>
-      <% end %>
-
-      <div class="service-card-heading">
-        <p class="service-card-name"><%= service.user[:username] %></p>
-        <p class="service-card-craft" data-service-card-target="card_craft">
-          <%= service.craft %>
-        </p>
-      </div>
-
-      <div class="service-card-address">
-        <p data-service-card-target="card_address"><%= service.address.split(",")[1] %></p>
-        <%if service.volunteer%>
-          <p >Volunteer</p>
-        <%else%>
-          <p data-service-card-target="card_price" ><%= service.price %> €/hr</p>
-        <%end%>
-      </div>
-
-      <div class="service-card-description">
-        <i data-service-card-target="card_description">"<%= service.description.length > 200 ? "#{service.description[0...200]}..." : service.description %>"</i>
-      </div>
-    <%end%>
-    <div class="service-card-specialities">
-      <i>Specialities</i>
-      <div>
-        <p data-service-card-target="card_speciality">
-          <% service.speciality_list.sample(4).each do |speciality| %>
-            <%= link_to speciality, tagged_path(speciality: speciality),
-            class: "speciality-btn" %>
-
-          <% end %>
-          <% if service.speciality_list.count > 4 %>
-            <span>...</span>
-          <% end %>
-        </p>
-      </div>
-    </div>
-
-    <% if profile %>
-      <div class="service-card-icon">
-        <i class="fa-regular fa-pen-to-square"></i>
-        <i class="fa-solid fa-trash-can"></i>
-      </div>
+<div class="service-card service-card-font">
+  <%= link_to (service === nil || service.id === nil) ? services_path : service_path(service), class: "service-card-clickable" do %>
+    <% if service.user.photo.attached? %>
+      <%= cl_image_tag service.user.photo.key, crop: :fill, class: "avatar-large service-card-img", alt: "avatar for user" %>
+    <% else %>
+      <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "avatar-large service-card-img") %>
     <% end %>
 
+    <div class="service-card-heading">
+      <p class="service-card-name"><%= service.user[:username] %></p>
+      <p class="service-card-craft" data-service-card-target="card_craft">
+        <%= service.craft %>
+      </p>
+    </div>
+
+    <div class="service-card-address">
+      <p data-service-card-target="card_address"><%= service.address.split(",")[1] %></p>
+      <%if service.volunteer%>
+        <p >Volunteer</p>
+      <%else%>
+        <p data-service-card-target="card_price" ><%= service.price %> €/hr</p>
+      <%end%>
+    </div>
+
+    <div class="service-card-description">
+      <i data-service-card-target="card_description">"<%= service.description.length > 200 ? "#{service.description[0...200]}..." : service.description %>"</i>
+    </div>
+  <%end%>
+  <div class="service-card-specialities">
+    <i>Specialities</i>
+    <div>
+      <p data-service-card-target="card_speciality">
+        <% service.speciality_list.sample(3).each do |speciality| %>
+          <%= link_to speciality, tagged_path(speciality: speciality),
+          class: "speciality-btn" %>
+
+        <% end %>
+        <% if service.speciality_list.count > 3 %>
+          <span>...</span>
+        <% end %>
+      </p>
+    </div>
   </div>
+
+  <% if profile %>
+    <div class="service-card-icon">
+      <%= link_to edit_service_path(service) do %>
+        <i class="fa-regular fa-pen-to-square"></i>
+      <% end %>
+      <%= link_to service_path(service),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+        <i class="fa-solid fa-trash-can"></i>
+      <% end %>
+    </div>
+  <% end %>
+
+</div>

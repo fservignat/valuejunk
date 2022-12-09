@@ -43,15 +43,13 @@ class ServicesController < ApplicationController
 
   def new
     @service = Service.new
-
-    # This is to make sure the service card doesn't generate error in the new form
-    @service_template=Service.new(description: "", price: "" , craft: "", volunteer: "", title: "", address: "", user_id: current_user.id)
-
+    @service_template=Service.new(description: "", address: "", user: current_user)
   end
 
   def create
     @service = Service.new(service_params)
     @service.user = current_user
+    @service_template=Service.new(description: "", address: "", user: current_user)
 
     if @service.save
       redirect_to service_path(@service)
