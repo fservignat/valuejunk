@@ -1,5 +1,6 @@
   <div class="service-card service-card-font">
     <%= link_to (service === nil || service.id === nil) ? services_path : service_path(service), class: "service-card-clickable" do %>
+    <%# important to merge with the code below !!!!! else the create a service wont work propperly  %>
       <% if service %>
         <% if service.user.photo.attached? %>
           <%= cl_image_tag service.user.photo.key, crop: :fill, class: "avatar-large service-card-img", alt: "avatar for user" %>
