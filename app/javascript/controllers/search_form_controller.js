@@ -2,9 +2,11 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="search-form"
 export default class extends Controller {
-  static targets = ["form", "category"]
-  connect() {
+  static targets = ["form", "category",
+    "craft", "input"]
 
+  connect() {
+    console.log("in the search-form")
   }
 
   update() {
@@ -14,4 +16,20 @@ export default class extends Controller {
     }
   }
 
+  update_with_img() {
+    // console.log("this is update!")
+    setTimeout(() => {
+      const activeImg = this.craftTarget.querySelector(".active")
+      const activeDiv = activeImg.getElementsByTagName("div")[0]
+      const activeHeader = activeDiv.getElementsByTagName("h5")[0].innerText
+
+      console.log(activeHeader)
+
+      // fetch(){
+
+      // }
+
+    }, 1000);
+
+  }
 }
