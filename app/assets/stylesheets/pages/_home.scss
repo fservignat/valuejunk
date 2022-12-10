@@ -309,6 +309,17 @@
   }
 }
 
+.craftpeople-carousel {
+  text-align: -webkit-center;
+  margin-top: 40px;
+  background-color: rgba(255, 255, 255, .5);
+  .home-img-size {
+    img {
+      height: 250px;
+    }
+  }
+}
+
 #community {
   color: $green;
 }
