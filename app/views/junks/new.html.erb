@@ -1,5 +1,7 @@
 <section class="junk-service-main-container">
-  <h1>Post an AD</h1>
+  <div class="full-title-junk">
+    <%= render "shared/title_ad" %>
+  </div>
 
   <div class="junk-service-sub-container">
       <div class="junk-service-tabs-wrap">
@@ -17,5 +19,6 @@
           <%= render "form", junk: @junk %>
       </div>
     </div>
+
   </div>
 </section>

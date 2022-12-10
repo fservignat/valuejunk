@@ -1,16 +1,17 @@
 .junk-card {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 280px;
-  height: 358px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  height: 21em;
+  width: 16em;
+
   border-radius: 10px;
   background-color: $lighter-grey;
   margin: 0;
   padding: 0;
 
   img {
-    height: 223px;
+    height: 14em;
     width: 100%;
     object-fit: cover;
   }
@@ -18,6 +19,7 @@
 
 .junk-card-img {
   position: relative;
+
   p {
     color: $green;
     font-family: stardos stencil;
@@ -42,22 +44,27 @@
 .junk-card-content {
   padding-left: 10px;
   padding-right: 10px;
-  height: 36%;
+  height: 30%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 
   h2 {
     font-family: $body-font;
     color: black;
-    font-size: 18px;
+    font-size: 1em;
     font-weight: bold;
     text-decoration: none;
     padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0;
   }
+
   p {
     font-family: $body-font;
     color: black;
-    font-size: 12px;
+    font-size: 0.8em;
     font-weight: bold;
     text-decoration: none;
     margin-bottom: 5px;
@@ -65,15 +72,29 @@
   }
 }
 
-.junk-card-bottom {
+.price-delivery {
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+
+.junk-card-bottom {
+  display: flex;
   justify-content: space-between;
-  // position: absolute;
-  // bottom: 5px;
+  align-items: center;
+
+  p {
+    font-size: 10px;
+    display: inline;
+  }
+
+  i {
+    color: black;
+  }
 }
 
 .address-date {
+  line-height: 12px;
   p {
     margin-bottom: 5px;
     color: $grey;
@@ -81,4 +102,8 @@
     font-size: 10px;
     display: inline;
   }
+}
+
+#bootstrap-override .arrow {
+  z-index: 0;
 }
