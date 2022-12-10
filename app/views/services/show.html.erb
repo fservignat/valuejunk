@@ -1,76 +1,112 @@
 <div data-controller="image-expand">
-<!-- The Modal -->
-  <div id="myModal" class="modal">
-    <!-- The Close Button -->
-    <span class="close">&times;</span>
-    <!-- Modal Content (The Image) -->
-   <img class="modal-content" id="img01">
-    <!-- Modal Caption (Image Text) -->
-    <div id="caption"></div>
-  </div>
-  <div class="junk-market-title">
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+
+<div class="main-container">
+
+
+
+
+  <div id="junk-market-title">
     <div class="full-title-junk">
-        <%= render "shared/title-market" %>
+      <%= render "shared/title-craftpeople" %>
     </div>
   </div>
-  <section class="main-container">
-  <div class="junk-show-container">
-    <div class="junk-show-form">
-      <div class="junk-show-form-title">
-        <h2><%= @junk.title %></h2>
-      </div>
-      <div class="junk-show-form-content">
-        <div class= "junk-show-card">
-          <%= render "shared/junk-card", junks: @junk_array %>
-        </div>
-        <div class="junk-show-form-info">
-          <div class="price-favourites">
+
+<div class="service-show-container">
+
+  <div class="photo-craft">
+    <div id="photo">
+    <% if @service.user.photo.attached? %>
+        <%= cl_image_tag @service.user.photo.key, crop: :fill, class: "service-avatar", alt: "avatar for user" %>
+      <% else %>
+        <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "service-avatar") %>
+      <% end %>
+    </div>
+
+    <div id="title-craft">
+    <h2><%= @service.title %></h2>
+    <p><%= @service.craft %></p>
+    </div>
+  </div>
+
+  <div class="middle-part">
+      <div class="service-show-content">
+
+        <div class="address-price">
+          <div id="address">
             <div>
-              <p><%= @junk.price %>€</p>
+            <p>City</p>
+              <p class="service-show-border"><%= @service.address.split(", ")[1].split[1] %></p>
             </div>
-            <div id="favourites">
-            <%= image_tag "heart.svg" %>
-            <p>Add to Favourites</p>
+
+            <div>
+            <p>Postal code</p>
+              <p class="service-show-border"><%= @service.address.split(", ")[1].split[0] %></p>
             </div>
           </div>
-          <div class="address">
-            <div>
-              <div class="label-name"><p>City</p></div>
-              <div class="boxed">
-                <p><%= @junk.address.split(", ")[1].split[1] %></p>
-              </div>
-            </div>
-            <div>
-              <div class="label-name"><p>Postal code</p></div>
-              <div class="boxed">
-                <p><%= @junk.address.split(", ")[1].split[0] %></p>
-              </div>
-            </div>
-            <div class="delivery">
-            <%= image_tag "delivery.svg" %>
-            <p>Delivery possible</p>
-            </div>
-          </div>
-          <div class="description">
-            <div class="label-name"><p>Description</p></div>
-            <div class="junk-description-scrollable">
-              <p><%= @junk.description %></p>
-            </div>
+
+          <div>
+          <p>Price</p>
+          <p class="service-show-border"><%= @service.price %> €/hr</p>
           </div>
         </div>
+
+        <div>
+        <p>Description</p>
+          <div id="description-scrollable">
+          <p><%= @service.description %></p>
+          </div>
+        </div>
+
+        <div>
+        <p>Specialities</p>
+          <div id="specialities">
+            <p><%  @service.speciality_list.each do |speciality| %>
+            <div class="specialities-container"><%= speciality %></div>
+            <% end %></p>
+          </div>
+        </div>
       </div>
-      <div class="junk-show-images-button">
-        <div class="small-image-container">
-          <% @junk.photos.first(6).each do |photo| %>
-          <%= cl_image_tag(photo.key, class: 'small-image', alt: 'image junk') %>
+
+    <div class="right-container">
+      <div id="grid">
+        <div class="service-small-image-container">
+          <% @service.photos.first(6).each do |photo| %>
+          <%= cl_image_tag(photo.key, class: 'service-small-image') %>
           <% end %>
         </div>
-        <%= link_to "Contact seller", junks_path, class: "primary-button-1" %>
+      </div>
+
+      <div class="contact-craftperson">
+        <%= link_to "Contact craftperson", service_path, class: "primary-button-1" %>
+      </div>
     </div>
-        <div class="map">
-          <%= render "shared/map"%>
-        </div>
-    </div>
+
   </div>
-  </section>
+
+  <div class="map">
+    <%= render "shared/map"%>
+  </div>
+
+
+
+
+</div>
+
+</div>
+</div>
+</div>
+  <% user_chat = Chatroom.where(name: @service.user.username)[0].id%>
+  <%= link_to "Message", chatroom_path(user_chat)%>
+  </div>
 </div>
