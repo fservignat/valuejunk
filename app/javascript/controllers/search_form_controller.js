@@ -23,8 +23,9 @@ export default class extends Controller {
       const activeDiv = activeImg.getElementsByTagName("div")[0]
       const activeHeader = activeDiv.getElementsByTagName("h5")[0].innerText
 
-      console.log(activeHeader)
-
+      this.inputTarget.value = activeHeader
+      console.log(this.inputTarget.value)
+      // console.log(activeHeader)
       // fetch(){
 
       // }

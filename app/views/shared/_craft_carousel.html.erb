@@ -1,22 +1,22 @@
 <div id="carouselExampleCaptions" class="carousel-size carousel slide"
-  data-bs-ride="false" data-controller="search-form">
+  data-bs-ride="false">
 
 
 <%# crafts: "CERAMICS AND GLASS", "FIBRE AND TEXTILE", "FLOWER AND GARDEN", "LEATHERWORK", "HOUSEWARE", "PAPER", "WOOD AND FURNITURE", "STONE", "METAL" %>
 
   <div class="carousel-inner">
-    <div class="carousel-indicators" data-search-form-target="craft">
-      <button type="button" data-action="click->search-form#update-with-img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-action="click->search-form#update-with-img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-action="click->search-form#update-with-img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-action="click->search-form#update-with-img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-      <button type="button" data-action="click->search-form#update-with-img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-      <button type="button" data-action="click->search-form#update-with-img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
-      <button type="button" data-action="click->search-form#update-with-img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
-      <button type="button" data-action="click->search-form#update-with-img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
-      <button type="button" data-action="click->search-form#update-with-img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
+    <div class="carousel-indicators">
+      <button type="button" data-action="click->search-form#update_with_img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-action="click->search-form#update_with_img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-action="click->search-form#update_with_img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-action="click->search-form#update_with_img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-action="click->search-form#update_with_img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-action="click->search-form#update_with_img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      <button type="button" data-action="click->search-form#update_with_img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+      <button type="button" data-action="click->search-form#update_with_img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
+      <button type="button" data-action="click->search-form#update_with_img" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
     </div>
-    <div class="items">
+    <div class="items" data-search-form-target="craft">
       <div class="carousel-item override-item home-img-size active">
         <%= image_tag("icons/ceramic.png", class: 'icon', alt: 'icon craft ceramics') %>
         <div class="carousel-caption d-none d-md-block">
@@ -73,12 +73,16 @@
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+  <button class="carousel-control-prev" type="button"
+    data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"
+    data-action="click->search-form#update_with_img">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+  <button class="carousel-control-next" type="button"
+    data-bs-target="#carouselExampleCaptions" data-bs-slide="next"
+    data-action="click->search-form#update_with_img">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
   </button>
 </div>
