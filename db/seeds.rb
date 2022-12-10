@@ -249,3 +249,19 @@ service = Service.new(
   service.speciality_list.add("Cabinet making", "Carpentry","Wood burning","Woodworking")
 service.save!
 puts "service: #{service.title} created."
+
+
+
+
+#create chatroom-------------------------
+Chatroom.destroy_all
+chatroom1=Chatroom.create!(name: "Kelly")
+puts "chatroom #{chatroom1.name} created."
+
+#create chatroom-------------------------
+chatroom2=Chatroom.create!(name: "Ricky")
+puts "chatroom #{chatroom2.name} created."
+
+#create chatroom-------------------------
+chatroom3=Chatroom.create!(name: "Taylor")
+puts "chatroom #{chatroom3.name} created."
