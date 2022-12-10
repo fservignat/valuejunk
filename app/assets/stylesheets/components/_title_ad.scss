@@ -2,9 +2,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-right: 20px;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 110px;
   margin-bottom: 70px;
 }
 
@@ -24,13 +23,13 @@
     color: $pale-green;
   }
 
-  .title-panel {
+  .title-panel-ad {
     background-color: $pale-green;
-    width: 208px;
-    height: 55px;
+    width: 217px;
+    height: 65px;
     z-index: 0;
     position: absolute;
-    top: -6px;
-    left: 366px;
+    top: -15px;
+    left: 446px;
   }
 }
