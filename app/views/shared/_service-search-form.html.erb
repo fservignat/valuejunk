@@ -1,0 +1,50 @@
+<%= form_with url: services_path, class: 'form', method: :get, data: {search_form_target: "form"} do %>
+  <div class="form">
+
+
+    <div class="query">
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Anything in particular?" %>
+    </div>
+
+    <div class="location">
+      <%= text_field_tag :location,
+        params[:location],
+        class: "form-control",
+        placeholder: "Any location in particular?" %>
+    </div>
+
+    <div class="price">
+      <p>Price</p>
+      <div class="min">
+        <%= text_field_tag :query_min_price,
+          params[:query_min_price],
+          class: "form-control",
+          placeholder: "Min" %>
+        <div class="input-group-text">€</div>
+      </div>
+      <div class="max">
+        <%= text_field_tag :query_max_price,
+          params[:query_max_price],
+          class: "form-control",
+          placeholder: "Max" %>
+        <div class="input-group-text">€</div>
+      </div>
+    </div>
+
+    <div class="switches">
+      <div class="form-check form-switch">
+        <input class="form-check-input boolean optional" type="checkbox" value="1" name="service[volunteer]" id="service_volunteer"/>
+        <label class="boolean optional" for="service_volunteer">Volunteer</label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input boolean optional" type="checkbox" value="1" name="junk[donation]" id="junk_donation"/>
+        <label class="boolean optional" for="junk_donation">Donation</label>
+      </div>
+    </div>
+
+  </div>
+  <%= submit_tag "Search", class: "primary-button-1" %>
+<% end %>
