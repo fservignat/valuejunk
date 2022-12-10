@@ -1,0 +1,41 @@
+.carousel-size {
+  width: 40%;
+}
+
+.carousel-caption {
+  position: initial !important;
+  text-align: -webkit-center;
+  h5 {
+    color: $green-turquoise;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 10px;
+    width: 250px;
+    text-align: center;
+  }
+}
+
+.carousel-item {
+  text-align: center;
+  position: initial !important;
+}
+
+.override-item{
+  margin-bottom: 20px;
+  img {
+    height: 170px;
+  }
+}
+
+.carousel-indicators {
+  margin-bottom: 0;
+}
+
+.carousel-control-prev-icon {
+  color: black;
+}
+
+.active {
+  width: 100%;
+}

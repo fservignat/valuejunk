@@ -1,9 +1,10 @@
 .junk-card {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   height: 21em;
   width: 16em;
+
   border-radius: 10px;
   background-color: $lighter-grey;
   margin: 0;
@@ -18,6 +19,7 @@
 
 .junk-card-img {
   position: relative;
+
   p {
     color: $green;
     font-family: stardos stencil;
@@ -58,6 +60,7 @@
     padding-bottom: 5px;
     margin: 0;
   }
+
   p {
     font-family: $body-font;
     color: black;
@@ -99,4 +102,8 @@
     font-size: 10px;
     display: inline;
   }
+}
+
+#bootstrap-override .arrow {
+  z-index: 0;
 }

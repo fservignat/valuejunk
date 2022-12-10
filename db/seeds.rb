@@ -16,6 +16,43 @@ User.destroy_all
 
 #create users -------------------------------------------------
 puts "Creating User Owner"
+ky_user = User.create!(
+  username: "Kylian",
+  email: "Kylianjanssens@hotmail.com",
+  address: "100 Bd d'Andilly, 95580 Andilly, France",
+  bio: "I am a developer",
+  password: "123456"
+  )
+  file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670538126/kylian_axzdyv.jpg')
+  ky_user.photo.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
+ky_user.save!
+puts "User created."
+
+f_user = User.create!(
+  username: "Francis",
+  email: "francis.servignat@outlook.com",
+  address: "37 All. de la Herse d'Or, 77230 Dammartin-en-Goële, France",
+  bio: "I am a developer",
+  password: "123456"
+  )
+  # file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670538126/kylian_axzdyv.jpg')
+  # f_user.photo.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
+f_user.save!
+puts "User created."
+
+s_user = User.create!(
+  username: "Sunny",
+  email: "sunny_law@hotmail.com",
+  address: "117 Rue des Labours, 77700 Magny-le-Hongre, France",
+  bio: "I am a developer",
+  password: "123456"
+  )
+  file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670538679/Sunny_weke0l.jpg')
+  s_user.photo.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
+s_user.save!
+puts "User created."
+
+puts "Creating User Owner"
 k_user = User.create!(
   username: "Kelly",
   email: "Kelly@outlook.com",
@@ -128,9 +165,14 @@ junk = Junk.new(
   donation: false,
   delivery: true,
   user: r_user)
-  # file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668158134/development/Experimental_Cocktail_Club_gzeegk.png')
-  # junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
-
+  file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670540774/single-bed2_lacybs.jpg')
+  junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
+  file2 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670540774/single-bed3_fxzr1n.jpg')
+  junk.photos.attach(io: file2, filename: 'experimental.jpg', content_type: 'image/jpg')
+  file3 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670540774/single-bed4_j1uykl.jpg')
+  junk.photos.attach(io: file3, filename: 'experimental.jpg', content_type: 'image/jpg')
+  file4 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670540774/single-bed4_j1uykl.jpg')
+  junk.photos.attach(io: file4, filename: 'experimental.jpg', content_type: 'image/jpg')
 junk.save!
 puts "junk: #{junk.title} created."
 
@@ -207,3 +249,19 @@ service = Service.new(
   service.speciality_list.add("Cabinet making", "Carpentry","Wood burning","Woodworking")
 service.save!
 puts "service: #{service.title} created."
+
+
+
+
+#create chatroom-------------------------
+Chatroom.destroy_all
+chatroom1=Chatroom.create!(name: "Kelly")
+puts "chatroom #{chatroom1.name} created."
+
+#create chatroom-------------------------
+chatroom2=Chatroom.create!(name: "Ricky")
+puts "chatroom #{chatroom2.name} created."
+
+#create chatroom-------------------------
+chatroom3=Chatroom.create!(name: "Taylor")
+puts "chatroom #{chatroom3.name} created."

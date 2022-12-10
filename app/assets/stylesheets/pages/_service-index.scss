@@ -1,10 +1,23 @@
 .title {
   margin-top: 100px;
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 }
 
 .service-content-center {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.search-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 65px;
+}
+
+.search-form-services {
+  width: 50%;
+  height: 230px;
 }

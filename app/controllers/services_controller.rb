@@ -5,14 +5,31 @@ class ServicesController < ApplicationController
 
   def index
 
-    if params[:query].present? or params[:query_min_price].present? or params[:query_max_price].present?
+    if params[:query].present? or params[:query_min_price].present? or
+      params[:query_max_price].present? or params[:location].present? or
+      params[:service].present? or params[:junk].present?
+      #set the max price so it will return all items if there is no input.
       if params[:query_max_price] == ""
         params[:query_max_price] = "99999"
       end
-      sql_query = "(title ILIKE :query OR description ILIKE :query OR craft ILIKE :query)"
+
+      if params[:service].present?
+        params[:query_max_price] = "0"
+      end
+
+      sql_query = "(title ILIKE :query OR description ILIKE :query)"
       price_query = "price BETWEEN :query_min_price AND :query_max_price"
-      @services = Service.where("#{sql_query} AND #{price_query}", query: "%#{params[:query]}%",
-      query_min_price: params[:query_min_price].to_i, query_max_price: params[:query_max_price].to_i)
+      location_query = "address ILIKE :location"
+
+      @services = Service.where("#{sql_query} AND #{price_query} AND #{location_query}",
+        query: "%#{params[:query]}%",
+        query_min_price: params[:query_min_price].to_i,
+        query_max_price: params[:query_max_price].to_i,
+        location: "%#{params[:location]}%"
+      )
+
+
+
     else
       @services = Service.all
     end
@@ -34,6 +51,13 @@ class ServicesController < ApplicationController
     else
       @services = Service.all
     end
+    @markers = @services.geocoded.map do |service|
+      {
+        lat: service.latitude,
+        lng: service.longitude,
+        image_url: helpers.asset_url("person-solid.svg")
+      }
+      end
     render :index
   end
 
@@ -53,6 +77,7 @@ class ServicesController < ApplicationController
 
     if @service.save
       redirect_to service_path(@service)
+      flash[:notice] = "Thank you, your ad was successfully created!"
     else
       render :new, status: :unprocessable_entity
     end

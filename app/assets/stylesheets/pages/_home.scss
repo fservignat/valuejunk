@@ -21,6 +21,7 @@
 
 .banner-full-title {
   position: relative;
+
   h1 {
     font-family: $headers-font;
     color: white;
@@ -305,6 +306,17 @@
     font-weight: 400;
     font-size: 24px;
     color: white;
+  }
+}
+
+.craftpeople-carousel {
+  text-align: -webkit-center;
+  margin-top: 40px;
+  background-color: rgba(255, 255, 255, .5);
+  .home-img-size {
+    img {
+      height: 250px;
+    }
   }
 }
 
