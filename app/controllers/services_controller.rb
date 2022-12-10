@@ -5,14 +5,31 @@ class ServicesController < ApplicationController
 
   def index
 
-    if params[:query].present? or params[:query_min_price].present? or params[:query_max_price].present?
+    if params[:query].present? or params[:query_min_price].present? or
+      params[:query_max_price].present? or params[:location].present? or
+      params[:service].present? or params[:junk].present?
+      #set the max price so it will return all items if there is no input.
       if params[:query_max_price] == ""
         params[:query_max_price] = "99999"
       end
-      sql_query = "(title ILIKE :query OR description ILIKE :query OR craft ILIKE :query)"
+
+      if params[:service].present?
+        params[:query_max_price] = "0"
+      end
+
+      sql_query = "(title ILIKE :query OR description ILIKE :query)"
       price_query = "price BETWEEN :query_min_price AND :query_max_price"
-      @services = Service.where("#{sql_query} AND #{price_query}", query: "%#{params[:query]}%",
-      query_min_price: params[:query_min_price].to_i, query_max_price: params[:query_max_price].to_i)
+      location_query = "address ILIKE :location"
+
+      @services = Service.where("#{sql_query} AND #{price_query} AND #{location_query}",
+        query: "%#{params[:query]}%",
+        query_min_price: params[:query_min_price].to_i,
+        query_max_price: params[:query_max_price].to_i,
+        location: "%#{params[:location]}%"
+      )
+
+
+
     else
       @services = Service.all
     end
@@ -43,15 +60,13 @@ class ServicesController < ApplicationController
 
   def new
     @service = Service.new
-
-    # This is to make sure the service card doesn't generate error in the new form
-    @service_template=Service.new(description: "", price: "" , craft: "", volunteer: "", title: "", address: "", user_id: current_user.id)
-
+    @service_template=Service.new(description: "", address: "", user: current_user)
   end
 
   def create
     @service = Service.new(service_params)
     @service.user = current_user
+    @service_template=Service.new(description: "", address: "", user: current_user)
 
     if @service.save
       redirect_to service_path(@service)

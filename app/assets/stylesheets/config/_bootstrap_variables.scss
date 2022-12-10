@@ -36,3 +36,24 @@ $dropdown-spacer: 10px;
 $dropdown-min-width: 8rem;
 $dropdown-box-shadow: 0 0 15px rgba(0,0,0,.2);
 $dropdown-divider-margin-y: 10px;
+
+$carousel-control-color:             $green-turquoise;
+$carousel-control-width:             15%;
+$carousel-control-opacity:           .5;
+$carousel-control-hover-opacity:     1;
+$carousel-control-transition:        opacity .15s ease;
+
+$carousel-caption-width:             20%;
+$carousel-caption-color:             $green-turquoise;
+$carousel-caption-padding-y:         0;
+$carousel-caption-spacer:            1.25rem;
+
+$carousel-indicator-active-bg: $green-turquoise;
+$carousel-indicator-width: 10px;
+$carousel-indicator-height: 3px;
+$carousel-indicator-hit-area-height: 5px;
+$carousel-indicator-spacer:          3px;
+$carousel-indicator-opacity:         .3;
+
+$carousel-control-icon-width:        4rem;
+$carousel-control-icon-color:        $green-turquoise;

@@ -1,0 +1,30 @@
+<div class="junk-card">
+
+    <div class="junk-card-img">
+
+      <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1670528656/House-Clearance_icaeeb.jpg",
+            crop: :fill, class: 'd-block', alt: 'image cover for junk', data: {junk_card_target: "card_photo"})%>
+
+      <% if junk.donation %>
+        <p class="donation">DONATION</p>
+      <% end %>
+    </div>
+
+    <div class="junk-card-content">
+      <h2 data-junk-card-target="card_title"><%= junk.title %></h2>
+      <p data-junk-card-target="card_price"><%= junk.price %>€</p>
+      <%# if junk.delivery %>
+        <%#  <p class="secondary-button-3">Delivery possible</p> %>
+      <%# end %>
+
+      <div class="junk-card-bottom">
+        <div class="address-date">
+          <p data-junk-card-target="card_address"><%= junk.address.split(", ")[1] %> - </p>
+        </div>
+        <div class="heart">
+          <i class="fa-regular fa-heart fa-lg"></i>
+        </div>
+      </div>
+    </div>
+
+</div>
