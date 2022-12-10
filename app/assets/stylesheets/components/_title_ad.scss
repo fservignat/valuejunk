@@ -3,7 +3,7 @@
   flex-direction: column;
   position: relative;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 110px;
   margin-bottom: 70px;
 }
 
@@ -23,13 +23,13 @@
     color: $pale-green;
   }
 
-  .title-panel {
+  .title-panel-ad {
     background-color: $pale-green;
     width: 217px;
     height: 65px;
     z-index: 0;
     position: absolute;
     top: -15px;
-    left: 523px;
+    left: 446px;
   }
 }
