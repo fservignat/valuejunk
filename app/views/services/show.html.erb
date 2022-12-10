@@ -79,7 +79,7 @@
 
     <div class="right-container">
       <div id="grid">
-        <div class="small-image-container">
+        <div class="service-small-image-container">
           <% @service.photos.first(6).each do |photo| %>
           <%= cl_image_tag(photo.key, class: 'service-small-image') %>
           <% end %>
