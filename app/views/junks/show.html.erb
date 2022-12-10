@@ -1,44 +1,95 @@
-<div class="main-container">
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
-  <div class="title">
-    <div class="full-title-junk">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+
+ <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+
+<div class="junk-market-title">
+  <div class="full-title-junk">
       <%= render "shared/title-market" %>
-    </div>
-  </div>
 
-<div class="junk-show-form">
-  <div>
-  <h2><%= @junk.title %></h2>
-  </div>
-
-<div class="junk-show-form-content">
-
-    <div>
-      <%= render "shared/junk-card", junks: @junk_array %>
-    </div>
-<div class="junk-show-form-info">
-
-    <div>
-    <p><%= @junk.price %>€</p>
-    </div>
-
-    <div>
-    <p><%= @junk.address %></p>
-    </div>
-
-    <div>
-    <p><%= @junk.description %></p>
-    </div>
   </div>
 </div>
 
-  <%= link_to "Delete",
-    junk_path(@junk),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
+<section class="main-container">
+<div class="junk-show-container">
 
-  <div class="map">
-    <%= render "shared/map"%>
+  <div class="junk-show-form">
+    <div class="junk-show-form-title">
+      <h2><%= @junk.title %></h2>
+    </div>
+
+    <div class="junk-show-form-content">
+      <div class= "junk-show-card">
+        <%= render "shared/junk-card", junks: @junk_array %>
+      </div>
+
+      <div class="junk-show-form-info">
+        <div class="price-favourites">
+          <div>
+            <p><%= @junk.price %>€</p>
+          </div>
+
+          <div id="favourites">
+          <%= image_tag "heart.svg" %>
+          <p>Add to Favourites</p>
+          </div>
+        </div>
+
+        <div class="address">
+          <div>
+            <div class="label-name"><p>City</p></div>
+            <div class="boxed">
+              <p><%= @junk.address.split(", ")[1].split[1] %></p>
+            </div>
+          </div>
+
+          <div>
+            <div class="label-name"><p>Postal code</p></div>
+            <div class="boxed">
+              <p><%= @junk.address.split(", ")[1].split[0] %></p>
+            </div>
+          </div>
+
+          <div class="delivery">
+          <%= image_tag "delivery.svg" %>
+          <p>Delivery possible</p>
+          </div>
+        </div>
+
+        <div class="description">
+          <div class="label-name"><p>Description</p></div>
+          <div class="junk-description-scrollable">
+            <p><%= @junk.description %></p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="junk-show-images-button">
+      <div class="small-image-container">
+        <% @junk.photos.first(6).each do |photo| %>
+        <%= cl_image_tag(photo.key, class: 'small-image', alt: 'image junk') %>
+        <% end %>
+      </div>
+      <%= link_to "Contact seller", junks_path, class: "primary-button-1" %>
+  </div>
+      <div class="map">
+        <%= render "shared/map"%>
+      </div>
+
   </div>
 </div>
-</div>
+</section>
