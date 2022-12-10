@@ -19,18 +19,18 @@
 
   <div class="user-info">
     <div class="user-bio">
-      <div class="img-upload">
-        <div class="field">
+      <%# <div class="img-upload">
+        <div class="field"> %>
           <%# if @user.photo.attached? %>
             <%#= image_tag @user.avatar %>
           <%# end %>
-        </div>
+        <%# </div>
         <div class="field">
-          Upload a Profile Picture
+          Upload a Profile Picture %>
           <%#= f.label "Profile Picture"  %>
           <%#= f.file_field :avatar %>
-        </div>
-      </div>
+        <%# </div>
+      </div> %>
       <div class="address"></div>
       <div class="bio"></div>
     </div>
@@ -40,30 +40,39 @@
     </div>
   </div>
 
-  <nav class="service-box">
-    <label for="touch"><span class="text-center title">Your trade services</span></label>
-    <input type="checkbox" id="touch">
-    <ul class="slide service-list list-unstyled">
-      <%# if service listed by user  %>
-      <%#= render "shared/service-card" %>
-      <li><a href="#">Lorem Ipsum</a></li>
-      <li><a href="#">Lorem Ipsum</a></li>
-      <li><a href="#">Lorem Ipsum</a></li>
-      <li><a href="#">Lorem Ipsum</a></li>
-    </ul>
-  </nav>
-
-  <nav class="junk-box">
-    <label for="touch2"><span class="text-center title">Your listed items</span></label>
-    <input type="checkbox" id="touch2">
-    <ul class="slide2 junk-list list-unstyled">
-      <%# if junk listed by user  %>
-      <%#= render "shared/junk-card" %>
-      <li><a href="#">Lorem Ipsum</a></li>
-      <li><a href="#">Lorem Ipsum</a></li>
-      <li><a href="#">Lorem Ipsum</a></li>
-      <li><a href="#">Lorem Ipsum</a></li>
-    </ul>
-  </nav>
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed title-accordeon" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          Your trade services
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <ul class="slide service-list list-unstyled">
+            <% @services.each do |service| %>
+            <%= render "shared/service-card", service: service, profile: current_user == @user %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingTwo">
+        <button class="accordion-button collapsed title-accordeon" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          Your listed items
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <ul class="slide2 junk-list list-unstyled">
+            <% @junks.each do |junk| %>
+            <%= render "shared/junk-card", junk: junk, profile: current_user == @user, junks: @junks %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
