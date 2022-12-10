@@ -1,106 +1,108 @@
-<div id="myModal" class="modal">
+<div data-controller="image-expand">
+  <div id="myModal" class="modal">
 
-  <!-- The Close Button -->
-  <span class="close">&times;</span>
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
 
-  <!-- Modal Content (The Image) -->
-  <img class="modal-content" id="img01">
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
 
-  <!-- Modal Caption (Image Text) -->
-  <div id="caption"></div>
-</div>
-
-<div class="main-container">
-
-
-
-
-  <div id="junk-market-title">
-    <div class="full-title-junk">
-      <%= render "shared/title-craftpeople" %>
-    </div>
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
   </div>
 
-<div class="service-show-container">
+  <div class="main-container">
 
-  <div class="photo-craft">
-    <div id="photo">
-    <% if @service.user.photo.attached? %>
-        <%= cl_image_tag @service.user.photo.key, crop: :fill, class: "service-avatar", alt: "avatar for user" %>
-      <% else %>
-        <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "service-avatar") %>
-      <% end %>
+
+
+
+    <div id="junk-market-title">
+      <div class="full-title-junk">
+        <%= render "shared/title-craftpeople" %>
+      </div>
     </div>
 
-    <div id="title-craft">
-    <h2><%= @service.title %></h2>
-    <p><%= @service.craft %></p>
+  <div class="service-show-container">
+
+    <div class="photo-craft">
+      <div id="photo">
+      <% if @service.user.photo.attached? %>
+          <%= cl_image_tag @service.user.photo.key, crop: :fill, class: "service-avatar", alt: "avatar for user" %>
+        <% else %>
+          <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "service-avatar") %>
+        <% end %>
+      </div>
+
+      <div id="title-craft">
+      <h2><%= @service.title %></h2>
+      <p><%= @service.craft %></p>
+      </div>
     </div>
-  </div>
 
-  <div class="middle-part">
-      <div class="service-show-content">
+    <div class="middle-part">
+        <div class="service-show-content">
 
-        <div class="address-price">
-          <div id="address">
-            <div>
-            <p>City</p>
-              <p class="service-show-border"><%= @service.address.split(", ")[1].split[1] %></p>
+          <div class="address-price">
+            <div id="address">
+              <div>
+              <p>City</p>
+                <p class="service-show-border"><%= @service.address.split(", ")[1].split[1] %></p>
+              </div>
+
+              <div>
+              <p>Postal code</p>
+                <p class="service-show-border"><%= @service.address.split(", ")[1].split[0] %></p>
+              </div>
             </div>
 
             <div>
-            <p>Postal code</p>
-              <p class="service-show-border"><%= @service.address.split(", ")[1].split[0] %></p>
+            <p>Price</p>
+            <p class="service-show-border"><%= @service.price %> €/hr</p>
             </div>
           </div>
 
           <div>
-          <p>Price</p>
-          <p class="service-show-border"><%= @service.price %> €/hr</p>
+          <p>Description</p>
+            <div id="description-scrollable">
+            <p><%= @service.description %></p>
+            </div>
+          </div>
+
+          <div>
+          <p>Specialities</p>
+            <div id="specialities">
+              <p><%  @service.speciality_list.each do |speciality| %>
+              <div class="specialities-container"><%= speciality %></div>
+              <% end %></p>
+            </div>
           </div>
         </div>
 
-        <div>
-        <p>Description</p>
-          <div id="description-scrollable">
-          <p><%= @service.description %></p>
+      <div class="right-container">
+        <div id="grid">
+          <div class="small-image-container">
+            <% @service.photos.first(6).each do |photo| %>
+            <%= cl_image_tag(photo.key, class: 'service-small-image') %>
+            <% end %>
           </div>
         </div>
 
-        <div>
-        <p>Specialities</p>
-          <div id="specialities">
-            <p><%  @service.speciality_list.each do |speciality| %>
-            <div class="specialities-container"><%= speciality %></div>
-            <% end %></p>
-          </div>
+        <div class="contact-craftperson">
+          <%= link_to "Contact craftperson", service_path, class: "primary-button-1" %>
         </div>
       </div>
 
-    <div class="right-container">
-      <div id="grid">
-        <div class="small-image-container">
-          <% @service.photos.first(6).each do |photo| %>
-          <%= cl_image_tag(photo.key, class: 'service-small-image') %>
-          <% end %>
-        </div>
-      </div>
-
-      <div class="contact-craftperson">
-        <%= link_to "Contact craftperson", service_path, class: "primary-button-1" %>
-      </div>
     </div>
 
+    <div class="map">
+      <%= render "shared/map"%>
+    </div>
+
+
+
+
   </div>
-
-  <div class="map">
-    <%= render "shared/map"%>
+  <% user_chat = Chatroom.where(name: @service.user.username)[0].id%>
+  <%= link_to "Message", chatroom_path(user_chat)%>
   </div>
-
-
-
-
-</div>
-<% user_chat = Chatroom.where(name: @service.user.username)[0].id%>
-<%= link_to "Message", chatroom_path(user_chat)%>
 </div>

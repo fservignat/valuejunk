@@ -8,6 +8,31 @@ export default class extends Controller {
 
     const modal = document.getElementById("myModal");
     const images = document.querySelectorAll(".small-image")
+    const imagesService = document.querySelectorAll(".service-small-image")
+
+    console.log(imagesService)
+    if (imagesService) {
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      const img = document.getElementById("myImg");
+      const modalImg = document.getElementById("img01");
+      const captionText = document.getElementById("caption");
+      imagesService.forEach((image) => {
+        image.addEventListener("click", (event) => {
+          modal.style.display = "block";
+          modalImg.src = event.target.src;
+        })
+      })
+
+      // Get the <span> element that closes the modal
+      const span = document.getElementsByClassName("close")[0];
+      console.log(span)
+      if (span) {
+        // When the user clicks on <span> (x), close the modal
+        span.addEventListener("click", (event) => {
+          modal.style.display = "none";
+        })
+      }
+    }
 
     if (images) {
       // Get the image and insert it inside the modal - use its "alt" text as a caption
@@ -20,7 +45,6 @@ export default class extends Controller {
           modalImg.src = event.target.src;
         })
       })
-
 
       // Get the <span> element that closes the modal
       const span = document.getElementsByClassName("close")[0];
