@@ -6,20 +6,23 @@
     </div>
   </div>
 
-  <div class="search-header" data-controller="search-form">
-    <%= render "shared/craft_carousel" %>
-    <div class="search-form-services box">
-    <%# TODO delete this and replace with Kylian code %>
-      <%= render "shared/search-form" %>
+  <div data-controller="search-form">
+    <div class="search-header" >
+      <%= render "shared/craft_carousel" %>
+      <div class="search-form-services box">
+      <%# TODO delete this and replace with Kylian code %>
+        <%= render "shared/search-form" %>
+      </div>
+    </div>
+
+    <div class="service-content-center" data-search-form-target="cards">
+      <% @services.each do |service| %>
+        <% profile=false %>
+        <%= render "shared/service-card", service: service, profile: profile %>
+      <%end%>
     </div>
   </div>
 
-  <div class="service-content-center">
-    <% @services.each do |service| %>
-      <% profile=false %>
-      <%= render "shared/service-card", service: service, profile: profile %>
-    <%end%>
-  </div>
 
 </div>
 
