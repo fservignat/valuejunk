@@ -29,11 +29,7 @@ export default class extends Controller {
       const url = `${serviceURL[0]}//${serviceURL[2]}/services?query=${activeHeader}&location=`
       // console.log("url reporting")
       // console.log(url)
-      // console.log(this.cardsTarget)
-      // this.inputTarget.value = activeHeader
-      // console.log(this.inputTarget.value)
-      // console.log(this.formTarget.action)
-      // console.log(activeHeader)
+
       fetch(url, {
         headers: { "Accept": "text/plain" }
       })
