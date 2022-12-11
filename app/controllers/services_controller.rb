@@ -75,6 +75,10 @@ class ServicesController < ApplicationController
     @service.user = current_user
     @service_template=Service.new(description: "", address: "", user: current_user)
 
+    if @service.volunteer = true
+      @service.price = 0
+    end
+
     if @service.save
       redirect_to service_path(@service)
       flash[:notice] = "Thank you, your ad was successfully created!"
