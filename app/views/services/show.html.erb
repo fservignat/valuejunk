@@ -83,7 +83,11 @@
       </div>
 
       <div class="contact-craftperson">
-        <%= link_to "Contact craftperson", service_path, class: "primary-button-1" %>
+        <% if Chatroom.where(name: @service.user.username) != [] %>
+        <% user_chat = Chatroom.where(name: @service.user.username)[0].id%>
+        <%= link_to "Message craftperson", chatroom_path(user_chat), class: "primary-button-1"%>
+        <% end %>
+        <%# <%= link_to "Contact craftperson", service_path, class: "primary-button-1" %>
       </div>
     </div>
 
@@ -102,9 +106,9 @@
 </div>
 </div>
   <%# this is connecting to a pre-seeded chatroom for some users %>
-<% if Chatroom.where(name: @service.user.username) != [] %>
-  <% user_chat = Chatroom.where(name: @service.user.username)[0].id%>
-  <%= link_to "Message", chatroom_path(user_chat)%>
-<% end %>
+<%# <% if Chatroom.where(name: @service.user.username) != [] %>
+ <%#  <% user_chat = Chatroom.where(name: @service.user.username)[0].id%>
+<%#   <%= link_to "Message", chatroom_path(user_chat), class: "primary-button-1"%>
+<%# <% end %>
   </div>
 </div>
