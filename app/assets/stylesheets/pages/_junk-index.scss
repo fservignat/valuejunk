@@ -9,8 +9,15 @@
   padding-bottom: 40px;
 
   .intro-form {
-    height: 300px;
+    height: 220px;
     width: 950px;
+  }
+
+  .form .primary-button-1 {
+    width: 120px;
+    position: unset;
+    bottom: -10px;
+    right: 0px;
   }
 }
 
@@ -31,3 +38,10 @@
 //     grid-template-columns: 1fr;
 //   }
 // }
+
+#price-donation-search {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+
+}
