@@ -1,4 +1,5 @@
 class ServicesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index, :show, :new ]
   before_action :set_service, only: [:show]
   before_action :service_params, only: [:create]
   before_action :msg_alert

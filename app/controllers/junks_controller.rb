@@ -1,4 +1,5 @@
 class JunksController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index, :show, :new ]
   before_action :msg_alert
 
   def index
