@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :services
 
+  resources :projects, only: [:index]
+
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end
