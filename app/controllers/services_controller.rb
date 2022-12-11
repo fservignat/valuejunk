@@ -1,6 +1,7 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show]
   before_action :service_params, only: [:create]
+  before_action :msg_alert
 
 
   def index
@@ -110,4 +111,7 @@ class ServicesController < ApplicationController
       .permit(:description, :price, :craft, :volunteer, :title, :address, :user_id, photos: [], speciality_list: [])
     end
 
+    def msg_alert
+      @messages = Message.find_by(user_id: current_user)
+    end
 end

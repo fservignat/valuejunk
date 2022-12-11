@@ -3,5 +3,6 @@ class PagesController < ApplicationController
 
   def home
     @junks = Junk.all
+    @messages = Message.find_by(user_id: current_user)
   end
 end
