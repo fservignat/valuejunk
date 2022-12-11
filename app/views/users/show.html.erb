@@ -7,18 +7,6 @@
       <%# else %>
         <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "avatar-large service-card-img") %>
       <%# end %>
-      <div class="username">
-        <%= @user.username.upcase %>
-      </div>
-    </div>
-    <div class="links">
-      <%= link_to "Messages", "#" %>
-      <%= link_to "Settings", "#" %>
-    </div>
-  </div>
-
-  <div class="user-info">
-    <div class="user-bio">
       <%# <div class="img-upload">
         <div class="field"> %>
           <%# if @user.photo.attached? %>
@@ -31,14 +19,52 @@
           <%#= f.file_field :avatar %>
         <%# </div>
       </div> %>
-      <div class="address"></div>
-      <div class="bio"></div>
+      <div class="username">
+        <%= @user.username.upcase %>
+      </div>
     </div>
-    <div class="user-craft">
-      <div class="craft"></div>
-      <div class="specialty"></div>
+    <div class="links">
+      <%= link_to "Messages", "#" %>
+      <%= link_to "Settings", "#" %>
     </div>
   </div>
+
+  <div class="user-info">
+
+    <div class="user-bio">
+      <div class="address-profile">
+      <div class="label-name"><p>Address</p></div>
+        <div class="address-box">
+          <p><%= @user.address.split(", ")[1] %>, <%= @user.address.split(", ")[2] %></p>
+        </div>
+      </div>
+
+      <div class="description">
+        <div class="label-name"><p>Bio</p></div>
+        <div class="user-bio-scrollable">
+          <%= @user.bio %>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-craft">
+      <div class="craft-profile">
+        <div class="label-name"><p>Craft</p></div>
+        <div class="craft-box">
+          <% @services.each do |service| %>
+            <%= service.craft %>
+          <% end %>
+        </div>
+      </div>
+
+      <%# <div class="specialty"> %>
+        <%#= @specialties.each do |specialty| %>
+        <%# <div class="specialities-container"> <%#= specialty.name %>
+      <%# </div> %>
+    </div>
+  </div>
+
+
 
   <div class="accordion accordion-flush" id="accordionFlushExample">
     <div class="accordion-item">
@@ -47,7 +73,7 @@
           Your trade services
         </button>
       </h2>
-      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div id="flush-collapseOne" class="accordion-collapse collapse list-services-profile" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
           <ul class="slide service-list list-unstyled">
             <% @services.each do |service| %>
@@ -64,15 +90,16 @@
         </button>
       </h2>
       <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">
-          <ul class="slide2 junk-list list-unstyled">
-            <% @junks.each do |junk| %>
-            <%= render "shared/junk-card", junk: junk, profile: current_user == @user, junks: @junks %>
-            <% end %>
-          </ul>
+        <div class="list-junks-profile">
+          <div class="accordion-body">
+            <ul class="slide2 junk-list list-unstyled">
+              <% @junks.each do |junk| %>
+              <%= render "shared/junk-card", junk: junk, profile: current_user == @user, junks: @junks %>
+              <% end %>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
 </div>

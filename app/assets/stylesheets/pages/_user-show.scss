@@ -31,15 +31,38 @@
 }
 
 .user-info {
-  margin-bottom: 57px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.service-box {
-  margin-bottom: 57px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.user-bio-scrollable {
+  padding: 5px;
+  width: 90%;
+  height: 150px;
+  overflow: auto;
+  overflow-y: scroll;
+  text-align: justify;
+  border: 1px solid #ADADAD;
+  border-radius: 5px;
 }
+
+.address-box, .craft-box {
+  border: 1px solid #ADADAD;
+  border-radius: 5px;
+  width: 300px;
+  padding: 5px;
+  margin-bottom: 10px;
+  p {
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+
 
 .title-accordeon {
   font-family: $body-font;
@@ -49,13 +72,11 @@
   width: 100%;
 }
 
-.junk-box {
-  margin-bottom: 57px;
+.list-services-profile {
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
-.junk-list {
+.list-junks-profile {
   display: grid;
 }

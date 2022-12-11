@@ -107,3 +107,17 @@
 #bootstrap-override .arrow {
   z-index: 0;
 }
+
+.service-card-icon {
+  display: flex;
+  width: 60px;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+
+  i {
+    margin: 5px;
+  }
+}
