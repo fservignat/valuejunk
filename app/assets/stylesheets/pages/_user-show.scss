@@ -1,0 +1,82 @@
+.profile-header {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  a {
+    margin-left: 140px;
+    font-family: $body-font;
+    font-size: 16px;
+    color: black;
+  }
+}
+
+.user-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .username {
+    margin-left: 15px;
+    font-family: $headers-font;
+    font-size: 40px;
+    font-weight: bold;
+    color: $pale-green;
+  }
+}
+
+.user-info {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-bio-scrollable {
+  padding: 5px;
+  width: 90%;
+  height: 150px;
+  overflow: auto;
+  overflow-y: scroll;
+  text-align: justify;
+  border: 1px solid #ADADAD;
+  border-radius: 5px;
+}
+
+.address-box, .craft-box {
+  border: 1px solid #ADADAD;
+  border-radius: 5px;
+  width: 300px;
+  padding: 5px;
+  margin-bottom: 10px;
+  p {
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+.title-accordeon {
+  font-family: $body-font;
+  font-size: 30px;
+  font-weight: bold;
+  color: $green;
+  width: 100%;
+}
+
+.list-services-profile {
+  display: flex;
+  justify-content: center;
+}
+
+.list-junks-profile {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}

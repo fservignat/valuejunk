@@ -14,4 +14,6 @@ Rails.application.routes.draw do
 
   get '/tagged', to: "services#tagged", as: :tagged
 
+  resources :users, only: [:show]
+
 end
