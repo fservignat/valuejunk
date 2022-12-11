@@ -30,3 +30,6 @@ application.register("service-card", ServiceCardController)
 
 import TypedJsController from "./typed_js_controller"
 application.register("typed-js", TypedJsController)
+
+// import TimerController from "./timer_controller"
+// application.register("timer", TimerController)
