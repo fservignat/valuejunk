@@ -3,6 +3,24 @@
   margin-bottom: 70px;
 }
 
+.junk-search-bar {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+
+  .intro-form {
+    height: 220px;
+    width: 950px;
+  }
+
+  .form .primary-button-1 {
+    width: 120px;
+    position: unset;
+    bottom: -10px;
+    right: 0px;
+  }
+}
+
 .index-cards-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -20,3 +38,10 @@
 //     grid-template-columns: 1fr;
 //   }
 // }
+
+#price-donation-search {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+
+}

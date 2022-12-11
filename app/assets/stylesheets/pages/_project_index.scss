@@ -1,0 +1,33 @@
+#projects-index-background {
+  background: linear-gradient(to bottom right, #5A0B7D, #050C43 100%) !important;
+}
+
+.banner-projects-container {
+  position: relative;
+  .banner-projects-txt {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0%;
+  }
+
+.banner-projects-txt {
+  h2 {
+    color: white;
+    font-size: 3rem;
+    font-family: $body-font;
+    margin: 0;
+  }
+}
+
+}
+.banner-projects-index {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 15px 70px 0px #B325BF;
+
+}
