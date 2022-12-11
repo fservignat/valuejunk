@@ -54,18 +54,18 @@
     <div class="user-craft">
       <div class="craft-profile">
         <div class="label-name"><p>Craft</p></div>
-          <div class="craft-box">
+          <div class="box-container">
             <% @services.each do |service| %>
               <%= service.craft %>
             <% end %>
           </div>
       </div>
 
-      <div class="specialty">
-        <% @tags_array.each do |tag| %>
-          <div class="specialities-container">
-            <%=tag%>
-          </div>
+      <div class="box-container">
+          <% @tags_array.each do |tag| %>
+            <div>
+              <%= link_to tag, tagged_path(speciality: tag), class: "speciality-btn" %>
+            </div>
         <% end %>
       </div>
     </div>
