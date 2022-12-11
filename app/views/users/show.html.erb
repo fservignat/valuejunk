@@ -2,11 +2,14 @@
 
   <div class="profile-header">
     <div class="user-title">
-      <%# if user.photo.attached? %>
-        <%#= cl_image_tag service.user.photo.key, crop: :fill, class: "avatar-large service-card-img", alt: "avatar image of user" %>
-      <%# else %>
-        <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "avatar-large service-card-img") %>
+      <%# if service %>
+        <% if @user.photo.attached? %>
+          <%= cl_image_tag @user.photo.key, crop: :fill, class: "avatar-large service-card-img", alt: "avatar for user" %>
+        <% else %>
+          <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "avatar-large service-card-img") %>
+        <% end %>
       <%# end %>
+
       <%# <div class="img-upload">
         <div class="field"> %>
           <%# if @user.photo.attached? %>
@@ -19,6 +22,7 @@
           <%#= f.file_field :avatar %>
         <%# </div>
       </div> %>
+
       <div class="username">
         <%= @user.username.upcase %>
       </div>
@@ -57,10 +61,14 @@
         </div>
       </div>
 
-      <%# <div class="specialty"> %>
+      <div class="specialty">
         <%#= @specialties.each do |specialty| %>
         <%# <div class="specialities-container"> <%#= specialty.name %>
-      <%# </div> %>
+
+        <%# @services.speciality_list.each do |speciality| %>
+          <div class="specialities-container"><%#= speciality %></div>
+        <%# end %>
+      </div>
     </div>
   </div>
 
@@ -92,9 +100,9 @@
       <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body list-junks-profile">
           <%# <ul class="slide2 junk-list list-unstyled"> %>
-            <% @junks.each do |junk| %>
-            <%= render "shared/junk-card", junk: junk, profile: current_user == @user, junks: @junks %>
-            <% end %>
+
+            <%= render "shared/junk-card", profile: current_user == @user, junks: @junks %>
+
           <%# </ul> %>
         </div>
       </div>
