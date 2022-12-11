@@ -51,9 +51,18 @@
           </div>
 
           <div>
-          <p>Price</p>
-          <p class="service-show-border"><%= @service.price %> €/hr</p>
-          </div>
+            <%if @service.volunteer%>
+            <div id="service-volunteer">
+            <p >Volunteer</p>
+            <%= image_tag "volunteer.svg" %>
+            </div>
+            <%else%>
+
+            <p>Price</p>
+
+            <p class="service-show-border"><%= @service.price %> €/hr</p>
+            <% end %>
+            </div>
         </div>
 
         <div>

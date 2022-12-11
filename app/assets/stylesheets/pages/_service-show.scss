@@ -56,6 +56,10 @@
   justify-content: space-between;
 }
 
+#service-volunteer {
+  display: flex;
+}
+
 .address-price {
   display: flex;
   justify-content: space-between;
@@ -103,6 +107,7 @@
 
 #specialities {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   width: 100%;
   height: 70px;
