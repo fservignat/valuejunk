@@ -90,14 +90,12 @@
         </button>
       </h2>
       <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-        <div class="list-junks-profile">
-          <div class="accordion-body">
-            <ul class="slide2 junk-list list-unstyled">
-              <% @junks.each do |junk| %>
-              <%= render "shared/junk-card", junk: junk, profile: current_user == @user, junks: @junks %>
-              <% end %>
-            </ul>
-          </div>
+        <div class="accordion-body list-junks-profile">
+          <%# <ul class="slide2 junk-list list-unstyled"> %>
+            <% @junks.each do |junk| %>
+            <%= render "shared/junk-card", junk: junk, profile: current_user == @user, junks: @junks %>
+            <% end %>
+          <%# </ul> %>
         </div>
       </div>
     </div>
