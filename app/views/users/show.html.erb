@@ -1,0 +1,111 @@
+<div class="main-container">
+
+  <div class="profile-header">
+    <div class="user-title">
+      <%# if service %>
+        <% if @user.photo.attached? %>
+          <%= cl_image_tag @user.photo.key, crop: :fill, class: "avatar-large service-card-img", alt: "avatar for user" %>
+        <% else %>
+          <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "avatar-large service-card-img") %>
+        <% end %>
+      <%# end %>
+
+      <%# <div class="img-upload">
+        <div class="field"> %>
+          <%# if @user.photo.attached? %>
+            <%#= image_tag @user.avatar %>
+          <%# end %>
+        <%# </div>
+        <div class="field">
+          Upload a Profile Picture %>
+          <%#= f.label "Profile Picture"  %>
+          <%#= f.file_field :avatar %>
+        <%# </div>
+      </div> %>
+
+      <div class="username">
+        <%= @user.username.upcase %>
+      </div>
+    </div>
+    <div class="links">
+      <%= link_to "Messages", "#" %>
+      <%= link_to "Settings", "#" %>
+    </div>
+  </div>
+
+  <div class="user-info">
+
+    <div class="user-bio">
+      <div class="address-profile">
+      <div class="label-name"><p>Address</p></div>
+        <div class="address-box">
+          <p><%= @user.address.split(", ")[1] %>, <%= @user.address.split(", ")[2] %></p>
+        </div>
+      </div>
+
+      <div class="description">
+        <div class="label-name"><p>Bio</p></div>
+        <div class="user-bio-scrollable">
+          <%= @user.bio %>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-craft">
+      <div class="craft-profile">
+        <div class="label-name"><p>Craft</p></div>
+        <div class="craft-box">
+          <% @services.each do |service| %>
+            <%= service.craft %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="specialty">
+        <%#= @specialties.each do |specialty| %>
+        <%# <div class="specialities-container"> <%#= specialty.name %>
+
+        <%# @services.speciality_list.each do |speciality| %>
+          <div class="specialities-container"><%#= speciality %></div>
+        <%# end %>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed title-accordeon" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          Your trade services
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse list-services-profile" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <ul class="slide service-list list-unstyled">
+            <% @services.each do |service| %>
+            <%= render "shared/service-card", service: service, profile: current_user == @user %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingTwo">
+        <button class="accordion-button collapsed title-accordeon" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          Your listed items
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body list-junks-profile">
+          <%# <ul class="slide2 junk-list list-unstyled"> %>
+
+            <%= render "shared/junk-card", profile: current_user == @user, junks: @junks %>
+
+          <%# </ul> %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -50,11 +50,23 @@
         </div>
 
         <div class="junk-card-bottom">
-            <div class="address-date">
-              <p><%= junk.address.split(", ")[1] %> - </p>
-              <p><%= junk.created_at.strftime("%A, %k:%M") %></p>
+          <div class="address-date">
+            <p><%= junk.address.split(", ")[1] %> - </p>
+            <p><%= junk.created_at.strftime("%A, %k:%M") %></p>
+          </div>
+          <% if profile %>
+            <div class="junk-card-icon">
+              <%= link_to edit_junk_path(junk) do %>
+                <i class="fa-regular fa-pen-to-square"></i>
+              <% end %>
+              <%= link_to junk_path(junk),
+                data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                <i class="fa-solid fa-trash-can"></i>
+              <% end %>
             </div>
+          <% else %>
             <i class="fa-regular fa-heart fa-lg"></i>
+          <% end %>
         </div>
       </div>
     <% end %>

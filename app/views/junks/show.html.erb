@@ -1,99 +1,98 @@
 <div data-controller="image-expand">
   <!-- The Modal -->
   <div id="myModal" class="modal">
-
-
     <!-- The Close Button -->
     <span class="close">&times;</span>
-
     <!-- Modal Content (The Image) -->
-
-  <img class="modal-content" id="img01">
-
+    <img class="modal-content" id="img01">
     <!-- Modal Caption (Image Text) -->
     <div id="caption"></div>
   </div>
 
-  <div class="junk-market-title">
-    <div class="full-title-junk">
+  <div class="main-container">
+
+    <div class="full-title-junk" id="margin-title-show-junk">
         <%= render "shared/title-market" %>
-
     </div>
-  </div>
 
-  <section class="main-container">
-  <div class="junk-show-container">
+    <div class="junk-show-container">
 
-    <div class="junk-show-form">
-      <div class="junk-show-form-title">
-        <h2><%= @junk.title %></h2>
-      </div>
-
-      <div class="junk-show-form-content">
-        <div class= "junk-show-card">
-          <%= render "shared/junk-card", junks: @junk_array %>
+      <div class="junk-show-form">
+        <div class="junk-show-form-title">
+          <h2><%= @junk.title %></h2>
         </div>
 
-        <div class="junk-show-form-info">
-          <div class="price-favourites">
-            <div>
-              <p><%= @junk.price %>€</p>
-            </div>
-
-            <div id="favourites">
-            <%= image_tag "heart.svg" %>
-            <p>Add to Favourites</p>
-            </div>
+        <div class="junk-show-form-content">
+          <div class= "junk-show-card">
+            <%= render "shared/junk-card", junks: @junk_array %>
           </div>
 
-          <div class="address">
-            <div>
-              <div class="label-name"><p>City</p></div>
-              <div class="boxed">
-                <p><%= @junk.address.split(", ")[1].split[1] %></p>
+          <div class="junk-show-form-info">
+            <div class="price-favourites">
+              <div>
+                <p><%= @junk.price %>€</p>
+              </div>
+
+              <div id="favourites">
+              <%= image_tag "heart.svg" %>
+              <p>Add to Favourites</p>
               </div>
             </div>
 
-            <div>
-              <div class="label-name"><p>Postal code</p></div>
-              <div class="boxed">
-                <p><%= @junk.address.split(", ")[1].split[0] %></p>
+            <div class="address">
+              <div>
+                <div class="label-name"><p>City</p></div>
+                <div class="boxed">
+                  <p><%= @junk.address.split(", ")[1].split[1] %></p>
+                </div>
+              </div>
+
+              <div>
+                <div class="label-name"><p>Postal code</p></div>
+                <div class="boxed">
+                  <p><%= @junk.address.split(", ")[1].split[0] %></p>
+                </div>
+              </div>
+
+              <div class="delivery">
+              <%= image_tag "delivery.svg" %>
+              <p>Delivery possible</p>
               </div>
             </div>
 
-            <div class="delivery">
-            <%= image_tag "delivery.svg" %>
-            <p>Delivery possible</p>
+            <div class="description">
+              <div class="label-name"><p>Description</p></div>
+              <div class="junk-description-scrollable">
+                <p><%= @junk.description %></p>
+              </div>
             </div>
           </div>
 
-          <div class="description">
-            <div class="label-name"><p>Description</p></div>
-            <div class="junk-description-scrollable">
-              <p><%= @junk.description %></p>
-            </div>
-          </div>
+
         </div>
 
+
+        <div class="junk-show-images-button">
+          <div class="small-image-container">
+            <% @junk.photos.first(6).each do |photo| %>
+            <%= cl_image_tag(photo.key, class: 'small-image', alt: 'image junk') %>
+            <% end %>
+          </div>
+          <%= link_to "Contact seller", junks_path, class: "primary-button-1" %>
+      </div>
+          <div class="map">
+            <%= render "shared/map"%>
+          </div>
 
       </div>
-
-
-      <div class="junk-show-images-button">
-        <div class="small-image-container">
-          <% @junk.photos.first(6).each do |photo| %>
-          <%= cl_image_tag(photo.key, class: 'small-image', alt: 'image junk') %>
-          <% end %>
-        </div>
-        <%= link_to "Contact seller", junks_path, class: "primary-button-1" %>
     </div>
-        <div class="map">
-          <%= render "shared/map"%>
-        </div>
 
-    </div>
   </div>
-  </section>
+
+  <%# this is connecting to a pre-seeded chatroom for some users %>
+  <% if Chatroom.where(name: @junk.user.username) != [] %>
+    <% user_chat = Chatroom.where(name: @junk.user.username)[0].id%>
+    <%= link_to "Message", chatroom_path(user_chat)%>
+  <% end %>
 
 </div>
-

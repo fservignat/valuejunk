@@ -1,30 +1,6 @@
-.main-container {
-  margin-left: 150px;
-  margin-right: 150px;
-  margin-top: 30px;
-}
-
-.junk-market-title {
-  padding-top: 100px;
-}
-
-.junk-title {
-  margin: auto;
-  position: relative;
-
-  h1 {
-    z-index: 0;
-  }
-}
-
-.junk-title .title-panel {
-  background-color: #D5EAE2;
-  width: 333px;
-  height: 55px;
-  z-index: -1;
-  position: absolute;
-  top: 31px;
-  right: -4px;
+#margin-title-show-junk {
+  margin-top: 100px;
+  margin-bottom: 70px;
 }
 
 .junk-show-container {
@@ -93,6 +69,7 @@
   border: 1px solid #ADADAD;
   border-radius: 3px;
   width: 130px;
+  padding: 5px;
 
   p {
     font-weight: 400;

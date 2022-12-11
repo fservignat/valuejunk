@@ -13,16 +13,11 @@
 
 <div class="main-container">
 
-
-
-
-  <div id="junk-market-title">
-    <div class="full-title-junk">
-      <%= render "shared/title-craftpeople" %>
-    </div>
+  <div class="full-title-craft" id="margin-title-show-craft">
+    <%= render "shared/title-craftpeople" %>
   </div>
 
-<div class="service-show-container">
+  <div class="service-show-container">
 
   <div class="photo-craft">
     <div id="photo">
@@ -106,7 +101,10 @@
 </div>
 </div>
 </div>
+  <%# this is connecting to a pre-seeded chatroom for some users %>
+<% if Chatroom.where(name: @service.user.username) != [] %>
   <% user_chat = Chatroom.where(name: @service.user.username)[0].id%>
   <%= link_to "Message", chatroom_path(user_chat)%>
+<% end %>
   </div>
 </div>

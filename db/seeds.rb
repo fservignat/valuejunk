@@ -186,7 +186,7 @@ service = Service.new(
   description: "I have 10 years experience in blacksmith and expert in making knifes and all sorts tools. I produced props for movie sets like Brave heart.",
   price:20,
   volunteer: false,
-  user: r_user)
+  user: t_user)
   # file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668158134/development/Experimental_Cocktail_Club_gzeegk.png')
   # junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
   service.speciality_list.add("Blacksmithing", "Casting","Jewellery", "Knife making" )
@@ -195,14 +195,14 @@ puts "service: #{service.title} created."
 
 service = Service.new(
 
-  title: "Making window panel and frame",
+  title: "Making window glass panel and frame",
   address: r_user.address,
   craft: "Ceramics and glass",
   description: "I have 5 years experience in window making involved renovating buildings and church windows. I am familar
   with traditional and modern techniques and will help you customise the window to fit your buidling design.",
   price:25,
   volunteer: false,
-  user: r_user)
+  user: t_user)
   # file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668158134/development/Experimental_Cocktail_Club_gzeegk.png')
   # junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
   service.speciality_list.add("Glass and glass art", "Woodworking","Wood carving" )
@@ -239,7 +239,7 @@ service = Service.new(
   description: "I have 10 years experience in repairing furniture and upcycle old ones. I also custom make furniture so that it fits your bespoke needs.",
   price:15,
   volunteer: false,
-  user: t_user)
+  user: r_user)
   file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670456803/ValueJunk/sideboar3_t91vi0.jpg')
   service.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
   file2 = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670456803/ValueJunk/cabinet-color1_ieuvuy.jpg')

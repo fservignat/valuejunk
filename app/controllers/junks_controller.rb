@@ -1,4 +1,6 @@
 class JunksController < ApplicationController
+  before_action :msg_alert
+
   def index
     if params[:query].present? or params[:query_min_price].present? or
       params[:query_max_price].present? or params[:location].present? or
@@ -35,6 +37,8 @@ class JunksController < ApplicationController
         info_window: render_to_string(partial: "popup_map", locals: { junk: junk }),
         image_url: helpers.asset_url("hammer-solid.svg")
       }
+
+
     end
   end
 
@@ -76,6 +80,17 @@ class JunksController < ApplicationController
   end
 
     private
+
+  def msg_alert
+    #check user and chatroom do exist before passing the varialbe.
+    if current_user != nil
+      if (Chatroom.find_by(name: current_user.username) != nil)
+        @chatroom = Chatroom.find_by(name: current_user.username).id
+        @messages = Message.find_by(chatroom_id: @chatroom)
+      end
+    end
+
+  end
 
   def junk_params
     params.require(:junk).permit(:title, :address, :description, :price, :category, :donation, :delivery, photos: [])
