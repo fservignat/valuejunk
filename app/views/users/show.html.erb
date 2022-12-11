@@ -54,20 +54,19 @@
     <div class="user-craft">
       <div class="craft-profile">
         <div class="label-name"><p>Craft</p></div>
-        <div class="craft-box">
-          <% @services.each do |service| %>
-            <%= service.craft %>
-          <% end %>
-        </div>
+          <div class="craft-box">
+            <% @services.each do |service| %>
+              <%= service.craft %>
+            <% end %>
+          </div>
       </div>
 
       <div class="specialty">
-        <%#= @specialties.each do |specialty| %>
-        <%# <div class="specialities-container"> <%#= specialty.name %>
-
-        <%# @services.speciality_list.each do |speciality| %>
-          <div class="specialities-container"><%#= speciality %></div>
-        <%# end %>
+        <% @tags_array.each do |tag| %>
+          <div class="specialities-container">
+            <%=tag%>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
