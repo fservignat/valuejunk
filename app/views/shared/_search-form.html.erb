@@ -1,4 +1,5 @@
-<%= form_with url: junks_path, class: 'form', method: :get, data: {search_form_target: "form"} do %>
+<%= form_with url: junks_path, class: 'form', method: :get,
+  data: {search_form_target: "form"} do %>
   <div class="form">
     <div class="category">
       <select class="form-select" name="category" data-search-form-target = "category" data-action="click->search-form#update" aria-label="Default select example">
@@ -12,6 +13,7 @@
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
+        data: {search_form_target: "input"},
         placeholder: "Anything in particular?" %>
     </div>
 

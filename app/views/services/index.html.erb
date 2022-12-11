@@ -6,23 +6,17 @@
     </div>
   </div>
 
-  <div class="search-header">
-    <%= render "shared/craft_carousel" %>
 
-      <div class="intro-form box" data-controller="search-form">
-          <%= render "shared/service-search-form" %>
+  <div data-controller="search-form">
 
+    <div class="search-header">
+      <%= render "shared/craft_carousel" %>
+        <div class="intro-form box">
+            <%= render "shared/service-search-form" %>
+      </div>
     </div>
+        <%= render "list" %>
   </div>
-
-  <div class="service-content-center">
-    <% @services.each do |service| %>
-      <% profile=false %>
-      <%= render "shared/service-card", service: service, profile: profile %>
-    <%end%>
-  </div>
-
-</div>
 
 <div class="map">
   <%= render "shared/map"%>

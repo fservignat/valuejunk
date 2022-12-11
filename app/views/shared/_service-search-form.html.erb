@@ -1,4 +1,5 @@
-<%= form_with url: services_path, class: 'form', method: :get, data: {search_form_target: "form"} do %>
+<%= form_with url: services_path, class: 'form', method: :get,
+  data: {search_form_target: "form"} do %>
   <div class="form ">
 
 
@@ -6,6 +7,7 @@
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
+        data: {search_form_target: "input"},
         placeholder: "Anything in particular?" %>
     </div>
 

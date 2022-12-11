@@ -19,7 +19,7 @@ class ServicesController < ApplicationController
       #  params[:query_max_price] = "0"
       #end
 
-      sql_query = "(title ILIKE :query OR description ILIKE :query)"
+      sql_query = "(title ILIKE :query OR description ILIKE :query OR craft ILIKE :query)"
       price_query = "price BETWEEN :query_min_price AND :query_max_price"
       location_query = "address ILIKE :location"
       @services = Service.where("#{sql_query} AND #{price_query} AND #{location_query}",
@@ -41,6 +41,12 @@ class ServicesController < ApplicationController
       lng: service.longitude,
       image_url: helpers.asset_url("person-solid.svg")
     }
+    end
+
+    #this for AJAX when clicking through the carousel, we want it to return text.
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: "list", locals: {service: @services}, formats: [:html] }
     end
 
   end
