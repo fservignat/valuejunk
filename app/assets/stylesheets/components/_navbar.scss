@@ -16,7 +16,7 @@
 }
 
 .navbar-custom-color {
-  background:linear-gradient(to right, #071A20 15%, #0F3043 30%, #02070A 70%, #062D0C 100%);
+  background: linear-gradient(to right, #071A20 15%, #0F3043 30%, #02070A 70%, #062D0C 100%);
 }
 
 .navbar-text {
@@ -32,6 +32,7 @@
 
 #nav-market {
   margin-left: 70px;
+
   &:hover {
     color: $light-green;
   }
@@ -40,16 +41,17 @@
 #nav-craft {
   margin-left: 120px;
   margin-right: 120px;
+
   &:hover {
     color: $light-green;
   }
 }
 
-  #nav-projects {
-    &:hover {
-      color: $pink;
-    }
+#nav-projects {
+  &:hover {
+    color: $pink;
   }
+}
 
 .navbar-icon {
   display: flex;
@@ -74,8 +76,13 @@
 .dropdown-menu {
   margin-top: 5px !important;
   margin-right: -25px !important;
- a {
-  text-align: end;
-  font-family: $body-font;
- }
+
+  a {
+    text-align: end;
+    font-family: $body-font;
+  }
+}
+
+.msg_alert {
+  color: red;
 }

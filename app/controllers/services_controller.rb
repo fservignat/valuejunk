@@ -1,6 +1,7 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show]
   before_action :service_params, only: [:create]
+  before_action :msg_alert
 
 
   def index
@@ -114,4 +115,14 @@ class ServicesController < ApplicationController
       .permit(:description, :price, :craft, :volunteer, :title, :address, :user_id, photos: [], speciality_list: [])
     end
 
+    def msg_alert
+      #check user and chatroom do exist before passing the varialbe.
+      if current_user != nil
+        if (Chatroom.find_by(name: current_user.username) != nil)
+          @chatroom = Chatroom.find_by(name: current_user.username).id
+          @messages = Message.find_by(chatroom_id: @chatroom)
+        end
+      end
+
+    end
 end
