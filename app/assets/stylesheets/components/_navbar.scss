@@ -57,7 +57,7 @@
   display: flex;
   align-items: center;
 
-  .avatar {
+  .user-icon-navbar {
     color: $light-grey;
     width: 32px;
     height: 32px;
@@ -65,16 +65,24 @@
     margin-right: 35px;
     margin-left: 40px;
   }
+  .avatar-navbar {
+    width: 56px;
+    height: 56px;
+    margin-right: 35px;
+    margin-left: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 }
 
-.avatar {
+.user-icon-navbar {
   &:hover {
     color: white;
   }
 }
 
 .dropdown-menu {
-  margin-top: 5px !important;
+  margin-top: 7px !important;
   margin-right: -25px !important;
 
   a {
