@@ -1,14 +1,23 @@
 <div class="junk-form-right-content">
-  <form class="new_junk" id="new_junk" novalidate="novalidate" enctype="multipart/form-data" action="/junks" accept-charset="UTF-8" method="post">
-    <div class="string required junk_title junk-form-box-length-sm">
+  <form class="new_junk" id="new_junk" novalidate="novalidate"
+    enctype="multipart/form-data" action="/junks" accept-charset="UTF-8" method="post">
+    <div class="string required junk_title junk-form-box-length-sm"
+      data-controller="character-counter"
+      data-character-counter-countdown-value="true">
       <label class="form-label string required" for="junk_title">Title <abbr title="required">*</abbr></label>
       <input class="form-control string required" type="text" name="junk[title]"
         id="junk_title" value="<%=@junk[:title]%>"
         data-junk-card-target="title"
-        data-action="keyup->junk-card#update_title">
+        data-action="keyup->junk-card#update_title"
+        data-character-counter-target="input" maxlength="42"
+        >
       <% if @junk.errors.any? %>
           <p class="form-error-format"><%= @junk.errors[:title].first %></p>
       <% end %>
+      <p class="word-count-phrase">
+        There are
+        <strong data-character-counter-target="counter"></strong> characters remaining.
+      </p>
     </div>
 
     <div class="junk-form-price">
@@ -45,13 +54,20 @@
       </div>
     </div>
 
-    <div class="text optional junk_description">
-      <label class="form-label text optional" for="junk_description">Description</label>
-      <textarea class="form-control text optional" rows="5" columns="15" name="junk[description]"
-        id="junk_description"><%=@junk[:description]%></textarea>
-      <% if @junk.errors.any? %>
-        <p class="form-error-format"><%= @junk.errors[:description].first %></p>
-      <% end %>
+    <div class="text optional junk_description"
+      data-controller="character-counter"
+      data-character-counter-countdown-value="true">
+        <label class="form-label text optional" for="junk_description">Description</label>
+        <textarea class="form-control text optional" rows="5" columns="15" name="junk[description]"
+          id="junk_description"
+          data-character-counter-target="input" maxlength="400"><%=@junk[:description]%></textarea>
+        <% if @junk.errors.any? %>
+          <p class="form-error-format"><%= @junk.errors[:description].first %></p>
+        <% end %>
+        <p class="word-count-phrase">
+          There are
+          <strong data-character-counter-target="counter"></strong> characters remaining.
+        </p>
     </div>
 
     <div class="string required junk_category junk-form-box-length-sm">
