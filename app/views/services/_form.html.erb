@@ -38,15 +38,22 @@
     </div>
 
     <div class="service-grid">
-      <div class="mb-3" >
+      <div class="mb-3"
+        data-controller="character-counter"
+        data-character-counter-countdown-value="true">
         <label class="service-label-stack" for="service_description">Description</label>
         <textarea class="form-control service-textbox text optional"
           rows="9" cols="25" name="service[description]" id="service_description"
           data-service-card-target="description"
-          data-action="keyup->service-card#update_description" /><%=@service[:description]%></textarea>
+          data-action="keyup->service-card#update_description"
+          data-character-counter-target="input" maxlength="400"/><%=@service[:description]%></textarea>
         <% if @service.errors.any? %>
           <p class="form-error-format"><%= @service.errors[:description].first %></p>
         <% end %>
+        <p class="word-count-phrase">
+          There are
+          <strong data-character-counter-target="counter"></strong> characters remaining.
+        </p>
       </div>
 
       <div class="service-grid-col2">
