@@ -112,6 +112,13 @@ class ServicesController < ApplicationController
     end
 
     def msg_alert
-      @messages = Message.find_by(user_id: current_user)
+      #check user and chatroom do exist before passing the varialbe.
+      if current_user != nil
+        if (Chatroom.find_by(name: current_user.username) != nil)
+          @chatroom = Chatroom.find_by(name: current_user.username).id
+          @messages = Message.find_by(chatroom_id: @chatroom)
+        end
+      end
+
     end
 end
