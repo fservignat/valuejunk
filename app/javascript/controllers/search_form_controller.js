@@ -24,8 +24,9 @@ export default class extends Controller {
       const activeDiv = activeImg.getElementsByTagName("div")[0]
       const activeHeader = activeDiv.getElementsByTagName("h5")[0].id
       const serviceURL = this.formTarget.baseURI.split('/')
-      // console.log(serviceURL)
-      const url = `${serviceURL[0]}//${serviceURL[2]}/services?category=Services&query=${activeHeader}&location=&query_min_price=&query_max_price=`
+      console.log(serviceURL)
+
+      const url = `${serviceURL[0]}//${serviceURL[2]}/services?query=${activeHeader}&location=`
       // console.log("url reporting")
       // console.log(url)
       // console.log(this.cardsTarget)
