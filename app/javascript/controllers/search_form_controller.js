@@ -26,7 +26,8 @@ export default class extends Controller {
       const serviceURL = this.formTarget.baseURI
       const url = `${serviceURL}?category=Services&query=${activeHeader}&location=&query_min_price=&query_max_price=`
       console.log("url reporting")
-      // console.log(url)
+      console.log(url)
+      console.log(this.cardsTarget)
       // this.inputTarget.value = activeHeader
       // console.log(this.inputTarget.value)
       // console.log(this.formTarget.action)

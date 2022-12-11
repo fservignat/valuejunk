@@ -15,12 +15,9 @@
       </div>
     </div>
 
-    <div class="service-content-center" data-search-form-target="cards">
-      <% @services.each do |service| %>
-        <% profile=false %>
-        <%= render "shared/service-card", service: service, profile: profile %>
-      <%end%>
-    </div>
+
+      <%= render "list" %>
+
   </div>
 
 
