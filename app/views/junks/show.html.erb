@@ -89,12 +89,10 @@
 
   </div>
 
-
   <%# this is connecting to a pre-seeded chatroom for some users %>
   <% if Chatroom.where(name: @junk.user.username) != [] %>
     <% user_chat = Chatroom.where(name: @junk.user.username)[0].id%>
     <%= link_to "Message", chatroom_path(user_chat)%>
   <% end %>
-
 
 </div>

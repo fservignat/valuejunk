@@ -6,7 +6,10 @@
   </div>
 
   <div class="index-cards-list">
-    <%= render "shared/junk-card", junks: @junks %>
+
+      <% profile = false %>
+      <%= render "shared/junk-card", junks: @junks, profile: profile %>
+
   </div>
 </div>
 

@@ -107,3 +107,16 @@
 #bootstrap-override .arrow {
   z-index: 0;
 }
+
+.junk-card-icon {
+  display: flex;
+  width: 60px;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+
+
+  i {
+    margin: 5px;
+  }
+}
