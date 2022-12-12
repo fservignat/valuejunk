@@ -34,31 +34,39 @@
   margin-top: 30px;
   margin-bottom: 40px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
+.profile-box{
+  padding: 8px;
+  border: 1px solid #ADADAD;
+  border-radius: 5px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
 .user-bio-scrollable {
-  padding: 5px;
-  width: 90%;
   height: 150px;
   overflow: auto;
   overflow-y: scroll;
-  text-align: justify;
-  border: 1px solid #ADADAD;
-  border-radius: 5px;
 }
 
-.address-box, .craft-box {
-  border: 1px solid #ADADAD;
-  border-radius: 5px;
-  width: 300px;
-  padding: 5px;
-  margin-bottom: 10px;
+.address-box {
+  width: 350px;
   p {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
+    font-family: $body-font;
+  }
+}
+
+.specialty-box, .craft-box {
+  height: 100px;
+  a, span {
+    padding: 3px 7px;
+    margin: 3px;
+    line-height: 30px;
   }
 }
 
