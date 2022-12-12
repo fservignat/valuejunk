@@ -3,4 +3,7 @@
     <% profile=false %>
     <%= render "shared/service-card", service: service, profile: profile %>
   <%end%>
+  <div class="map">
+    <%= render "shared/map", markers: @markers%>
+  </div>
 </div>
