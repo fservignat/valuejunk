@@ -58,6 +58,9 @@
 
 #service-volunteer {
   display: flex;
+  padding-right: 80px;
+  padding-top: 35px;
+  gap: 15px;
 }
 
 .address-price {
@@ -99,6 +102,17 @@
   text-align: justify;
   border: 1px solid #ADADAD;
   border-radius: 3px;
+}
+
+.volunteer-image {
+  display: flex;
+  align-items: center;
+
+  img,
+  svg {
+    vertical-align: middle;
+    padding-bottom: 15px;
+  }
 }
 
 .map {
