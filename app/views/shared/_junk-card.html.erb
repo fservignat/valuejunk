@@ -42,7 +42,20 @@
         <div class="junk-card-upper">
           <h2><%= junk.title %></h2>
           <div class="price-delivery">
-            <p><%= junk.price %>€</p>
+          <%# old code wher price does not turn into free when 0 or donation %>
+            <%# <p><%= junk.price %><%# €</p> %>
+            <%# end of old code %>
+
+            <%# new code %>
+              <%if junk.donation %>
+                <p>Free</p>
+              <% elsif junk.price == 0 %>
+                <p>Free</p>
+              <% else %>
+                <p><%= junk.price %>€</p>
+                <% end %>
+            <%# end of new code %>
+
             <% if junk.delivery %>
               <p class="secondary-button-3 text-nowrap">Delivery possible</p>
             <% end %>
