@@ -14,7 +14,7 @@
       <div class=junk-form-content>
         <div class="junk-form-content-left">
           <% junk_template=Junk.new(title: "", address: "", description: "", price: "" , category: "",
-            donation: false, user_id: current_user.id, photos: []) %>
+            donation: false, photos: []) %>
           <%= render "shared/junk-card-preview", junk: junk_template %>
         </div>
           <%= render "form", junk: @junk %>
