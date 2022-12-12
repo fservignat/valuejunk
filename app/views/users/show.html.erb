@@ -38,14 +38,14 @@
     <div class="user-bio">
       <div class="address-profile">
       <div class="label-name"><p>Address</p></div>
-        <div class="address-box">
+        <div class="address-box profile-box">
           <p><%= @user.address.split(", ")[1] %>, <%= @user.address.split(", ")[2] %></p>
         </div>
       </div>
 
       <div class="description">
         <div class="label-name"><p>Bio</p></div>
-        <div class="user-bio-scrollable">
+        <div class="user-bio-scrollable profile-box">
           <%= @user.bio %>
         </div>
       </div>
@@ -53,20 +53,21 @@
 
     <div class="user-craft">
       <div class="craft-profile">
-        <div class="label-name"><p>Craft</p></div>
-          <div class="box-container">
+        <div class="label-name"><p>Crafts</p></div>
+          <div class="craft-box profile-box">
             <% @services.each do |service| %>
               <span class="speciality-btn"><%= service.craft %></span>
             <% end %>
           </div>
       </div>
 
-      <div class="box-container">
+      <div class="specialty-profile">
+        <div class="label-name"><p>Specialties</p></div>
+        <div class="specialty-box profile-box">
           <% @tags_array.each do |tag| %>
-            <div>
-              <%= link_to tag, tagged_path(speciality: tag), class: "speciality-btn" %>
-            </div>
-        <% end %>
+            <%= link_to tag, tagged_path(speciality: tag), class: "speciality-btn" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
