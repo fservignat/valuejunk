@@ -265,3 +265,15 @@ puts "chatroom #{chatroom2.name} created."
 #create chatroom-------------------------
 chatroom3=Chatroom.create!(name: "Taylor")
 puts "chatroom #{chatroom3.name} created."
+
+#create chatroom-------------------------
+chatroom4=Chatroom.create!(name: "Sunny")
+puts "chatroom #{chatroom4.name} created."
+
+#create chatroom-------------------------
+chatroom5=Chatroom.create!(name: "Kylian")
+puts "chatroom #{chatroom5.name} created."
+
+#create chatroom-------------------------
+chatroom6=Chatroom.create!(name: "Francis")
+puts "chatroom #{chatroom6.name} created."
