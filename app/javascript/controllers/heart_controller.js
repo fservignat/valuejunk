@@ -11,6 +11,6 @@ export default class extends Controller {
     // } else {
     //   ('li .heart-red').removeClass('heart-red');
     //   (this).addClass('heart-red');
-    (this.element).toggleClass('heart-red')
+    (this.element).classList.toggle('heart-red')
   }
 }
