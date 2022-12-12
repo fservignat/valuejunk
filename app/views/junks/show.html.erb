@@ -24,7 +24,8 @@
 
         <div class="junk-show-form-content">
           <div class= "junk-show-card">
-            <%= render "shared/junk-card", junks: @junk_array %>
+            <% profile = false %>
+            <%= render "shared/junk-card", junks: @junk_array, junk: @junk, profile: profile %>
           </div>
 
           <div class="junk-show-form-info">

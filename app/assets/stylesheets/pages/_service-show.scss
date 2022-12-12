@@ -141,6 +141,17 @@
   }
 }
 
+.box-container {
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  background: white;
+  height: 115px;
+  width: 274px;
+
+}
+
 .specialities-container {
   display: flex;
   justify-content: center;

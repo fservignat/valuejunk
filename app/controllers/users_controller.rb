@@ -4,7 +4,14 @@ class UsersController < ApplicationController
     @user = current_user
     @junks = @user.junks
     @services = @user.services
-    # @specialties = @user.specialties
+
+    #store the specialities tags in an array
+    @tags_array = Array.new()
+    @services.map do |service|
+      service.speciality_list.each do |speciality|
+        @tags_array.append(speciality)
+      end
+    end
   end
 
   def edit

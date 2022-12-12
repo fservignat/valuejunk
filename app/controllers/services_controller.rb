@@ -1,4 +1,5 @@
 class ServicesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index, :show, :new ]
   before_action :set_service, only: [:show]
   before_action :service_params, only: [:create]
   before_action :msg_alert
@@ -10,18 +11,17 @@ class ServicesController < ApplicationController
       params[:query_max_price].present? or params[:location].present? or
       params[:service].present? or params[:junk].present?
       #set the max price so it will return all items if there is no input.
-      if params[:query_max_price] == ""
+      if params[:query_max_price] == "" or params[:query_max_price] == nil
         params[:query_max_price] = "99999"
       end
 
-      if params[:service].present?
-        params[:query_max_price] = "0"
-      end
+     # if params[:service].present?
+      #  params[:query_max_price] = "0"
+      #end
 
-      sql_query = "(title ILIKE :query OR description ILIKE :query)"
+      sql_query = "(title ILIKE :query OR description ILIKE :query OR craft ILIKE :query)"
       price_query = "price BETWEEN :query_min_price AND :query_max_price"
       location_query = "address ILIKE :location"
-
       @services = Service.where("#{sql_query} AND #{price_query} AND #{location_query}",
         query: "%#{params[:query]}%",
         query_min_price: params[:query_min_price].to_i,
@@ -41,6 +41,12 @@ class ServicesController < ApplicationController
       lng: service.longitude,
       image_url: helpers.asset_url("person-solid.svg")
     }
+    end
+
+    #this for AJAX when clicking through the carousel, we want it to return text.
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: "list", locals: {service: @services}, formats: [:html] }
     end
 
   end
