@@ -47,6 +47,7 @@ class ServicesController < ApplicationController
     respond_to do |format|
       format.html # Follow regular flow of Rails
       format.text { render partial: "list", locals: {service: @services}, formats: [:html] }
+      format.text { render partial: "map", locals: {markers: @markers}, formats: [:html] }
     end
 
   end

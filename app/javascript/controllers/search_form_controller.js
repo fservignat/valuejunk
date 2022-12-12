@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="search-form"
 export default class extends Controller {
   static targets = ["form", "category",
-    "craft", "input", "cards"]
+    "craft", "input", "cards", "map"]
 
   connect() {
     console.log("in the search-form")
@@ -24,7 +24,7 @@ export default class extends Controller {
       const activeDiv = activeImg.getElementsByTagName("div")[0]
       const activeHeader = activeDiv.getElementsByTagName("h5")[0].id
       const serviceURL = this.formTarget.baseURI.split('/')
-      console.log(serviceURL)
+      // console.log(serviceURL)
 
       const url = `${serviceURL[0]}//${serviceURL[2]}/services?query=${activeHeader}&location=`
       // console.log("url reporting")
@@ -42,4 +42,6 @@ export default class extends Controller {
     }, 1000);
 
   }
+
+
 }
