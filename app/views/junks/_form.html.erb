@@ -32,7 +32,10 @@
         <% end %>
       </div>
       <div class="form-check form-switch">
-        <input class="form-check-input boolean optional" type="checkbox" value="1" name="junk[donation]" id="junk_donation"/>
+        <input class="form-check-input boolean optional" type="checkbox"
+          value="1" name="junk[donation]" id="junk_donation"
+          data-junk-card-target="donation"
+          data-action="click->junk-card#update_donation"/>
         <label class="boolean optional" for="junk_donation">Donation</label>
       </div>
     </div>

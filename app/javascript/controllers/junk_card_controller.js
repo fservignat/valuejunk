@@ -5,11 +5,14 @@ export default class extends Controller {
   static targets = ["title", "card_title",
     "price", "card_price",
     "address", "card_address",
-    "photo", "card_photo"]
+    "photo", "card_photo",
+    "donation", "card_donation", "card_donation_free"]
+
 
   connect() {
     console.log("junk connected");
     console.log(this.photoTarget.value);
+    console.log(this.donationTarget);
   }
 
   update_title() {
@@ -30,12 +33,14 @@ export default class extends Controller {
     this.card_priceTarget.innerHTML = `${this.priceTarget.value}€`;
   }
 
-  update_photo() {
+  update_donation() {
 
     // console.log("inside photo")
     // console.dir(this.card_photoTarget.src)
-    console.log(this.photoTarget.value)
-    // this.card_photoTarget.src = this.photoTarget.value;
+    // console.dir(this.card_donation_freeTarget)
+    this.card_donationTarget.innerHTML = `<p class="donation">DONATION</p>`;
+    this.card_priceTarget.innerHTML = `<p data-junk-card-target="card_donation_free">Free</p>`;
+
   }
 
 }
