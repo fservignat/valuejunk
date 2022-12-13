@@ -21,16 +21,21 @@
 
   <div class="photo-craft">
     <div id="photo">
-    <% if @service.user.photo.attached? %>
-        <%= cl_image_tag @service.user.photo.key, crop: :fill, class: "service-avatar", alt: "avatar for user" %>
-      <% else %>
-        <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "service-avatar") %>
+      <% if @service.user != nil %>
+        <% if @service.user.photo.attached? %>
+          <%= cl_image_tag @service.user.photo.key, crop: :fill, class: "service-avatar", alt: "avatar for user" %>
+        <% else %>
+          <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "service-avatar") %>
+        <% end %>
       <% end %>
     </div>
 
     <div id="title-craft">
-    <h2><%= @service.title %></h2>
-    <p><%= @service.craft %></p>
+      <h1 class="username">
+        <%= @service.user.username %>
+      </h1>
+      <h2><%= @service.title %></h2>
+      <p><%= @service.craft %></p>
     </div>
   </div>
 
@@ -53,28 +58,27 @@
           <div>
               <div class="volunteer-image">
                 <%if @service.volunteer%>
-                <div id="service-volunteer">
-                <p >Volunteer</p>
-                <%= image_tag "volunteer.svg" %>
-                </div>
+                  <div id="service-volunteer">
+                    <p >Volunteer</p>
+                    <%= image_tag "volunteer.svg" %>
+                  </div>
                 <%else%>
-
-                <p>Price</p>
-
-                <p class="service-show-border"><%= @service.price %> €/hr</p>
+                  <p>Price</p>
+                  <p class="service-show-border"><%= @service.price %> €/hr</p>
                 <% end %>
-                </div>
+              </div>
             </div>
           </div>
+
         <div>
-        <p>Description</p>
+          <p id="description-show-label">Description</p>
           <div id="description-scrollable">
-          <p><%= @service.description %></p>
+            <p><%= @service.description %></p>
           </div>
         </div>
 
         <div>
-        <p>Specialities</p>
+        <p id="description-show-label">Specialities</p>
           <div id="specialities">
             <p><%  @service.speciality_list.each do |speciality| %>
             <div class="speciality-btn"><%= speciality %></div>
