@@ -52,7 +52,9 @@
         <% end %>
       </div>
       <div class="form-check form-switch">
-        <input class="form-check-input boolean optional" type="checkbox" value="1" name="junk[delivery]" id="junk_delivery"/>
+        <input class="form-check-input boolean optional" type="checkbox"
+          value="1" name="junk[delivery]" id="junk_delivery"
+          data-action="click->junk-card#update_delivery"/>
         <label class="boolean optional" for="junk_delivery">Do you deliver?</label>
       </div>
     </div>

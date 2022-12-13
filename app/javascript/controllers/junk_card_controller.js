@@ -6,7 +6,8 @@ export default class extends Controller {
     "price", "card_price",
     "address", "card_address",
     "photo", "card_photo",
-    "donation", "card_donation", "card_donation_free"]
+    "donation", "card_donation",
+    "delivery", "card_delivery"]
 
 
   connect() {
@@ -33,14 +34,26 @@ export default class extends Controller {
     this.card_priceTarget.innerHTML = `${this.priceTarget.value}€`;
   }
 
+
   update_donation() {
 
-    // console.log("inside photo")
-    // console.dir(this.card_photoTarget.src)
-    // console.dir(this.card_donation_freeTarget)
-    this.card_donationTarget.innerHTML = `<p class="donation">DONATION</p>`;
-    this.card_priceTarget.innerHTML = `<p data-junk-card-target="card_donation_free">Free</p>`;
+    // this.card_donationTarget.innerHTML = `<p data-junk-card-target="card_donation"  class="donation donation_display">DONATION</p>`
+    if (this.card_donationTarget.style.visibility === "visible") {
+      this.card_donationTarget.style.visibility = "hidden";
+      this.card_priceTarget.innerHTML = `<p data-junk-card-target="card_price">€</p>`
+    } else {
+      this.card_donationTarget.style.visibility = "visible";
+      this.card_priceTarget.innerHTML = `<p data-junk-card-target="card_price">Free</p>`
+    }
 
+  }
+
+  update_delivery() {
+    if (this.card_deliveryTarget.style.visibility === "visible") {
+      this.card_deliveryTarget.style.visibility = "hidden";
+    } else {
+      this.card_deliveryTarget.style.visibility = "visible";
+    }
   }
 
 }

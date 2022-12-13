@@ -41,6 +41,14 @@
   transform: rotate(-20deg);
 }
 
+.donation.vis {
+  visibility: hidden;
+}
+
+.delivery-vis {
+  visibility: hidden;
+}
+
 .junk-card-content {
   padding-left: 10px;
   padding-right: 10px;
@@ -95,6 +103,7 @@
 
 .address-date {
   line-height: 12px;
+
   p {
     margin-bottom: 5px;
     color: $grey;

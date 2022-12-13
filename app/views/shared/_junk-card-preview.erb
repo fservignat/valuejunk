@@ -6,19 +6,19 @@
             crop: :fill, class: 'd-block', alt: 'image cover for junk', data: {junk_card_target: "card_photo"})%>
 
 
-        <p data-junk-card-target="card_donation" class="donation"></p>
+        <p data-junk-card-target="card_donation"  class="donation vis">DONATION</p>
 
     </div>
 
 
     <div class="junk-card-content">
       <h2 data-junk-card-target="card_title"><%= junk.title %></h2>
+        <div class="price-delivery">
 
-
-          <p data-junk-card-target="card_price"
-            data-junk-card-target="card_donation_free"><%= junk.price %>€</p>
-
-
+          <p data-junk-card-target="card_price"><%= junk.price %>€</p>
+          <p class="secondary-button-3 text-nowrap delivery-vis"
+            data-junk-card-target="card_delivery">Delivery possible</p>
+        </div>
       <div class="junk-card-bottom">
         <div class="address-date">
           <p data-junk-card-target="card_address"><%= junk.address.split(", ")[1] %> - </p>
