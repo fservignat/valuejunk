@@ -19,11 +19,12 @@
               <% end %>
             </div>
             <% if junk.photos.any? %>
-              <button class="carousel-control-prev arrow" type="button" data-bs-target="#carouselExampleControls-<%= junk.id %>" data-bs-slide="prev">
+
+              <button class="carousel-control-prev arrow"id="next-button-carroussel" type="button" data-bs-target="#carouselExampleControls-<%= junk.id %>" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next arrow" type="button" data-bs-target="#carouselExampleControls-<%= junk.id %>" data-bs-slide="next">
+              <button class="carousel-control-next arrow"id="prev-button-carroussel" type="button" data-bs-target="#carouselExampleControls-<%= junk.id %>" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
@@ -77,6 +78,7 @@
             <p><%= junk.address.split(", ")[1] %> - </p>
             <p><%= junk.created_at.strftime("%A, %k:%M") %></p>
           </div>
+    <% end %>
           <% if profile %>
             <div class="junk-card-icon">
               <%= link_to edit_junk_path(junk) do %>
@@ -88,10 +90,14 @@
               <% end %>
             </div>
           <% else %>
-            <i class="fa-regular fa-heart fa-lg"></i>
+            <div class="heart">
+              <i class="fa-regular fa-heart fa-lg"
+              data-controller="heart"
+              data-action="click->heart#updateHeart"></i>
+            </div>
           <% end %>
         </div>
       </div>
-    <% end %>
+
   </div>
 <%end%>
