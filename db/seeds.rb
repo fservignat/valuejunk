@@ -44,7 +44,8 @@ s_user = User.create!(
   username: "Sunny",
   email: "sunny_law@hotmail.com",
   address: "117 Rue des Labours, 77700 Magny-le-Hongre, France",
-  bio: "I am a developer",
+  bio: "I have some experience in some simple wood works and enjoy making crafts.
+  This includes Christmas decorations and cards.",
   password: "123456"
   )
   file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670538679/Sunny_weke0l.jpg')
@@ -250,7 +251,21 @@ service = Service.new(
 service.save!
 puts "service: #{service.title} created."
 
+service = Service.new(
 
+  title: "Small wood works",
+  address: s_user.address,
+  craft: "Wood and furniture",
+  description: "I have few years experience in DIY at home. I made some small
+  small wood work boxes for jewlery and watches.",
+  price:5,
+  volunteer: false,
+  user: s_user)
+  file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670880846/box1_mesnd9.jpg')
+  service.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
+  service.speciality_list.add("Carpentry","Wood burning","Woodworking")
+  service.save!
+puts "service: #{service.title} created."
 
 
 #create chatroom-------------------------
@@ -265,3 +280,15 @@ puts "chatroom #{chatroom2.name} created."
 #create chatroom-------------------------
 chatroom3=Chatroom.create!(name: "Taylor")
 puts "chatroom #{chatroom3.name} created."
+
+#create chatroom-------------------------
+chatroom4=Chatroom.create!(name: "Sunny")
+puts "chatroom #{chatroom4.name} created."
+
+#create chatroom-------------------------
+chatroom5=Chatroom.create!(name: "Kylian")
+puts "chatroom #{chatroom5.name} created."
+
+#create chatroom-------------------------
+chatroom6=Chatroom.create!(name: "Francis")
+puts "chatroom #{chatroom6.name} created."

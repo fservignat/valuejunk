@@ -18,13 +18,17 @@
     <div class="navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <li class="nav-item dropdown">
-          <%= image_tag "icons/user", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% if user_signed_in? && current_user.photo.attached? %>
+            <%= cl_image_tag current_user.photo.key, crop: :fill, class: "avatar-navbar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false,  alt: "avatar for user" %>
+          <% else %>
+          <%= image_tag "icons/user", class: "user-icon-navbar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% end %>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <% if user_signed_in? %>
               <%= link_to "My profile", current_user, class: "dropdown-item" %>
               <%=
                 link_to (@chatroom === nil ? "#" : chatroom_path(@chatroom)),
-                class: "dropdown-item #{@messages != nil ? "msg_alert" : ""}" do 
+                class: "dropdown-item #{@messages != nil ? "msg_alert" : ""}" do
               %>
                   <span>Messages</span>
               <% end %>
