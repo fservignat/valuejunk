@@ -33,7 +33,7 @@
           <%= image_tag("https://res.cloudinary.com/dfkgih0bp/image/upload/v1668949083/development/ValueJunk/internal%20img%20%28website%20itself%29/images/no-img-placeholder_acr54j.jpg", crop: :fill, class: 'd-block', alt: 'image cover for junk') %>
         <% end %>
 
-        <% if junk.donation %>
+        <% if junk.donation || junk.price == 0 %>
           <p class="donation">DONATION</p>
         <% end %>
       </div>
@@ -46,15 +46,25 @@
             <%# <p><%= junk.price %><%# €</p> %>
             <%# end of old code %>
 
-            <%# new code %>
-              <%if junk.donation %>
-                <p>Free</p>
-              <% elsif junk.price == 0 %>
+            <%# new code kylian %>
+              <%# <%if junk.donation %>
+                <%# <p>Free</p> %>
+              <%# <% elsif junk.price == 0 %>
+                <%# <p>Free</p> %>
+              <%# <% else %>
+                <%# <p><%= junk.price %><%# €</p> %>
+                <%# <% end %>
+            <%# end of new code kylian %>
+
+            <%# new code Francis %>
+              <% if junk.donation || junk.price == 0 %>
                 <p>Free</p>
               <% else %>
                 <p><%= junk.price %>€</p>
                 <% end %>
             <%# end of new code %>
+
+
 
             <% if junk.delivery %>
               <p class="secondary-button-3 text-nowrap">Delivery possible</p>
