@@ -6,11 +6,22 @@ export default class extends Controller {
     console.log("hello")
   }
   updateHeart(event) {
-    // if ( (this).hasClass("heart-red") ) {
-    //   (this).removeClass('heart-red');
+    // if ( this.element.include?("heart-red") ) {
+    //   this.element.classList.remove('heart-red');
     // } else {
-    //   ('li .heart-red').removeClass('heart-red');
-    //   (this).addClass('heart-red');
-    (this.element).classList.toggle('heart-red')
+    //   this.element.classList.add('heart-red');
+
+      // (this).addClass('heart-red');
+    // console.log(event)
+    // (this.element).classList.toggle('heart-red')
+  // }
+
+  if (this.element.classList.contains("fa-regular")) {
+    this.element.classList.remove("fa-regular")
+    this.element.classList.add("fa-solid")
+  } else {
+    this.element.classList.remove("fa-solid")
+    this.element.classList.add("fa-regular")
   }
+}
 }

@@ -93,10 +93,6 @@
   }
 }
 
-.heart-red {
-  color: red;
-}
-
 .address-date {
   line-height: 12px;
   p {
@@ -118,5 +114,15 @@
 
   i {
     margin: 5px;
+  }
+}
+
+.heart {
+  .fa-regular {
+
+  }
+
+  .fa-solid {
+    color: red;
   }
 }
