@@ -69,15 +69,16 @@
               </div>
             </div>
           </div>
+
         <div>
-        <p>Description</p>
+          <p id="description-show-label">Description</p>
           <div id="description-scrollable">
-          <p><%= @service.description %></p>
+            <p><%= @service.description %></p>
           </div>
         </div>
 
         <div>
-        <p>Specialities</p>
+        <p id="description-show-label">Specialities</p>
           <div id="specialities">
             <p><%  @service.speciality_list.each do |speciality| %>
             <div class="speciality-btn"><%= speciality %></div>
