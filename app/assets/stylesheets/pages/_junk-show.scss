@@ -51,8 +51,13 @@
 
 .address {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 30px;
   align-items: center;
+}
+
+#free {
+  color: green;
 }
 
 #favourites {
@@ -98,7 +103,7 @@
   justify-content: space-between;
   padding-top: 30px;
   padding-left: 50px;
-  padding-right: 50px;
+  padding-right: 100px;
   align-items: center;
 }
 

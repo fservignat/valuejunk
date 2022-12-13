@@ -51,11 +51,21 @@
           </div>
 
           <div>
-          <p>Price</p>
-          <p class="service-show-border"><%= @service.price %> €/hr</p>
-          </div>
-        </div>
+              <div class="volunteer-image">
+                <%if @service.volunteer%>
+                <div id="service-volunteer">
+                <p >Volunteer</p>
+                <%= image_tag "volunteer.svg" %>
+                </div>
+                <%else%>
 
+                <p>Price</p>
+
+                <p class="service-show-border"><%= @service.price %> €/hr</p>
+                <% end %>
+                </div>
+            </div>
+          </div>
         <div>
         <p>Description</p>
           <div id="description-scrollable">
@@ -67,7 +77,7 @@
         <p>Specialities</p>
           <div id="specialities">
             <p><%  @service.speciality_list.each do |speciality| %>
-            <div class="specialities-container"><%= speciality %></div>
+            <div class="speciality-btn"><%= speciality %></div>
             <% end %></p>
           </div>
         </div>
@@ -83,7 +93,11 @@
       </div>
 
       <div class="contact-craftperson">
-        <%= link_to "Contact craftperson", service_path, class: "primary-button-1" %>
+        <% if Chatroom.where(name: @service.user.username) != [] %>
+        <% user_chat = Chatroom.where(name: @service.user.username)[0].id%>
+        <%= link_to "Message craftperson", chatroom_path(user_chat), class: "primary-button-1"%>
+        <% end %>
+        <%# <%= link_to "Contact craftperson", service_path, class: "primary-button-1" %>
       </div>
     </div>
 
@@ -102,9 +116,9 @@
 </div>
 </div>
   <%# this is connecting to a pre-seeded chatroom for some users %>
-<% if Chatroom.where(name: @service.user.username) != [] %>
-  <% user_chat = Chatroom.where(name: @service.user.username)[0].id%>
-  <%= link_to "Message", chatroom_path(user_chat)%>
-<% end %>
+<%# <% if Chatroom.where(name: @service.user.username) != [] %>
+ <%#  <% user_chat = Chatroom.where(name: @service.user.username)[0].id%>
+<%#   <%= link_to "Message", chatroom_path(user_chat), class: "primary-button-1"%>
+<%# <% end %>
   </div>
 </div>

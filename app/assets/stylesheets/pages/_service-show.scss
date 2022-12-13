@@ -56,6 +56,17 @@
   justify-content: space-between;
 }
 
+#service-volunteer {
+  display: flex;
+  padding-right: 86px;
+  padding-top: 50px;
+  gap: 15px;
+
+  p {
+    margin-bottom: 0px;
+  }
+}
+
 .address-price {
   display: flex;
   justify-content: space-between;
@@ -81,8 +92,10 @@
 .service-show-border {
   border: 1px solid #ADADAD;
   border-radius: 3px;
-  padding: 5px;
-  width: 115px;
+  padding: 10px;
+  /*  width: 115px; */
+  font-weight: 400;
+  font-size: 14px;
 
 }
 
@@ -95,6 +108,11 @@
   text-align: justify;
   border: 1px solid #ADADAD;
   border-radius: 3px;
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+  }
 }
 
 .map {
@@ -103,12 +121,24 @@
 
 #specialities {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   width: 100%;
   height: 70px;
   background-color: #F0F0F0;
   border: 1px solid #ADADAD;
   border-radius: 3px;
+  align-items: center;
+  gap: 5px;
+  word-wrap: break-word;
+
+  .speciality-btn {
+    background-color: #D5EAE2;
+    color: black;
+    border-radius: 10px;
+    padding: 2px 4px 2px 4px;
+    font-size: small;
+  }
 }
 
 .box-container {

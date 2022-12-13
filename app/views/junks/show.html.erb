@@ -31,11 +31,22 @@
           <div class="junk-show-form-info">
             <div class="price-favourites">
               <div>
+              <%if @junk.donation %>
+                <div id="free">
+                <p>Free</p>
+                </div>
+              <% elsif @junk.price == 0 %>
+              <div id="free">
+                <p>Free</p>
+                </div>
+              <% else %>
                 <p><%= @junk.price %>€</p>
+                <% end %>
               </div>
 
               <div id="favourites">
-              <%= image_tag "heart.svg" %>
+              <%=  image_tag "heart.svg" %>
+
               <p>Add to Favourites</p>
               </div>
             </div>
@@ -56,8 +67,13 @@
               </div>
 
               <div class="delivery">
+              <%if @junk.delivery %>
               <%= image_tag "delivery.svg" %>
               <p>Delivery possible</p>
+              <% else %>
+              <%= image_tag "handshake-regular.svg" %>
+              <p>Pick-up</p>
+              <% end %>
               </div>
             </div>
 
@@ -79,7 +95,12 @@
             <%= cl_image_tag(photo.key, class: 'small-image', alt: 'image junk') %>
             <% end %>
           </div>
-          <%= link_to "Contact seller", junks_path, class: "primary-button-1" %>
+          <%# this is connecting to a pre-seeded chatroom for some users %>
+          <% if Chatroom.where(name: @junk.user.username) != [] %>
+          <% user_chat = Chatroom.where(name: @junk.user.username)[0].id%>
+          <%= link_to "Message seller", chatroom_path(user_chat), class: "primary-button-1"%>
+          <% end %>
+          <%# <%= link_to "Contact seller", junks_path, class: "primary-button-1" %>
       </div>
           <div class="map">
             <%= render "shared/map", markers: @markers%>
@@ -90,10 +111,6 @@
 
   </div>
 
-  <%# this is connecting to a pre-seeded chatroom for some users %>
-  <% if Chatroom.where(name: @junk.user.username) != [] %>
-    <% user_chat = Chatroom.where(name: @junk.user.username)[0].id%>
-    <%= link_to "Message", chatroom_path(user_chat)%>
-  <% end %>
+
 
 </div>
