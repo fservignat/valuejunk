@@ -173,9 +173,8 @@
 .modal-content {
   margin: auto;
   display: block;
-  width: 50%;
-  max-width: 900px;
-  z-index: 9999999;
+  max-width: 45vw;
+  max-height: 80vh
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
