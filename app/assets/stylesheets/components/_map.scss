@@ -7,3 +7,19 @@
   padding-top: 40px;
   padding-bottom: 40px;
 }
+
+.mapboxgl-popup-content {
+  max-height: 60px;
+  border-radius: 30px;
+
+  h2 {
+    font-family: "inter", "sans-serif";
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0;
+  }
+}
