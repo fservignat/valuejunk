@@ -20,9 +20,10 @@
     <div class="service-card-address">
       <p data-service-card-target="card_address"><%= service.address.split(",")[1] %></p>
       <%if service.volunteer%>
-        <p >Volunteer</p>
+        <p>Volunteer</p>
       <%else%>
-        <p data-service-card-target="card_price" ><%= service.price %> €/hr</p>
+        <p data-service-card-target="card_price" class="service-price"><%= service.price %> €/hr</p>
+
       <%end%>
     </div>
 
