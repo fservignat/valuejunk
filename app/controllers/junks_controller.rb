@@ -46,7 +46,9 @@ class JunksController < ApplicationController
   def show
     @junk = Junk.find(params[:id])
     @junk_array = [@junk]
-    @markers = [{lat: @junk.latitude, lng: @junk.longitude, image_url: helpers.asset_url("hammer-solid.svg")}]
+    @markers = [{lat: @junk.latitude, lng: @junk.longitude,
+      image_url: helpers.asset_url("hammer-solid.svg"),
+      info_window: render_to_string(partial: "popup_map", locals: { junk: @junk })}]
   end
 
   def new

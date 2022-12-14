@@ -6,7 +6,8 @@ export default class extends Controller {
     "craft", "card_craft",
     "description", "card_description",
     "price", "card_price",
-    "speciality", "card_speciality"]
+    "speciality", "card_speciality",
+    "volunteer", "card_volunteer"]
 
 
   connect() {
@@ -31,7 +32,9 @@ export default class extends Controller {
   }
 
   update_price() {
-    this.card_priceTarget.innerHTML = `${this.priceTarget.value} €/hr`;
+    if (this.card_priceTarget.textContent != "Volunteer") {
+      this.card_priceTarget.innerHTML = `${this.priceTarget.value} €/hr`;
+    }
   }
 
   update_speciality() {
@@ -55,4 +58,15 @@ export default class extends Controller {
     this.card_specialityTarget.innerHTML = final_innerHTML;
 
   }
+
+  update_volunteer() {
+
+    console.log(this.card_priceTarget.textContent)
+    if (this.card_priceTarget.textContent === "Volunteer") {
+      this.card_priceTarget.textContent = " €/hr";
+    } else {
+      this.card_priceTarget.textContent = "Volunteer";
+    }
+  }
+
 }
