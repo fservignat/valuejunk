@@ -25,13 +25,16 @@
       <div class="mb-3">
         <label class="service-label-stack integer optional" for="service_price">Price</label>
         <input class="form-control numeric integer optional" type="number" step="1" name="service[price]" id="service_price"
-        value="<%=@service[:price]%>"
+          value="<%=@service[:price]%>"
           data-service-card-target="price"
           data-action="keyup->service-card#update_price"/>
       </div>
       <div>
       <div class="form-check form-switch">
-        <input class="form-check-input boolean optional" type="checkbox" value="1" name="service[volunteer]" id="service_volunteer"/>
+        <input class="form-check-input boolean optional" type="checkbox"
+          value=1 name="service[volunteer]" id="service_volunteer"
+          data-service-card-target="volunteer"
+          data-action="click->service-card#update_volunteer"/>
         <label class="boolean optional" for="service_volunteer">Do you volunteer?</label>
       </div>
       </div>
