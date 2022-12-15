@@ -44,8 +44,8 @@ s_user = User.create!(
   username: "Sunny",
   email: "sunny_law@hotmail.com",
   address: "117 Rue des Labours, 77700 Magny-le-Hongre, France",
-  bio: "I have some experience in some simple wood works and enjoy making crafts.
-  This includes Christmas decorations and cards.",
+  bio:  "I am experience in textile and main talent is making fancy custome for parties.
+  I also enjoy making home crafts and make some simple wood works.",
   password: "123456"
   )
   file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670538679/Sunny_weke0l.jpg')
