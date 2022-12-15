@@ -57,7 +57,7 @@
 
           <div>
               <div class="volunteer-price">
-                <%if @service.volunteer%>
+                <%if @service.volunteer || @service.price == 0 %>
                   <div id="service-volunteer">
                     <p >Volunteer</p>
                     <%= image_tag "volunteer.svg" %>

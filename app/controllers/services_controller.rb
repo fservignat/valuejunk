@@ -87,7 +87,7 @@ class ServicesController < ApplicationController
     @service.user = current_user
     @service_template=Service.new(description: "", address: "", user: current_user)
 
-    if @service.volunteer = true
+    if @service.volunteer === true
       @service.price = 0
     end
 
