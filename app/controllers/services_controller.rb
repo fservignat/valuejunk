@@ -39,7 +39,9 @@ class ServicesController < ApplicationController
     {
       lat: service.latitude,
       lng: service.longitude,
-      image_url: helpers.asset_url("person-solid.svg")
+      image_url: helpers.asset_url("person-solid.svg"),
+      info_window: render_to_string(partial: "service_popup_map", locals: { service: service })
+
     }
     end
 
@@ -70,7 +72,9 @@ class ServicesController < ApplicationController
   end
 
   def show
-    @markers = [{lat: @service.latitude, lng: @service.longitude, image_url: helpers.asset_url("person-solid.svg")}]
+    @markers = [{lat: @service.latitude, lng: @service.longitude,
+      image_url: helpers.asset_url("person-solid.svg"),
+      info_window: render_to_string(partial: "service_popup_map", locals: { service: @service })}]
   end
 
   def new

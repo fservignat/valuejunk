@@ -6,7 +6,7 @@ export default class extends Controller {
     "craft", "input", "cards", "map"]
 
   connect() {
-    console.log("in the search-form")
+    // console.log("in the search-form")
     // console.log(this.cardsTarget.innerHTML)
   }
 

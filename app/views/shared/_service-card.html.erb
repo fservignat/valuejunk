@@ -2,26 +2,28 @@
   <div class="service-card service-card-font">
     <%= link_to (service === nil || service.id === nil) ? services_path : service_path(service), class: "service-card-clickable" do %>
     <%# important to merge with the code below !!!!! else the create a service wont work propperly  %>
-      <% if service %>
-        <% if service.user.photo.attached? %>
-          <%= cl_image_tag service.user.photo.key, crop: :fill, class: "avatar-large service-card-img", alt: "avatar for user" %>
-        <% else %>
-          <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "avatar-large service-card-img") %>
+      <% if service.user != nil %>
+        <% if service %>
+          <% if service.user.photo.attached? %>
+            <%= cl_image_tag service.user.photo.key, crop: :fill, class: "avatar-large service-card-img", alt: "avatar for user" %>
+          <% else %>
+            <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "avatar-large service-card-img") %>
+          <% end %>
         <% end %>
+        <div class="service-card-heading">
+          <p class="service-card-name"><%= service.user[:username] %></p>
+          <p class="service-card-craft" data-service-card-target="card_craft">
+            <%= service.craft %>
+          </p>
+        </div>
       <% end %>
-      <div class="service-card-heading">
-        <p class="service-card-name"><%= service.user[:username] %></p>
-        <p class="service-card-craft" data-service-card-target="card_craft">
-          <%= service.craft %>
-        </p>
-      </div>
-
     <div class="service-card-address">
       <p data-service-card-target="card_address"><%= service.address.split(",")[1] %></p>
       <%if service.volunteer%>
-        <p >Volunteer</p>
+        <p>Volunteer</p>
       <%else%>
-        <p data-service-card-target="card_price" ><%= service.price %> €/hr</p>
+        <p data-service-card-target="card_price" class="service-price"><%= service.price %> €/hr</p>
+
       <%end%>
     </div>
 

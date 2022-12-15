@@ -18,8 +18,11 @@
 
 .junk-show-form-title {
   text-align: center;
-  padding-top: 35px;
-  padding-bottom: 30px;
+
+  h2 {
+    padding: 50px 15% 70px 15%;
+
+  }
 }
 
 .junk-show-form-content {
@@ -51,8 +54,13 @@
 
 .address {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 30px;
   align-items: center;
+}
+
+#free {
+  color: green;
 }
 
 #favourites {
@@ -98,7 +106,7 @@
   justify-content: space-between;
   padding-top: 30px;
   padding-left: 50px;
-  padding-right: 50px;
+  padding-right: 100px;
   align-items: center;
 }
 
@@ -114,10 +122,14 @@
   padding: 5px
 }
 
+#next-button-carroussel,
+#prev-button-carroussel {
+  z-index: 0;
+}
+
 .map {
   width: 100%;
 }
-
 
 
 /* Style the Image Used to Trigger the Modal */
@@ -125,7 +137,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
-  width: 100%;
+  width: 20%;
   max-width: 300px;
 }
 
@@ -161,9 +173,8 @@
 .modal-content {
   margin: auto;
   display: block;
-  width: 100%;
-  max-width: 900px;
-  z-index: 9999999;
+  max-width: 45vw;
+  max-height: 80vh
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -193,6 +204,10 @@
   to {
     transform: scale(1)
   }
+}
+
+#myModal {
+  z-index: 10;
 }
 
 /* The Close Button */

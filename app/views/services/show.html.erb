@@ -21,16 +21,21 @@
 
   <div class="photo-craft">
     <div id="photo">
-    <% if @service.user.photo.attached? %>
-        <%= cl_image_tag @service.user.photo.key, crop: :fill, class: "service-avatar", alt: "avatar for user" %>
-      <% else %>
-        <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "service-avatar") %>
+      <% if @service.user != nil %>
+        <% if @service.user.photo.attached? %>
+          <%= cl_image_tag @service.user.photo.key, crop: :fill, class: "service-avatar", alt: "avatar for user" %>
+        <% else %>
+          <%= image_tag("https://res.cloudinary.com/dvveiqb1p/image/upload/v1666893626/7eu35j8bhnwbbsf0cm2tj5m6de2m.jpg", class: "service-avatar") %>
+        <% end %>
       <% end %>
     </div>
 
     <div id="title-craft">
-    <h2><%= @service.title %></h2>
-    <p><%= @service.craft %></p>
+      <h1 class="username">
+        <%= @service.user.username %>
+      </h1>
+      <h2><%= @service.title %></h2>
+      <p><%= @service.craft %></p>
     </div>
   </div>
 
@@ -51,23 +56,32 @@
           </div>
 
           <div>
-          <p>Price</p>
-          <p class="service-show-border"><%= @service.price %> €/hr</p>
+              <div class="volunteer-image">
+                <%if @service.volunteer%>
+                  <div id="service-volunteer">
+                    <p >Volunteer</p>
+                    <%= image_tag "volunteer.svg" %>
+                  </div>
+                <%else%>
+                  <p>Price</p>
+                  <p class="service-show-border"><%= @service.price %> €/hr</p>
+                <% end %>
+              </div>
+            </div>
           </div>
-        </div>
 
         <div>
-        <p>Description</p>
+          <p id="description-show-label">Description</p>
           <div id="description-scrollable">
-          <p><%= @service.description %></p>
+            <p><%= @service.description %></p>
           </div>
         </div>
 
         <div>
-        <p>Specialities</p>
+        <p id="description-show-label">Specialities</p>
           <div id="specialities">
             <p><%  @service.speciality_list.each do |speciality| %>
-            <div class="specialities-container"><%= speciality %></div>
+            <div class="speciality-btn"><%= speciality %></div>
             <% end %></p>
           </div>
         </div>
@@ -83,7 +97,11 @@
       </div>
 
       <div class="contact-craftperson">
-        <%= link_to "Contact craftperson", service_path, class: "primary-button-1" %>
+        <% if Chatroom.where(name: @service.user.username) != [] %>
+        <% user_chat = Chatroom.where(name: @service.user.username)[0].id%>
+        <%= link_to "Message craftperson", chatroom_path(user_chat), class: "primary-button-1"%>
+        <% end %>
+        <%# <%= link_to "Contact craftperson", service_path, class: "primary-button-1" %>
       </div>
     </div>
 
@@ -102,9 +120,9 @@
 </div>
 </div>
   <%# this is connecting to a pre-seeded chatroom for some users %>
-<% if Chatroom.where(name: @service.user.username) != [] %>
-  <% user_chat = Chatroom.where(name: @service.user.username)[0].id%>
-  <%= link_to "Message", chatroom_path(user_chat)%>
-<% end %>
+<%# <% if Chatroom.where(name: @service.user.username) != [] %>
+ <%#  <% user_chat = Chatroom.where(name: @service.user.username)[0].id%>
+<%#   <%= link_to "Message", chatroom_path(user_chat), class: "primary-button-1"%>
+<%# <% end %>
   </div>
 </div>
