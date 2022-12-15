@@ -226,16 +226,16 @@ puts "service: #{service.title} created."
 
 service = Service.new(
 
-  title: "Flower decoration for parties",
+  title: "Fahsion designer taking old making it new",
   address: k_user.address,
-  craft: "Flower & Gardening",
-  description: "I have a store selling flowers and make beautiful boutieque for stores display
-  and parties. My price is competitive.",
+  craft: "Fibre and textile",
+  description: "I take ole vintage clothing and make them modern that everyone will admire.
+  It is sustainable and turn your old clothing into the new trend. Come and check out my profilio.",
   price:10,
   volunteer: false,
   user: k_user)
-  # file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1670880846/box1_mesnd9.jpg')
-  # service.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
+  file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1671125068/fashion-dress_z4cues.jpg')
+  service.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
   service.speciality_list.add("Bouquet", "Floral Design")
   service.save!
 puts "service: #{service.title} created."
