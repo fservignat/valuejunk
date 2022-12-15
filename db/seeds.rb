@@ -141,7 +141,8 @@ puts "Listing a junk"
 junk = Junk.new(
   title: "Some old curtains to give away",
   address: "16 Bd Verd de Saint-Julien, 92190 Meudon, France",
-  description: "Got some red curtains to give away. Dimension is 10 X 50m.",
+  description: "Got some red curtains to give away. Dimension is 10 X 50m.
+  Good red textile for turning into apparels.",
   category:"Décor",
   price: 0,
   user: k_user)
