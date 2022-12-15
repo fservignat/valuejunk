@@ -79,7 +79,8 @@ class JunksController < ApplicationController
   def destroy
     @junk = Junk.find(params[:id])
     @junk.destroy
-    redirect_to junks_path, status: :see_other
+    @user = current_user
+    redirect_to user_path(@user), status: :see_other
   end
 
     private

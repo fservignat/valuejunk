@@ -1,6 +1,16 @@
+  <% if junk.id != nil %>
+    <% junk_path = "/junks/#{junk.id}" %>
+    <% method = "PATCH" %>
+    <% value = "Update" %>
+  <% else %>
+    <% junk_path = "/junks" %>
+    <% method = "POST" %>
+    <% value = "Post Ad" %>
+  <% end %>
+
 <div class="junk-form-right-content">
   <form class="new_junk" id="new_junk" novalidate="novalidate"
-    enctype="multipart/form-data" action="/junks" accept-charset="UTF-8" method="post">
+    enctype="multipart/form-data" action=<%=junk_path%> accept-charset="UTF-8" method=<%=method%>>
     <div class="string required junk_title junk-form-box-length-sm"
       data-controller="character-counter"
       data-character-counter-countdown-value="true">
@@ -97,6 +107,6 @@
     </div>
 
       <input type="submit" name="commit" class="primary-button-1"
-        value="Post ad" data-disable-with="Post ad">
+        value="<%=value%>" data-disable-with="Post ad">
   </form>
 </div>

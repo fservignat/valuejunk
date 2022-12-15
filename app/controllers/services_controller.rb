@@ -40,7 +40,7 @@ class ServicesController < ApplicationController
       lat: service.latitude,
       lng: service.longitude,
       image_url: helpers.asset_url("person-solid.svg"),
-      info_window: render_to_string(partial: "service_popup_map", locals: { service: service })
+      # info_window: render_to_string(partial: "service_popup_map", locals: { service: service })
 
     }
     end
@@ -87,7 +87,7 @@ class ServicesController < ApplicationController
     @service.user = current_user
     @service_template=Service.new(description: "", address: "", user: current_user)
 
-    if @service.volunteer = true
+    if @service.volunteer === true
       @service.price = 0
     end
 
@@ -112,7 +112,8 @@ class ServicesController < ApplicationController
   def destroy
     @service = Service.find(params[:id])
     @service.destroy
-    redirect_to services_path, status: :see_other
+    @user = current_user
+    redirect_to user_path(@user), status: :see_other
   end
 
   private

@@ -1,4 +1,14 @@
-  <form class="service-form-center" id="new_service" novalidate="novalidate" enctype="multipart/form-data" action="/services" accept-charset="UTF-8" method="post">
+  <% if service.id != nil %>
+    <% service_path = "/services/#{service.id}" %>
+    <% method = "PATCH" %>
+    <% value = "Update" %>
+  <% else %>
+    <% service_path = "/services" %>
+    <% method = "POST" %>
+    <% value = "Add Service" %>
+  <% end %>
+
+  <form class="service-form-center" id="new_service" novalidate="novalidate" enctype="multipart/form-data" action=<%=service_path%> accept-charset="UTF-8" method=<%=method%>>
 
     <div class="mb-3">
       <label class="service-label-stack string required" for="service_title">
@@ -124,7 +134,7 @@
     </div>
 
   <div class="service-flex-center">
-    <input type="submit" name="commit" value="Add Service" class="primary-button-1" data-disable-with="Addrai Service" />
+    <input type="submit" name="commit" value="<%=value%>" class="primary-button-1" data-disable-with="Addrai Service" />
   </div>
 
 </form>
