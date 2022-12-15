@@ -163,8 +163,8 @@ junk = Junk.new(
   category: "Furniture",
   price: 20,
   user: r_user)
-  # file = URI.open('https://res.cloudinary.com/dfkgih0bp/image/upload/v1668158134/development/Experimental_Cocktail_Club_gzeegk.png')
-  # junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
+  file = URI.open('https://res.cloudinary.com/dvveiqb1p/image/upload/v1671125350/coffee_table_hiyjwz.jpg')
+  junk.photos.attach(io: file, filename: 'experimental.jpg', content_type: 'image/jpg')
 
 junk.save!
 puts "junk: #{junk.title} created."
