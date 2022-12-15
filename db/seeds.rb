@@ -227,11 +227,11 @@ puts "service: #{service.title} created."
 
 service = Service.new(
 
-  title: "Fahsion designer taking old making it new",
+  title: "Fashion designer making new with old",
   address: k_user.address,
   craft: "Fibre and textile",
-  description: "I take ole vintage clothing and make them modern that everyone will admire.
-  It is sustainable and turn your old clothing into the new trend. Come and check out my profilio.",
+  description: "I take old vintage clothing and make them modern that everyone will admire.
+  It is sustainable and turn your old clothing into the new trend. Come and check out my portfolio.",
   price:10,
   volunteer: false,
   user: k_user)
@@ -279,8 +279,7 @@ service = Service.new(
   title: "Small wood works",
   address: s_user.address,
   craft: "Wood and furniture",
-  description: "I have few years experience in DIY at home. I made some small
-  small wood work boxes for jewlery and watches.",
+  description: "I have few years experience in DIY at home. I made some small wood work boxes for jewlery and watches.",
   price:5,
   volunteer: false,
   user: s_user)
@@ -311,7 +310,7 @@ service = Service.new(
   title: "Party outfit and costume designer",
   address: s_user.address,
   craft: "Fibre and textile",
-  description: "I have experience in making party outfits and all sort of custome for parties.
+  description: "I have experience in making party outfits and all sort of costume for parties.
    I am concious about the enviroment and aim to upcycle old clothing in my design. Please check out my portfolio.
    I also provide free consultations services to community projects and school arts.",
   price:15,
