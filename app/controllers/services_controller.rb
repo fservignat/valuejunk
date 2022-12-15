@@ -40,7 +40,7 @@ class ServicesController < ApplicationController
       lat: service.latitude,
       lng: service.longitude,
       image_url: helpers.asset_url("person-solid.svg"),
-      # info_window: render_to_string(partial: "service_popup_map", locals: { service: service })
+      info_window: render_to_string(partial: "service_popup_map", locals: { service: service }, formats: [:html])
 
     }
     end
@@ -49,7 +49,7 @@ class ServicesController < ApplicationController
     respond_to do |format|
       format.html # Follow regular flow of Rails
       format.text { render partial: "list", locals: {service: @services}, formats: [:html] }
-      format.text { render partial: "map", locals: {markers: @markers}, formats: [:html] }
+      # format.text { render partial: "map", locals: {markers: @markers}, formats: [:html] }
     end
 
   end
