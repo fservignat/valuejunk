@@ -112,7 +112,8 @@ class ServicesController < ApplicationController
   def destroy
     @service = Service.find(params[:id])
     @service.destroy
-    redirect_to services_path, status: :see_other
+    @user = current_user
+    redirect_to user_path(@user), status: :see_other
   end
 
   private
