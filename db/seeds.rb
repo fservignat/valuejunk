@@ -13,6 +13,7 @@ puts "Clearing Database"
 Junk.destroy_all
 Service.destroy_all
 User.destroy_all
+Message.destroy_all
 
 #create users -------------------------------------------------
 puts "Creating User Owner"
