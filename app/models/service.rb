@@ -22,6 +22,7 @@ class Service < ApplicationRecord
 
 
   validates :title, presence: true
+  validates :title, length: { in: 10..125 }
   validates :address, presence: true
   validates :description, length: { in: 10..400 }
   validates :craft, presence: true
