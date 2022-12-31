@@ -28,8 +28,17 @@ Rather throwing them away, these can be upcycled. However, the availability of t
 
 ![image](https://user-images.githubusercontent.com/104385712/210156125-710572f1-3fa1-43d1-ae98-1f586f8e273f.png)
 
+    1) My profile - this is a dashboard for the user to check what is advertised under the account and provide access to update or delete items and services.
 
+![image](https://user-images.githubusercontent.com/104385712/210156345-48c3c3cf-c5c4-414d-806d-5ab85c65304f.png)
 
+    2) Messages - this is messages box to allow the buyers and sellers to communicate with each other.
+    
+    ![image](https://user-images.githubusercontent.com/104385712/210156366-50f31cd0-4e95-40c5-b836-e6d983955150.png)
+    
+    3)  Setting - [this feature is underdevelopment] and where the user is able to update the account details.
+    
+    4) Log out - this allows the user to sign out of the account.
 
 
 
