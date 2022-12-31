@@ -85,8 +85,9 @@ Detail of the card after clicking:
 Due to limited time, not all features were developed. The outstanding work still remaining are: 
  - project page,
  - user setting,
- - further improvement to the message box (ie. formatting and features)
+ - further improvements to the message box (ie. formatting and features)
 
 
-**Rerference:**
+### Rerference:
+
 Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
