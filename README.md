@@ -20,9 +20,17 @@ Rather throwing them away, these can be upcycled. However, the availability of t
 
 ![image](https://user-images.githubusercontent.com/104385712/210156059-8e53575f-2201-40c8-8efb-7a19bfd39730.png)
 
-**Search box** – User can perform a quick search and filtering of the items or services they want to view.
+**Search box** – User can perform a quick search and filtering of the items or services they want to view from the home page but these feature is also available in the Junk Market and Craftpeople pages.
 
 ![image](https://user-images.githubusercontent.com/104385712/210156180-631aee5b-f016-455d-8f2b-c2d19d012f04.png)
+
+  * Junk Market Search box
+
+![image](https://user-images.githubusercontent.com/104385712/210156637-4f23210b-4630-48f7-94f3-3cedc51d59bb.png)
+
+  * Craftpeople Search box - beside the search box, the craft images can be scrolled through and this will filter the list by the craft categories.
+
+![image](https://user-images.githubusercontent.com/104385712/210156632-58b64adc-3123-414d-be3b-daeaf75b412f.png)
 
 **Avatar** – this is the image of the user and clicking it will produce a dropdown menu with 'My profile', 'Messages', 'Settings', and 'Log out'.
 
@@ -41,12 +49,43 @@ Rather throwing them away, these can be upcycled. However, the availability of t
 * Log out - this allows the user to sign out of the account.
 
 
+**Junk Market page** - this page shows a list of items posted for donation or selling. The card allows user to scroll through the images giving some key details. Clicking anywhere on the card will bring up a more detail of the product. A map at the bottom of page shows where the item is located.
+
+![image](https://user-images.githubusercontent.com/104385712/210156699-00f9839b-a538-4739-b128-4176a3702f34.png)
+
+Detail of the card after clicking: 
+
+![image](https://user-images.githubusercontent.com/104385712/210156751-52bd7311-9738-48dd-88cb-c508927353bc.png)
+
+**Craftpeople page** - this page shows a list of trade services. A map at the bottom of page shows where the craftperson is located.
+
+![image](https://user-images.githubusercontent.com/104385712/210156793-fa371027-ce08-4bf6-a3c5-1d98a42b31cb.png)
+
+Detail of the card after clicking: 
+
+![image](https://user-images.githubusercontent.com/104385712/210156903-8f4fb136-ea31-47d6-b98e-d0aff5c6f1ec.png)
 
 
 Footer - contains links to the developers of this website.
 
 ![image](https://user-images.githubusercontent.com/104385712/210156522-5d298b73-04ec-46ac-a4dc-1343d2e43f22.png)
 
+
+**Post an Ad** - this gives the user a quick access to posting an ad on the website. Also, the user can see a preview of the card as details are entered in the form.
+
+* list ad for junk market
+![image](https://user-images.githubusercontent.com/104385712/210156932-fdc63bf5-1221-497d-9d86-181b62aa3969.png)
+
+* list ad for craftpeople
+![image](https://user-images.githubusercontent.com/104385712/210156947-78b21838-47db-4c11-be7f-b18b21cac60e.png)
+
+
+## Features left to implement
+
+Due to limited time, not all features were developed. The outstanding work still remaining are: 
+ - project page,
+ - user setting,
+ - further improvement to the message box (ie. formatting and features)
 
 
 Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
