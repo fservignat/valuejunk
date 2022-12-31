@@ -66,11 +66,6 @@ Detail of the card after clicking:
 ![image](https://user-images.githubusercontent.com/104385712/210156903-8f4fb136-ea31-47d6-b98e-d0aff5c6f1ec.png)
 
 
-Footer - contains links to the developers of this website.
-
-![image](https://user-images.githubusercontent.com/104385712/210156522-5d298b73-04ec-46ac-a4dc-1343d2e43f22.png)
-
-
 **Post an Ad** - this gives the user a quick access to posting an ad on the website. Also, the user can see a preview of the card as details are entered in the form.
 
 * list ad for junk market
@@ -86,6 +81,10 @@ Due to limited time, not all features were developed. The outstanding work still
  - project page,
  - user setting,
  - further improvement to the message box (ie. formatting and features)
+
+**Footer** - contains links to the developers of this website.
+
+![image](https://user-images.githubusercontent.com/104385712/210156522-5d298b73-04ec-46ac-a4dc-1343d2e43f22.png)
 
 
 Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
