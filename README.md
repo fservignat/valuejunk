@@ -43,6 +43,9 @@ Rather throwing them away, these can be upcycled. However, the availability of t
 
 
 
+Footer - contains links to the developers of this website.
+
+![image](https://user-images.githubusercontent.com/104385712/210156522-5d298b73-04ec-46ac-a4dc-1343d2e43f22.png)
 
 
 
