@@ -74,6 +74,11 @@ Detail of the card after clicking:
 * list ad for craftpeople
 ![image](https://user-images.githubusercontent.com/104385712/210156947-78b21838-47db-4c11-be7f-b18b21cac60e.png)
 
+**Footer** - contains links to the developers of this website.
+
+![image](https://user-images.githubusercontent.com/104385712/210156522-5d298b73-04ec-46ac-a4dc-1343d2e43f22.png)
+
+
 
 ## Features left to implement
 
@@ -82,9 +87,6 @@ Due to limited time, not all features were developed. The outstanding work still
  - user setting,
  - further improvement to the message box (ie. formatting and features)
 
-**Footer** - contains links to the developers of this website.
 
-![image](https://user-images.githubusercontent.com/104385712/210156522-5d298b73-04ec-46ac-a4dc-1343d2e43f22.png)
-
-
+**Rerference:**
 Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
