@@ -2,8 +2,8 @@
 
 This website was developed in 4 weeks (part-time) by 3 passionate Le Wagon students (ie. Francis Servignat, Kylian Janssens, Sunny Law). ValueJunk website can be accessed via http://www.valuejunk.site/. 
 
-The webpage was born from recognising nowadays people are concern about the environment and want to have a more sustainable ecosystem how to deal with junk.
-Rather throwing them away, these can be upcycled. However, the availability of the junk and help from craftspeople may not be obvious in the communities. The webpage bring these elements together connecting to the junks and pool of talents. This can be expanded into bigger community projects revolving around events like the Soapbox racing.
+The webpage was born from recognising nowadays people are concern about the environment and to support a more sustainable ecosystem in dealing with junk.
+Rather throwing them away, these can be upcycled. However, the availability of the junk and help from craftspeople may not be obvious in the communities. The webpage bring these elements together connecting people to the junk market and pool of talents. This can be expanded into bigger community projects revolving around events like the Soapbox racing.
 
 ![image](https://user-images.githubusercontent.com/104385712/210155828-c8aed178-bab2-4bb3-8371-d80ec9b469cf.png)
 
@@ -49,11 +49,11 @@ Rather throwing them away, these can be upcycled. However, the availability of t
 * Log out - this allows the user to sign out of the account.
 
 
-**Junk Market page** - this page shows a list of items posted for donation or selling. The card allows user to scroll through the images giving some key details. Clicking anywhere on the card will bring up a more detail of the product. A map at the bottom of page shows where the item is located.
+**Junk Market page** - this page shows a list of items posted for donation or selling. The card allows user to scroll through the images giving some key details. Clicking anywhere on the card will bring up more details of the product. A map at the bottom is provided to show where the item is located.
 
 ![image](https://user-images.githubusercontent.com/104385712/210156699-00f9839b-a538-4739-b128-4176a3702f34.png)
 
-Detail of the card after clicking: 
+Details of the card after clicking: 
 
 ![image](https://user-images.githubusercontent.com/104385712/210156751-52bd7311-9738-48dd-88cb-c508927353bc.png)
 
@@ -61,7 +61,7 @@ Detail of the card after clicking:
 
 ![image](https://user-images.githubusercontent.com/104385712/210156793-fa371027-ce08-4bf6-a3c5-1d98a42b31cb.png)
 
-Detail of the card after clicking: 
+Details of the card after clicking: 
 
 ![image](https://user-images.githubusercontent.com/104385712/210156903-8f4fb136-ea31-47d6-b98e-d0aff5c6f1ec.png)
 
@@ -83,11 +83,37 @@ Detail of the card after clicking:
 ## Features left to implement
 
 Due to limited time, not all features were developed. The outstanding work still remaining are: 
- - project page,
+ - project webpage,
  - user setting,
  - further improvements to the message box (ie. formatting and features)
 
 
-### Rerference:
+## Technologies
 
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+- *full-stack framework* 
+   - Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+
+- *HTML*
+   - The structure of the Website was developed using HTML as the main language.
+
+- *SCSS*
+   - The Website was styled and layed out using SCSS.
+
+- *Heroku*
+   - Source code is hosted on GitHub and delpoyed using Git Pages.
+
+- *Git*
+   - Used to commit and push code during the development of the Website
+   
+- *Other key GEMS*
+   - cloudinary, acts-as-taggable-on, geocoder, devise, font-awesome-sass, turbo-rails
+
+- *Favicon.io*
+   - Favicon files were created at https://favicon.io/favicon-converter/
+   
+   
+
+
+
+
+
