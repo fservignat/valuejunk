@@ -57,7 +57,7 @@ Details of the card after clicking:
 
 ![image](https://user-images.githubusercontent.com/104385712/210156751-52bd7311-9738-48dd-88cb-c508927353bc.png)
 
-**Craftpeople page** - this page shows a list of trade services. A map at the bottom of page shows where the craftperson is located.
+**Craftpeople page** - this page shows a list of trade services. A map at the bottom of page shows where the all the craftperson is located.
 
 ![image](https://user-images.githubusercontent.com/104385712/210156793-fa371027-ce08-4bf6-a3c5-1d98a42b31cb.png)
 
@@ -66,12 +66,12 @@ Details of the card after clicking:
 ![image](https://user-images.githubusercontent.com/104385712/210156903-8f4fb136-ea31-47d6-b98e-d0aff5c6f1ec.png)
 
 
-**Post an Ad** - this gives the user a quick access to posting an ad on the website. Also, the user can see a preview of the card as details are entered in the form.
+**Post an Ad** - this gives the user a quick access to posting an ad on the website. Also, the user can see a live preview of the card as details are entered in the form.
 
-* list ad for junk market
+* list ad for the junk market
 ![image](https://user-images.githubusercontent.com/104385712/210156932-fdc63bf5-1221-497d-9d86-181b62aa3969.png)
 
-* list ad for craftpeople
+* list ad for the craftpeople
 ![image](https://user-images.githubusercontent.com/104385712/210156947-78b21838-47db-4c11-be7f-b18b21cac60e.png)
 
 **Footer** - contains links to the developers of this website.
