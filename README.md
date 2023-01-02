@@ -10,13 +10,13 @@ Rather throwing them away, these can be upcycled. However, the availability of t
 
 ## Feature
 
-**Landing page** – is an old telephone with light bulbs capturing the purpose of the website to providing connectivity in the community for bright ideas of upcycling projects. Scrolling down reviews the three main sections (i.e. Market place, craftspeople, and projects) which is explanatory from the images and brief description. 
+**Landing page** – is an old telephone with light bulbs. This captures the purpose of the website of providing connectivity in the community sharing their bright ideas of upcycling projects. Scrolling down reviews the three main sections (i.e. Market place, Craftspeople, and Projects) which is self-explanatory from the images and brief descriptions. 
 
-**Logo**– The logo is two circles joined together reineforcing the idea of connnectivity and ciricle representing a sustainable life cycle for junk. This logo on the top left will also server as link to the home page.
+**Logo**– The logo is two circles joined together reineforcing the idea of connnectivity. The ciricles represents a sustainable life cycle for junk. This logo is located on the top left and server as a clickable icon to the home page.
 
 ![image](https://user-images.githubusercontent.com/104385712/210156265-2d17d068-829d-4660-b25e-15fbf90e5372.png)
 
-**Navigation Bar** - he navigation bar blends in with the landing page taking the theme colors, shades of green throughout the website. It has the three categories access, 'Junk Market', 'Craftpeople', and 'Projects'. In addition, there is a quick access to post an Ad.
+**Navigation Bar** - the navigation bar blends in with the landing page taking the theme colors, shades of green throughout the website. It has the three categories , 'Junk Market', 'Craftpeople', and 'Projects'. In addition, there is a quick access to 'Post an Ad'.
 
 ![image](https://user-images.githubusercontent.com/104385712/210156059-8e53575f-2201-40c8-8efb-7a19bfd39730.png)
 
