@@ -53,7 +53,7 @@ Rather throwing them away, these can be upcycled. However, the availability of t
 
 ![image](https://user-images.githubusercontent.com/104385712/210156699-00f9839b-a538-4739-b128-4176a3702f34.png)
 
-Details of the card after clicking: 
+*Details of the card after clicking:*
 
 ![image](https://user-images.githubusercontent.com/104385712/210156751-52bd7311-9738-48dd-88cb-c508927353bc.png)
 
@@ -61,7 +61,7 @@ Details of the card after clicking:
 
 ![image](https://user-images.githubusercontent.com/104385712/210156793-fa371027-ce08-4bf6-a3c5-1d98a42b31cb.png)
 
-Details of the card after clicking: 
+*Details of the card after clicking:*
 
 ![image](https://user-images.githubusercontent.com/104385712/210156903-8f4fb136-ea31-47d6-b98e-d0aff5c6f1ec.png)
 
@@ -94,7 +94,7 @@ Due to limited time, not all features were developed. The outstanding work still
    - Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
 
 - *HTML*
-   - The structure of the Website was developed using HTML as the main language.
+   - The structure of the Website was developed using HTML.
 
 - *SCSS*
    - The Website was styled and layed out using SCSS.
