@@ -100,7 +100,7 @@ Due to limited time, not all features were developed. The outstanding work still
    - The Website was styled and layed out using SCSS.
 
 - *Heroku*
-   - Source code is hosted on GitHub and delpoyed using Git Pages.
+   - platform used to deploy the application.
 
 - *Git*
    - Used to commit and push code during the development of the Website
