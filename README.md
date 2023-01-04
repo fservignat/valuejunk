@@ -3,16 +3,16 @@
 This website was developed in 4 weeks (part-time) by 3 passionate Le Wagon students (ie. Francis Servignat, Kylian Janssens, Sunny Law). ValueJunk website can be accessed via http://www.valuejunk.site/. 
 
 The webpage was born from recognising nowadays people are concern about the environment and to support a more sustainable ecosystem in dealing with junk.
-Rather throwing them away, these can be upcycled. However, the availability of the junk and help from craftspeople may not be obvious in the communities. The webpage bring these elements together connecting people to the junk market and pool of talents. This can be expanded into bigger community projects revolving around events like the Soapbox racing.
+Rather throwing them away, junks can be upcycled. However, the availability of the junk and help from craftspeople may not be obvious in the communities. The webpage bring these elements together connecting people to the junk market and pool of talents. This can be expanded into bigger community projects revolving around events like the Soapbox racing.
 
 ![image](https://user-images.githubusercontent.com/104385712/210155828-c8aed178-bab2-4bb3-8371-d80ec9b469cf.png)
 
 
 ## Feature
 
-**Landing page** – is an old telephone with light bulbs. This captures the purpose of the website of providing connectivity in the community sharing their bright ideas of upcycling projects. Scrolling down reviews the three main sections (i.e. Market place, Craftspeople, and Projects) which is self-explanatory from the images and brief descriptions. 
+**Landing page** – is an old telephone with light bulbs. This captures the purpose of the website of providing connectivity in the community sharing their bright ideas of upcycling projects. Scrolling down reviews the three main sections of the website (i.e. Market place, Craftspeople, and Projects) which is self-explanatory from the images and brief descriptions. 
 
-**Logo**– The logo is two circles joined together reineforcing the idea of connnectivity. The ciricles represents a sustainable life cycle for junk. This logo is located on the top left and server as a clickable icon to the home page.
+**Logo**– The logo is two circles joined together reineforcing the idea of connnectivity. The ciricles represent a sustainable life cycle for junk. This logo is located on the top left and server as a clickable icon to the home page.
 
 ![image](https://user-images.githubusercontent.com/104385712/210156265-2d17d068-829d-4660-b25e-15fbf90e5372.png)
 
