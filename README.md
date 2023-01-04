@@ -8,7 +8,7 @@ Rather throwing them away, junks can be upcycled. However, the availability of t
 ![image](https://user-images.githubusercontent.com/104385712/210155828-c8aed178-bab2-4bb3-8371-d80ec9b469cf.png)
 
 
-## Feature
+## Features
 
 **Landing page** – is an old telephone with light bulbs. This captures the purpose of the website of providing connectivity in the community sharing their bright ideas of upcycling projects. Scrolling down reviews the three main sections of the website (i.e. Market place, Craftspeople, and Projects) which is self-explanatory from the images and brief descriptions. 
 
