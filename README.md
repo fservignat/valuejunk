@@ -3,7 +3,7 @@
 This website was developed in 4 weeks (part-time) by 3 passionate Le Wagon students (ie. Francis Servignat, Kylian Janssens, Sunny Law). ValueJunk website can be accessed via http://www.valuejunk.site/. 
 
 The webpage was born from recognising nowadays people are concern about the environment and to support a more sustainable ecosystem in dealing with junk.
-Rather throwing them away, junks can be upcycled. However, the availability of the junk and help from craftspeople may not be obvious in the communities. The webpage bring these elements together connecting people to the junk market and pool of talents. This can be expanded into bigger community projects revolving around events like the Soapbox racing.
+Rather than throwing them away, junks can be upcycled. However, the availability of the junk and help from craftspeople may not be obvious in the communities. The webpage bring these elements together connecting people to the junk market and pool of talents. This can be expanded into bigger community projects revolving around events like the Soapbox racing.
 
 ![image](https://user-images.githubusercontent.com/104385712/210155828-c8aed178-bab2-4bb3-8371-d80ec9b469cf.png)
 
