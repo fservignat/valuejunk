@@ -1,9 +1,10 @@
 # Value Junk
 
-This website was developed in 4 weeks (part-time) by 3 passionate Le Wagon students (ie. Francis Servignat, Kylian Janssens, Sunny Law). ValueJunk website can be accessed via http://www.valuejunk.site/. 
+This website was developed in 4 weeks (part-time) by 3 passionate Le Wagon students (Francis Servignat, Kylian Janssens and Sunny Law). The website is accessible via http://www.valuejunk.site/. 
 
-The webpage was born from recognising nowadays people are concern about the environment and to support a more sustainable ecosystem in dealing with junk.
-Rather than throwing them away, junks can be upcycled. However, the availability of the junk and help from craftspeople may not be obvious in the communities. The webpage bring these elements together connecting people to the junk market and pool of talents. This can be expanded into bigger community projects revolving around events like the Soapbox racing.
+The project idea was born after recognising the struggle of upcycling. Most of the time, people will throw away their junk instead of repairing or giving/selling them. However, the availability of the junk and help from craftspeople may not be obvious in the communities. ValueJunk brings these elements together to connect people to the junk market and to a pool of skilled craftpeople. 
+
+Our vision was to provide ValueJunk with a project marketplace. People would gather around projects that they are interested in, creating teams, learning new skills, and make friends. We can think of projects like arts, humanitarian, gardening, or specific event like the 'Redbull Soapbox Races'.
 
 ![image](https://user-images.githubusercontent.com/104385712/210155828-c8aed178-bab2-4bb3-8371-d80ec9b469cf.png)
 
@@ -12,15 +13,31 @@ Rather than throwing them away, junks can be upcycled. However, the availability
 
 **Landing page** – is an old telephone with light bulbs. This captures the purpose of the website of providing connectivity in the community sharing their bright ideas of upcycling projects. Scrolling down reviews the three main sections of the website (i.e. Market place, Craftspeople, and Projects) which is self-explanatory from the images and brief descriptions. 
 
-**Logo**– The logo is two circles joined together reineforcing the idea of connnectivity. The ciricles represent a sustainable life cycle for junk. This logo is located on the top left and server as a clickable icon to the home page.
+**Logo**– The logo is two circles joined together reinforcing the idea of connnectivity. The circles represent a sustainable life cycle for junk. This logo is located on the top left and serves as a clickable icon to the home page.
 
 ![image](https://user-images.githubusercontent.com/104385712/210156265-2d17d068-829d-4660-b25e-15fbf90e5372.png)
 
-**Navigation Bar** - the navigation bar blends in with the landing page taking the theme colors, shades of green throughout the website. It has the three categories , 'Junk Market', 'Craftpeople', and 'Projects'. In addition, there is a quick access to 'Post an Ad'.
+**Navigation Bar** - the navigation bar blends in with the landing page taking the theme colors, shades of green throughout the website. It includes the three categories , 'Junk Market', 'Craftpeople', and 'Projects'. In addition, there is a quick access to 'Post an Ad'.
 
 ![image](https://user-images.githubusercontent.com/104385712/210156059-8e53575f-2201-40c8-8efb-7a19bfd39730.png)
 
-**Search box** – User can perform a quick search and filtering of the items or services they want to view from the home page but these feature is also available in the Junk Market and Craftpeople pages.
+**Avatar** – this is the user's image and clicking it will drop a menu with 'My profile', 'Messages', 'Settings', and 'Log out'. When logout, the dropdown menu will only include 'Log in' and 'Sign up'.
+
+![image](https://user-images.githubusercontent.com/104385712/210156125-710572f1-3fa1-43d1-ae98-1f586f8e273f.png)
+
+* My profile - this is a dashboard where the current_user can check what is advertised under the account (junks, crafts and projects). It is also from this page that the user can update or delte his/her listings.
+
+![image](https://user-images.githubusercontent.com/104385712/210156345-48c3c3cf-c5c4-414d-806d-5ab85c65304f.png)
+
+* Messages - this message box allows the users to communicate with each other. Buttons to contact a specific user are available in the junk and craft show pages.
+    
+    ![image](https://user-images.githubusercontent.com/104385712/210156366-50f31cd0-4e95-40c5-b836-e6d983955150.png)
+    
+* Setting - [this feature is underdevelopment] and is where the user will be able to update his/her account details.
+    
+* Log out - this allows the user to sign out of the account.
+
+**Search boxes** – Users can perform a quick search and filtering of the items or services they want to view from the home page but these features are also available in the Junk Market and Craftpeople pages.
 
 ![image](https://user-images.githubusercontent.com/104385712/210156180-631aee5b-f016-455d-8f2b-c2d19d012f04.png)
 
@@ -28,40 +45,23 @@ Rather than throwing them away, junks can be upcycled. However, the availability
 
 ![image](https://user-images.githubusercontent.com/104385712/210156637-4f23210b-4630-48f7-94f3-3cedc51d59bb.png)
 
-  * Craftpeople Search box - beside the search box, the craft images can be scrolled through and this will filter the list by the craft categories.
+  * Craftpeople Search box - beside the search box, the carousel brings a better UX (interactive and rapid search) when searching for a specific craft. The results will be filered in real time as the user goes through the content of the carousel.
 
 ![image](https://user-images.githubusercontent.com/104385712/210156632-58b64adc-3123-414d-be3b-daeaf75b412f.png)
 
-**Avatar** – this is the image of the user and clicking it will produce a dropdown menu with 'My profile', 'Messages', 'Settings', and 'Log out'.
-
-![image](https://user-images.githubusercontent.com/104385712/210156125-710572f1-3fa1-43d1-ae98-1f586f8e273f.png)
-
-* My profile - this is a dashboard for the user to check what is advertised under the account and provide access to update or delete items and services.
-
-![image](https://user-images.githubusercontent.com/104385712/210156345-48c3c3cf-c5c4-414d-806d-5ab85c65304f.png)
-
-* Messages - this is messages box to allow the buyers and sellers to communicate with each other.
-    
-    ![image](https://user-images.githubusercontent.com/104385712/210156366-50f31cd0-4e95-40c5-b836-e6d983955150.png)
-    
-* Setting - [this feature is underdevelopment] and where the user is able to update the account details.
-    
-* Log out - this allows the user to sign out of the account.
-
-
-**Junk Market page** - this page shows a list of items posted for donation or selling. The card allows user to scroll through the images giving some key details. Clicking anywhere on the card will bring up more details of the product. A map at the bottom is provided to show where the item is located.
+**Junk Market page** - this page is listing the junk items posted for donation or selling. The cards include a small carousel of images (uploaded by the user). Clicking anywhere on the card (except the heart icon that is used to add the item to the favourites) will open the item's show page. A map at the bottom is provided to show where the item is located.
 
 ![image](https://user-images.githubusercontent.com/104385712/210156699-00f9839b-a538-4739-b128-4176a3702f34.png)
 
-*Details of the card after clicking:*
+*Junk show page:*
 
 ![image](https://user-images.githubusercontent.com/104385712/210156751-52bd7311-9738-48dd-88cb-c508927353bc.png)
 
-**Craftpeople page** - this page shows a list of trade services. A map at the bottom of page shows where the all the craftperson is located.
+**Craftpeople page** - this page is listing trade services. A map at the bottom of page shows where the all the craftperson is located.
 
 ![image](https://user-images.githubusercontent.com/104385712/210156793-fa371027-ce08-4bf6-a3c5-1d98a42b31cb.png)
 
-*Details of the card after clicking:*
+*Craft show page:*
 
 ![image](https://user-images.githubusercontent.com/104385712/210156903-8f4fb136-ea31-47d6-b98e-d0aff5c6f1ec.png)
 
@@ -98,6 +98,10 @@ Due to limited time, not all features were developed. The outstanding work still
 
 - *SCSS*
    - The Website was styled and layed out using SCSS.
+
+- *Javascript*
+   - TypedJS
+   - Stimulus
 
 - *Heroku*
    - platform used to deploy the application.
