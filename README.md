@@ -2,9 +2,9 @@
 
 This website was developed in 4 weeks (part-time) by 3 passionate Le Wagon students (Francis Servignat, Kylian Janssens and Sunny Law). The website is accessible via http://www.valuejunk.site/. 
 
-The project idea was born after recognising the struggle of upcycling. Most of the time, people will throw away their junk instead of repairing or giving/selling them. However, the availability of the junk and help from craftspeople may not be obvious in the communities. ValueJunk brings these elements together to connect people to the junk market and to a pool of skilled craftpeople. 
+The project idea was born after recognising the *struggle of upcycling*. Most of the time, people will throw away their junk instead of repairing or giving/selling them. However, the availability of the junk and help from craftspeople may not be obvious in the communities. ValueJunk brings these elements together to *connect people to the junk market and to a pool of skilled craftpeople*. 
 
-Our vision was to provide ValueJunk with a project marketplace. People would gather around projects that they are interested in, creating teams, learning new skills, and make friends. We can think of projects like arts, humanitarian, gardening, or specific event like the 'Redbull Soapbox Races'.
+Our vision was also to provide ValueJunk with a project marketplace. People would gather around projects they are interested in, creating teams, learning new skills, and make friends. We can think of project kinds like art, humanitarian, gardening, or specific event like the 'Redbull Soapbox Races'.
 
 ![image](https://user-images.githubusercontent.com/104385712/210155828-c8aed178-bab2-4bb3-8371-d80ec9b469cf.png)
 
@@ -13,13 +13,16 @@ Our vision was to provide ValueJunk with a project marketplace. People would gat
 
 **Landing page** – is an old telephone with light bulbs. This captures the purpose of the website of providing connectivity in the community sharing their bright ideas of upcycling projects. Scrolling down reviews the three main sections of the website (i.e. Market place, Craftspeople, and Projects) which is self-explanatory from the images and brief descriptions. 
 
-**Logo**– The logo is two circles joined together reinforcing the idea of connnectivity. The circles represent a sustainable life cycle for junk. This logo is located on the top left and serves as a clickable icon to the home page.
+
+**Logo** – The logo is two circles joined together reinforcing the idea of connnectivity. The circles represent a sustainable life cycle for junk. This logo is located on the top left and serves as a clickable icon to the home page.
 
 ![image](https://user-images.githubusercontent.com/104385712/210156265-2d17d068-829d-4660-b25e-15fbf90e5372.png)
+
 
 **Navigation Bar** - the navigation bar blends in with the landing page taking the theme colors, shades of green throughout the website. It includes the three categories , 'Junk Market', 'Craftpeople', and 'Projects'. In addition, there is a quick access to 'Post an Ad'.
 
 ![image](https://user-images.githubusercontent.com/104385712/210156059-8e53575f-2201-40c8-8efb-7a19bfd39730.png)
+
 
 **Avatar** – this is the user's image and clicking it will drop a menu with 'My profile', 'Messages', 'Settings', and 'Log out'. When logout, the dropdown menu will only include 'Log in' and 'Sign up'.
 
@@ -36,6 +39,7 @@ Our vision was to provide ValueJunk with a project marketplace. People would gat
 * Setting - [this feature is underdevelopment] and is where the user will be able to update his/her account details.
     
 * Log out - this allows the user to sign out of the account.
+ 
 
 **Search boxes** – Users can perform a quick search and filtering of the items or services they want to view from the home page but these features are also available in the Junk Market and Craftpeople pages.
 
@@ -49,6 +53,7 @@ Our vision was to provide ValueJunk with a project marketplace. People would gat
 
 ![image](https://user-images.githubusercontent.com/104385712/210156632-58b64adc-3123-414d-be3b-daeaf75b412f.png)
 
+
 **Junk Market page** - this page is listing the junk items posted for donation or selling. The cards include a small carousel of images (uploaded by the user). Clicking anywhere on the card (except the heart icon that is used to add the item to the favourites) will open the item's show page. A map at the bottom is provided to show where the item is located.
 
 ![image](https://user-images.githubusercontent.com/104385712/210156699-00f9839b-a538-4739-b128-4176a3702f34.png)
@@ -56,6 +61,7 @@ Our vision was to provide ValueJunk with a project marketplace. People would gat
 *Junk show page:*
 
 ![image](https://user-images.githubusercontent.com/104385712/210156751-52bd7311-9738-48dd-88cb-c508927353bc.png)
+
 
 **Craftpeople page** - this page is listing trade services. A map at the bottom of page shows where the all the craftperson is located.
 
@@ -74,7 +80,8 @@ Our vision was to provide ValueJunk with a project marketplace. People would gat
 * list ad for the craftpeople
 ![image](https://user-images.githubusercontent.com/104385712/210156947-78b21838-47db-4c11-be7f-b18b21cac60e.png)
 
-**Footer** - contains links to the developers of this website.
+
+**Footer** - List the creators of this website and their social media links (GitHub and Linkedin).
 
 ![image](https://user-images.githubusercontent.com/104385712/210156522-5d298b73-04ec-46ac-a4dc-1343d2e43f22.png)
 
@@ -116,8 +123,3 @@ Due to limited time, not all features were developed. The outstanding work still
    - Favicon files were created at https://favicon.io/favicon-converter/
    
    
-
-
-
-
-
