@@ -4,7 +4,7 @@ This website was developed in 4 weeks (part-time) by 3 passionate Le Wagon stude
 
 The project idea was born after recognising the *struggle of upcycling*. Most of the time, people will throw away their junk instead of repairing or giving/selling them. However, the availability of the junk and help from craftspeople may not be obvious in the communities. ValueJunk brings these elements together to *connect people to the junk market and to a pool of skilled craftpeople*. 
 
-Our vision was also to provide ValueJunk with a project marketplace. People would gather around projects they are interested in, creating teams, learning new skills, and make friends. We can think of project kinds like art, humanitarian, gardening, or specific event like the 'Redbull Soapbox Races'.
+Our vision also included a project marketplace, where people could gather around projects they are interested in, creating teams, learning new skills, and make friends. We can think of project kinds like art, humanitarian, gardening, or specific event like the 'Redbull Soapbox Races'.
 
 ![image](https://user-images.githubusercontent.com/104385712/210155828-c8aed178-bab2-4bb3-8371-d80ec9b469cf.png)
 
